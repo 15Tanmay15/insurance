@@ -1,0 +1,24 @@
+
+#login{
+    position: absolute;
+    right: 1%;
+}
+#container{
+    display: flex;
+}
+
+#login a{
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 992px){
+.navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+.nav-flex{
+    display: flex;
+    flex-direction: row;
+}
+}
