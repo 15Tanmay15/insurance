@@ -1,5 +1,9 @@
 const User = require('../models/user');
 
+module.exports.profile = (req, res) => {
+    return res.render('user_profile');
+}
+
 module.exports.signUp = (req, res) => {
     return res.render('user_signup');
 }
