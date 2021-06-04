@@ -45,10 +45,17 @@
                             </ul>
                         </li>
                       </div>
-                      <div id="login">
-                        <button type="button" style="margin-right: 5px;" class="btn btn-light"><a href="/users/sign-in">Sign In</a></button>
-                        <button type="button" class="btn btn-info"><a href="/users/sign-up">Sign Up</a></button>
-                      </div>
+                        <% if(!locals.user){ %>
+                          <div class="login">
+                            <button type="button" style="margin-right: 5px;" class="btn btn-light"><a href="/users/sign-in">Sign In</a></button>
+                            <button type="button" class="btn btn-info"><a href="/users/sign-up">Sign Up</a></button>
+                          </div>
+                        <% }else{ %>
+                          <div class="login">
+                            <span id="display-name"><%= user.name %></span>
+                            <button type="button" class="btn btn-danger"><a id="display-name" href="/users/sign-out">Sign Out</a></button>
+                          </div>
+                        <% } %>
                     </div>
                   </ul>
                 </div>

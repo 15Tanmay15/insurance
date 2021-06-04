@@ -1,5 +1,5 @@
 
-#login{
+.login{
     position: absolute;
     right: 1%;
 }
@@ -7,9 +7,13 @@
     display: flex;
 }
 
-#login a{
+.login a{
     text-decoration: none;
     color: black;
+}
+
+#display-name{
+    color: white;
 }
 
 @media (min-width: 992px){
