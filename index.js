@@ -5,9 +5,12 @@ const session = require('express-session');
 const app = express();
 const port = 7000;
 const ejs = require('ejs');
+const expressLayouts = require('express-ejs-layouts');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 const MongoStore = require('connect-mongo');
+
+app.use(expressLayouts);
 
 app.use(express.urlencoded());
 app.use(cookieParser());
