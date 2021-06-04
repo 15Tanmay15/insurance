@@ -12,8 +12,13 @@
     color: black;
 }
 
-#display-name{
-    color: white;
+.display-name{
+    color: white !important;
+}
+
+.name-css{
+    color: white !important;
+    text-decoration: none !important;
 }
 
 @media (min-width: 992px){

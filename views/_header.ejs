@@ -3,7 +3,7 @@
     <section id="Navbar">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Logo</a>
+              <a class="navbar-brand" href="/">Logo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -52,8 +52,8 @@
                           </div>
                         <% }else{ %>
                           <div class="login">
-                            <span id="display-name"><%= user.name %></span>
-                            <button type="button" class="btn btn-danger"><a id="display-name" href="/users/sign-out">Sign Out</a></button>
+                            <span><a class="name-css" href="/users/profile"><%= user.name %></a></span>
+                            <button type="button" class="btn btn-danger"><a class="display-name" href="/users/sign-out">Sign Out</a></button>
                           </div>
                         <% } %>
                     </div>
