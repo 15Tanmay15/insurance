@@ -18,7 +18,7 @@ module.exports.signIn = (req, res) => {
         return res.redirect('/users/profile');
     }
 
-    return res.render('user_signin');
+    return res.render('user_signIn');
 }
 
 module.exports.create = (req, res) => {
@@ -43,5 +43,5 @@ module.exports.create = (req, res) => {
 
 
 module.exports.createSession = (req,res) => {
-    return res.redirect('/');
+    return res.redirect('/users/profile');
 }
