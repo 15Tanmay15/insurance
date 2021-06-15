@@ -1,15 +1,13 @@
 const passport = require('passport');
-
 const LocalStrategy = require('passport-local').Strategy;
-
-const User = require('../models/user');
+const ConnectorData = require('../models/connector_personal_data');
 
 passport.use(new LocalStrategy({
-    usernameField: 'email'
+    usernameField: 'phone',
     },
-    (email, password, done) => {
+    (phone, password, done) => {
         // find a user and establish an identity
-        User.findOne({email: email}, (err, user)=>{
+        ConnectorData.findOne({phone: phone}, (err, user)=>{
             if(err){
                 console.log('error in finding user --> Passport');
                 return done(err);
@@ -35,12 +33,11 @@ passport.serializeUser((user, done) => {
 
 // deserializing the user
 passport.deserializeUser((id, done)=> {
-    User.findById(id, (err, user)=>{
+    ConnectorData.findById(id, (err, user)=>{
         if(err){
         console.log('error in finding user --> Passport');
         return done(err);
         }
-
         return done(null, user)
     })
 });
@@ -51,7 +48,7 @@ passport.checkAuthentication = (req, res, next) => {
     }
 
     // if not
-    return res.redirect('/users/sign-in');
+    return res.redirect('/connector/sign-in');
 }
 
 passport.setAuthenticatedUser = (req, res, next) => {

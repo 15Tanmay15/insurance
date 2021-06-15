@@ -1,24 +1,23 @@
-const User = require('../models/user');
+const ConnectorData = require('../models/connector_personal_data');
 
 module.exports.profile = (req, res) => {
-    // if()
-    return res.render('user_profile');
+        return res.render('connector_personal_profile')
 }
 
 module.exports.signUp = (req, res) => {
     if(req.isAuthenticated()){
-        return res.redirect('/users/profile');
+        return res.redirect('/connector/profile');
     }
 
-    return res.render('user_signup');
+    return res.render('connector_personal_signUp');
 }
 
 module.exports.signIn = (req, res) => {
     if(req.isAuthenticated()){
-        return res.redirect('/users/profile');
+        return res.redirect('/connector/profile');
     }
 
-    return res.render('user_signIn');
+    return res.render('connector_personal_signIn');
 }
 
 module.exports.create = (req, res) => {
@@ -26,14 +25,14 @@ module.exports.create = (req, res) => {
         return res.redirect('back');
     }
 
-    User.findOne({email: req.body.email}, (err, user) => {
+    ConnectorData.findOne({phone: req.body.phone}, (err, user) => {
         if(err){console.log('error in finding user', err); return;}
 
         if(!user){
-            User.create(req.body, (err, user) => {
+            ConnectorData.create(req.body, (err, user) => {
                 if(err){console.log('error in creating a user', err); return;}
 
-                return  res.redirect('/users/sign-in')
+                return  res.redirect('/connector/enter-bankDetails')
             })
         }else{
             return res.redirect('back');
@@ -41,9 +40,8 @@ module.exports.create = (req, res) => {
     })
 }
 
-
 module.exports.createSession = (req,res) => {
-    return res.redirect('/users/profile');
+    return res.redirect('/connector/profile');
 }
 
 module.exports.destroySession = (req, res) =>{

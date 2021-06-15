@@ -1,0 +1,20 @@
+#carouselExampleCaptions{
+height: 40%;
+width: 40%;
+}
+
+#Term-Plan{
+    display: none;
+}
+
+#Health-Plan{
+    display: none;
+}
+
+#Vehicle-Plan{
+    display: none;
+}
+
+#submit-btn{
+    display: none;
+}

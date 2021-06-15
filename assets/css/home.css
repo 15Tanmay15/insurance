@@ -14,11 +14,13 @@
 
 .display-name{
     color: white !important;
+
 }
 
 .name-css{
     color: white !important;
     text-decoration: none !important;
+    padding: 5px;
 }
 
 @media (min-width: 992px){
