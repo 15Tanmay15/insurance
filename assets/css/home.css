@@ -14,13 +14,19 @@
 
 .display-name{
     color: white !important;
-
+    transition: font-size 1s;
 }
+
 
 .name-css{
     color: white !important;
     text-decoration: none !important;
     padding: 5px;
+    transition: font-size 1s;
+}
+
+.hide-login{
+    visibility: hidden;
 }
 
 @media (min-width: 992px){

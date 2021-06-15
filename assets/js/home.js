@@ -6,3 +6,9 @@ dropdownItem[i].addEventListener('focus', function(){
     this.style.backgroundColor = "darkgrey";
 })
 };
+
+$(document).ready(function(){
+    $(".navbar-toggler").click(function(){
+        (".login").toggleClass("hide-login");
+    });
+});

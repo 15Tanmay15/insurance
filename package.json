@@ -27,5 +27,13 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "twilio": "^3.63.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/15Tanmay15/insurance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/15Tanmay15/insurance/issues"
+  },
+  "homepage": "https://github.com/15Tanmay15/insurance#readme"
 }
