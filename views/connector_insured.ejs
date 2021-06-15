@@ -8,10 +8,14 @@
 <body>
     <div id="insured-display-container">
         <ul>
-            <% for(insured of insureds){ %>
-
-                <li></li>
-
+            <% for(let i=0; i<insurers.length; i++){ %>
+                <% for(let j=0; j<insurers[i].insurers.length; j++){%>
+                <li>
+                    <p>
+                        <%= insurers[i].insurers[j].nameOfInsured %>
+                    </p>
+                </li>
+                <% } %>
             <% } %>
         </ul>
     </div>

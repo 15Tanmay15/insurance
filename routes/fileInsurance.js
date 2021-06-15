@@ -3,6 +3,7 @@ const router = express.Router();
 const passport = require('passport');
 const insuredController = require('../controllers/connector_insured_controller');
 
+router.get('/list', insuredController.list)
 router.get('/', insuredController.openFileInsurancePage);
 router.post('/create', passport.checkAuthentication, insuredController.create);
 
