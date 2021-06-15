@@ -48,3 +48,12 @@ module.exports.create = (req, res)=>{
         }
     })
 }
+
+module.exports.list = (req, res) => {
+    ConnectorData.find({}).populate('insurers').exec(function(err, insurers){
+        return res.render('connector_insured', {
+            insurers: insurers
+        });
+});
+
+};
