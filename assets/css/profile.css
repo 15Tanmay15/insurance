@@ -28,12 +28,13 @@ body{
 }
 
 .image img{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4.5rem;
 }
 .image{
     margin-right: auto;
     margin-left: auto;
+    height: 20rem;
+    transition: height 1s;
 }
 
 div .details
@@ -42,9 +43,11 @@ div .details
 }
 
 img{
-    height: 250px;
-    width: 250px;
+    margin-top: 0;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
+    transition: height 1s,width 1s,margin-top 1s;
 }
 
 .details div{
@@ -66,17 +69,61 @@ div button{
     border: none;
 }
 
-@media screen and (max-width: 600px)
+.name{
+    margin-top: -3.8rem;
+    margin-right: auto;
+    margin-left: auto;
+    transition: margin-top 1s;
+}
+
+.ala{
+    width: 40%;
+    transition: width 1s;
+}
+
+@media screen and (max-width: 900px)
 {
     .home{
         font-size: large;
     }
-
+    
     .minibar{
         margin-top: 1rem;
         margin-left: -1%;
     }
+    
+    .details div{
+        font-size: 22px;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        height: 3.8rem;
+    }
+    .name-css{
+        font-size: medium;
+    }
+    
+    .display-name{
+        font-size: medium;
+    }
 
+    img{
+        height: 150px;
+        width: 150px;
+        margin-top: 1rem;
+    }
+
+    .image{
+        height: 18rem;
+    }
+    
+    .ala{
+        width: 55%;
+    }
+}
+
+
+@media screen and (max-width: 600px)
+{
     .details div{
         font-size: 18px;
         margin-top: 0.8rem;
@@ -89,5 +136,15 @@ div button{
     
     .display-name{
         font-size: medium;
+    }
+    img{
+        height: 120px;
+        width: 120px;
+    }
+    .image{
+        height: 15rem;
+    }
+    .ala{
+        width: 70%;
     }
 }
