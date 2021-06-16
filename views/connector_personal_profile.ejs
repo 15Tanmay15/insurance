@@ -57,60 +57,80 @@
                                   <li><a class="dropdown-item" href="#">RD Calculator</a></li>
                                   <li><a class="dropdown-item" href="#">FD Calculator</a></li>
                                 </ul>
-                            </li>
+                              </li>
+                            </div>
+                            <div class="login">
+                              <span><a class="name-css " style="text-decoration: none; font-size: x-large; margin-right: 0.2rem;" href="/connector/profile"><%= locals.user.first_name %></a></span>
+                              <button type="button" class="btn btn-danger ml-5" style="float: right;"><a class="display-name"  style="text-decoration: none; color: white;" href="/connector/sign-out">Sign Out</a></button>
+                            </div>
                           </div>
-                              <div class="login">
-                                <span><a class="name-css " style="text-decoration: none; font-size: x-large; margin-right: 0.2rem;" href="/connector/profile"><%= locals.user.first_name %></a></span>
-                                <button type="button" class="btn btn-danger ml-5" style="float: right;"><a class="display-name"  style="text-decoration: none; color: white;" href="/connector/sign-out">Sign Out</a></button>
-                              </div>
-                        </div>
-                      </ul>
+                        </ul>
                     </div>
-                </div>
-            </nav>
-        </section>
-    
-    </header>
-
-    <!-- <h1>Hi <%= locals.user.first_name %></h1> 
-    <h3><%= locals.user.phone %></h3> -->
-    <div class="minibar">
+                  </div>
+                </nav>
+              </section>
+              
+            </header>
+            
+            <!-- <h1>Hi <%= locals.user.first_name %></h1> 
+              <h3><%= locals.user.phone %></h3> -->
+    <div class="minibar" style="display: flex;">
       <ul class="list">
         <li><button type="button"  ><a class="home" style="text-decoration: none; color: black; font-weight: bold;" href="/connector/sign-out">HOME <i class='fas fa-angle-right'></i></a></button></li>
         <li><button ><a class="home">USER PROFILE </a></button></li>
       </ul>
+      <button type="button" class="btn btn-danger" style="position:absolute; right:0; margin-right: 1rem; margin-top: 0..3rem;">
+          <a href="/connector/file-insurance" style="text-decoration: none; color: white;">File Insurance</a>
+      </button>
     </div>
-
+    
     <center><div class="image">
       <img src="/images/car.jpeg">
       <h1 class="name"><%= locals.user.first_name[0].toUpperCase()  %><%= locals.user.first_name.slice(1,)  %> <%= locals.user.last_name[0].toUpperCase() %><%= locals.user.last_name.slice(1,) %></h1>
       <hr class="ala">
       <p style="margin-top:3.6rem;">Complete your profile for the best results and ease up your application process</p>
     </div></center>
-
+    
     <div class="details">
       <div class="dropdown1">Personal Information<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
           <a href="#" style="margin-top: 0.7rem;">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
-      </div>
-      
-      <div>Contact Information<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button></div>
-      
-      <div>Work Information<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button></div>
-      
-      <div>Documents<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button></div>
-      
-      <div>Application<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button></div>
-      
-      <div>Offers<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button></div>
+        </div>
+        
+        <div class="dropdown2">Contact Information<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
+          <a href="#" style="margin-top: 0.7rem;">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        
+        <div class="dropdown3">Work Information<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
+          <a href="#" style="margin-top: 0.7rem;">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        
+        <div class="dropdown4">Documents<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
+          <a href="#" style="margin-top: 0.7rem;">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        
+        <div class="dropdown5">Application<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
+          <a href="#" style="margin-top: 0.7rem;">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        
+        <div class="dropdown6">Offers<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
+          <a href="#" style="margin-top: 0.7rem;">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
       
     </div>
 
 
-    <button type="button" class="btn btn-danger">
-        <a href="/connector/file-insurance" style="text-decoration: none; color: white;">File Insurance</a>
-    </button>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

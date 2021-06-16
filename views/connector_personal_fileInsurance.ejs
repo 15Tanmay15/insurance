@@ -76,17 +76,19 @@
   
     <div class="plot">
       <h1 class="t-head" >File Insurance</h1>
+      <center><div class="on">
         <label for="NameOfInsured">Name of Insured</label>
-        <input class="first-inp" id="first" type="text" name="name" placeholder="Name">
-      
-      <br>
-      
+        <input class="first-inp" id="first" type="text" name="name" placeholder="Name of Insured">
+        
+        <br>
+        
         <label for="NameOfInsured">Phone No. of Insured</label>
-        <input class="first-inp" type="text" name="phone" placeholder="98765....">
-      
-      <input type="hidden" name="connector" value="<%= user._id %>">
+        <input class="first-inp" type="text" name="phone" placeholder="Phone No. of Insured">
+        
+        <input type="hidden" name="connector" value="<%= user._id %>">
+      </div></center>
     </div>
-    <center><h3 style="margin-top: 3rem; margin-bottom: 5rem;">What Insurance would you like to file</h3></center>
+    <center><h3 style="margin-top:5rem; margin-bottom: 3rem; color: white;">What Insurance would you like to file</h3></center>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -127,80 +129,79 @@
             </button>
           </div>
 
-          <div>
+            <center><div class="sec-part" id="part2">
               <div id="Term-Plan">
-                  <h3>Term Plan</h3>
-                  <label for="age">Enter Age</label>
-                  <input type="number" name="age">
-
+                <h3 class="heads">Term Plan</h3>
+                <div class="on">
+                <label for="age">Enter Age</label>
+                <input class="first-inp" id="first" style="margin-top: 5.3rem;" type="number" name="age" placeholder="Enter Age">
+                
+                <br>
+                
+                <label for="sourceOfincome">Source of income</label>
+                <input  class="first-inp" type="text" name="source" placeholder="Source of income">
+                
                   <br>
-
-                  <label for="sourceOfincome">Source of income</label>
-                  <input type="text" name="source">
-
-                  <br>
-
-                  <!-- <label for="CopyofITR">Upload a copy of ITR</label>
-                  <input type="file" name="ITRcopy"> -->
-
-                  <br>
-
+                  
                   <label for="Illness">Any illness</label>
-                  <input type="text" name="illness">
-
-              </div>
-
-              <div id="Health-Plan">
-                <h3>Health Plan</h3>
-                <label for="familyDetails">Enter Spouse Name</label>
-                <input type="text" name="spouseName">
-
+                  <input class="first-inp" type="text" name="illness" placeholder="Any illness">
+                  </div>
+                </div>
+                
+                <div id="Health-Plan">
+                  <h3 class="heads">Health Plan</h3>
+                  <div class="on">
+                    <label for="familyDetails" class="one" style="margin-top: -1rem; margin-left: 2.2rem; transition: margin-top 1s; @media screen (max-width:600px) { margin-top: 3rem; }">Enter Spouse Name</labe class="first-inp"l>
+                      <input class="first-inp" id="first" style="margin-left: 4.2rem; width: 13rem;" type="text" name="spouseName" placeholder="Enter Spouse Name">
+                      
+                      <br>
+                      
+                      <label for="marriageAnniversary" style="margin-left: -1.5rem; word-break: break-all;">Date of marriage anniversary</label>
+                      <input class="first-inp" type="date" name="marriageAnniversary" placeholder="Date of marriage anniversary">
+                      
+                      <br>
+                      
+                      <label for="children" style="margin-left: 1rem;">Name of 1st child</label>
+                      <input class="first-inp" style="margin-left: 4.5rem; width: 13rem;" type="text" name="FChildName" placeholder="Name of 1st child">
+                      
+                      <br>
+                      
+                      <label for="children" style="margin-left: 1rem;">Name of 2nd child</label>
+                      <input class="first-inp" style="margin-left: 4.0rem; width: 13rem;" type="text" name="SChildName" placeholder="Name of 2nd child">
+                      
+                      <br>
+                      
+                      <!-- <label for="previousPolicy">Upload if any previous policy copy</label>
+                        <input type="file" name="previousPolicyHealth"> -->
+                        
+                      </div>
+                    </div>
+                      
+                      <div id="Vehicle-Plan">
+                        <h3 class="heads">Vehicle Plan</h3>
+                        <div class="on">
+                          <label for="vehicle-number">Enter Vehicle Number</label>
+                          <input class="first-inp" style="margin-right: 1rem;" id="first" type="text" name="vehicleName" placeholder="Enter Vehicle Number">
+                          
+                          <br>
+                          
+                          <label for="vehicle-make" style="margin-right: 2.3rem;">Enter make of Vehicle</label>
+                          <input class="first-inp" style="margin-right: 1rem;" type="text" name="vehicleMake" placeholder="Enter make of Vehicle">
+                        </div>
+                
                 <br>
-
-                <label for="marriageAnniversary">Enter date of marriage anniversary</label>
-                <input type="date" name="marriageAnniversary">
-
-                <br>
-
-                <label for="children">Name of 1st child</label>
-                <input type="text" name="FChildName">
-
-                <br>
-
-                <label for="children">Name of 2nd child</label>
-                <input type="text" name="SChildName">
-
-                <br>
-
+                
                 <!-- <label for="previousPolicy">Upload if any previous policy copy</label>
-                <input type="file" name="previousPolicyHealth"> -->
-
-            </div>
-
-            <div id="Vehicle-Plan">
-                <h3>Vehicle Plan</h3>
-
-                <label for="vehicle-number">Enter Vehicle Number</label>
-                <input type="text" name="vehicleName">
-
-                <br>
-
-                <label for="vehicle-make">Enter make of Vehicle</label>
-                <input type="text" name="vehicleMake">
-
-                <br>
-
-                <!-- <label for="previousPolicy">Upload if any previous policy copy</label>
-                <input type="file" name="previousPolicyVehicle"> -->
-
-            </div>
-          </div>
-
-          <input type="submit" value="Submit" id="submit-btn">
-    </form>
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-<script src="/js/displayPlan.js"></script>
-</body>
-</html>
+                  <input type="file" name="previousPolicyVehicle"> -->
+                  
+                </div>
+              </div></center>
+              
+              <center><input class="submit" type="submit" value="Submit" id="submit-btn"></center>
+            </form>
+            
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+            <script src="/js/displayPlan.js"></script>
+          </body>
+          </html>
