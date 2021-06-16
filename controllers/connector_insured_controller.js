@@ -6,6 +6,9 @@ module.exports.openFileInsurancePage = (req, res) =>{
 }
 
 module.exports.create = (req, res)=>{
+    if(!req.isAuthenticated()){
+        return res.redirect('/connector/sign-in')
+    }
     // console.log('req.body ', req.body);
     ConnectorData.findById(req.body.connector, (err, connector)=>{
         // console.log('hey 1 ', connector)

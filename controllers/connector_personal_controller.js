@@ -1,4 +1,5 @@
 const ConnectorData = require('../models/connector_personal_data');
+const ConnectorBankDetails = require('../models/connector_bankAccount_details');
 
 module.exports.profile = (req, res) => {
         return res.render('connector_personal_profile')
@@ -14,7 +15,7 @@ module.exports.signUp = (req, res) => {
 
 module.exports.signIn = (req, res) => {
     if(req.isAuthenticated()){
-        return res.redirect('/connector/profile');
+        return res.redirect('/connector/profile')
     }
 
     return res.render('connector_personal_signIn');
@@ -32,7 +33,7 @@ module.exports.create = (req, res) => {
             ConnectorData.create(req.body, (err, user) => {
                 if(err){console.log('error in creating a user', err); return;}
 
-                return  res.redirect('/connector/enter-bankDetails')
+                return  res.redirect('/connector/sign-in');
             })
         }else{
             return res.redirect('back');

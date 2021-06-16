@@ -1,6 +1,7 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const ConnectorData = require('../models/connector_personal_data');
+const ConnectorBankDetails = require('../models/connector_bankAccount_details');
 
 passport.use(new LocalStrategy({
     usernameField: 'phone',
@@ -44,11 +45,28 @@ passport.deserializeUser((id, done)=> {
 
 passport.checkAuthentication = (req, res, next) => {
     if (req.isAuthenticated()){
-        return next();
+        ConnectorBankDetails.findOne({connector: req.user._id}, (err, user) => {
+            if(err){console.log('error in finding user', err); return;}
+
+            if(user){
+                // return res.redirect('/connector/profile');
+                console.log('user', user)
+                return next();
+            }
+
+            if(!user || user == undefined){
+                console.log('user not found')
+                return res.redirect('/connector/enter-bankDetails')
+            }
+        })
+
+        
     }
 
     // if not
+    else{
     return res.redirect('/connector/sign-in');
+    }
 }
 
 passport.setAuthenticatedUser = (req, res, next) => {

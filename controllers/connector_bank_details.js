@@ -7,8 +7,6 @@ module.exports.enterBankDetails = (req, res) => {
 }
 
 module.exports.create = (req, res) => {
-    console.log('Bank create ', req.user);
-    console.log('req.body ', req.body);
     ConnectorBankDetails.create({
         Bankname: req.body.Bankname,
         accountNumber: req.body.accountNumber,
@@ -19,8 +17,6 @@ module.exports.create = (req, res) => {
             console.log('error in adding details');
             return;
         }
-        console.log('req.user ', req.user);
-        console.log('req.body ', req.body);
         return res.render('connector_personal_profile')
     }
     )
