@@ -83,12 +83,17 @@
 
     <center><div class="image">
       <img src="/images/car.jpeg">
-      <h1 class="name"><%= locals.user.first_name %> <%= locals.user.last_name %></h1>
+      <h1 class="name"><%= locals.user.first_name[0].toUpperCase()  %><%= locals.user.first_name.slice(1,)  %> <%= locals.user.last_name[0].toUpperCase() %><%= locals.user.last_name.slice(1,) %></h1>
       <hr class="ala">
+      <p style="margin-top:3.6rem;">Complete your profile for the best results and ease up your application process</p>
     </div></center>
 
     <div class="details">
-      <div>Personal Information<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button></div>
+      <div class="dropdown1">Personal Information<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
+          <a href="#" style="margin-top: 0.7rem;">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+      </div>
       
       <div>Contact Information<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button></div>
       

@@ -1,5 +1,5 @@
 body{
-    background-color:white;
+    /* background-color:gray; */
 }
 
 .list li{
@@ -33,7 +33,7 @@ body{
 .image{
     margin-right: auto;
     margin-left: auto;
-    height: 20rem;
+    height: 25rem;
     transition: height 1s;
 }
 
@@ -61,7 +61,7 @@ img{
     width: 80%;
     border-radius: 1rem;
     transition: font-size 1s,margin-top 1s,margin-bottom , height 1s;
-    box-shadow: 0 0 20px rgba(202, 221, 156, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 div button{
@@ -77,9 +77,95 @@ div button{
 }
 
 .ala{
+    margin-top: 1.3rem;
     width: 40%;
+    border-top: 1.5px solid black;
     transition: width 1s;
 }
+
+.dropdown1 a{
+    text-decoration: none;
+    color: black;
+    visibility: hidden;
+    font-size: large;
+    margin-left: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+.dropdown1:hover{
+    height: 10rem;
+}
+
+.dropdown1:hover a{
+    display: block;
+    visibility: visible;
+    transition: visibility 10s;
+}
+
+.dropdown2{
+    height: 1rem;
+}
+.dropdown2:hover{
+    height: 10rem;
+}
+
+.dropdown3{
+    height: 1rem;
+}
+.dropdown3:hover{
+    height: 10rem;
+}
+
+.dropdown4{
+    height: 1rem;
+}
+.dropdown4:hover{
+    height: 10rem;
+}
+
+.dropdown5{
+    height: 1rem;
+}
+.dropdown5:hover{
+    height: 10rem;
+}
+
+.dropdown6{
+    height: 1rem;
+}
+.dropdown6:hover{
+    height: 10rem;
+}
+
+
+/* .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: height 1s;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown:focus .dropdown-content {
+    display: flex;
+    height: 10rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    height: 10rem;
+} */
+
 
 @media screen and (max-width: 900px)
 {
@@ -113,7 +199,7 @@ div button{
     }
 
     .image{
-        height: 18rem;
+        height: 23rem;
     }
     
     .ala{
@@ -142,7 +228,7 @@ div button{
         width: 120px;
     }
     .image{
-        height: 15rem;
+        height: 20rem;
     }
     .ala{
         width: 70%;
