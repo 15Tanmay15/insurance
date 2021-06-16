@@ -58,17 +58,10 @@
                             </ul>
                         </li>
                       </div>
-                        <% if(!locals.user){ %>
-                          <div class="login">
-                            <button type="button" style="margin-right: 5px;" class="btn btn-light"><a href="/connector/sign-in">Sign In</a></button>
-                            <button type="button" class="btn btn-info"><a href="/connector/sign-up">Sign Up</a></button>
-                          </div>
-                        <% }else{ %>
                           <div class="login m-1">
-                            <span><a class="name-css" href="/connector/profile"><%= locals.user.first_name %></a></span>
+                            <span><a class="name-css" href="/connector/profile"> <%= locals.user.first_name %></a></span>
                             <button type="button" class="btn btn-danger"><a class="display-name" href="/connector/sign-out">Sign Out</a></button>
                           </div>
-                        <% } %>
                     </div>
                   </ul>
                 </div>
@@ -78,25 +71,28 @@
 
 </header>
 
-    <h1>File Insurance</h1>
 
-    <form class="form" action="/connector/file-insurance/create" method="POST">
+<form class="form" action="/connector/file-insurance/create" method="POST">
+  
+    <div class="plot">
+      <h1 class="t-head" >File Insurance</h1>
         <label for="NameOfInsured">Name of Insured</label>
-        <input type="text" name="name">
-
-        <br>
-
-        <label for="NameOfInsured">Phone Number of Insured</label>
-        <input type="text" name="phone">
-
-        <input type="hidden" name="connector" value="<%= user._id %>">
-        <h3>What Insurance would you like to file</h3>
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
+        <input class="first-inp" id="first" type="text" name="name" placeholder="Name">
+      
+      <br>
+      
+        <label for="NameOfInsured">Phone No. of Insured</label>
+        <input class="first-inp" type="text" name="phone" placeholder="98765....">
+      
+      <input type="hidden" name="connector" value="<%= user._id %>">
+    </div>
+    <center><h3 style="margin-top: 3rem; margin-bottom: 5rem;">What Insurance would you like to file</h3></center>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="/images/paisabazaar_term.jpeg" class="d-block w-100" alt="..." id="term-plan-img">
