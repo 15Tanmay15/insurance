@@ -6,24 +6,8 @@ module.exports.openFileInsurancePage = (req, res) =>{
 }
 
 module.exports.create = (req, res)=>{
-    if(!req.isAuthenticated()){
-        return res.redirect('/connector/sign-in')
-    }
-    // console.log('req.body ', req.body);
     ConnectorData.findById(req.body.connector, (err, connector)=>{
-        // console.log('hey 1 ', connector)
         if(connector){
-            // console.log('hey 2');
-            let insuranceType;
-            if(req.body.age){
-                insuranceType: 'Term Plan'
-            }
-            if(req.body.spouseName){
-                insuranceType: 'Health Insurance'
-            }
-            if(req.body.vehicleName){
-                insuranceType: 'Vehicle Insurance'
-            }
             Insured.create({
                 nameOfInsured: req.body.name,
                 phoneOfInsured: req.body.phone,
@@ -53,7 +37,8 @@ module.exports.create = (req, res)=>{
 }
 
 module.exports.list = (req, res) => {
-    ConnectorData.find({}).populate('insurers').exec(function(err, insurers){
+    ConnectorData.find({}).
+    populate('insurers').exec(function(err, insurers){
         return res.render('connector_insured', {
             insurers: insurers
         });
