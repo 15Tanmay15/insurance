@@ -23,21 +23,28 @@ transition: height 1s, width 1s;
 }
 
 #submit-btn{
+    visibility: hidden;
     display: none;
+    font-size: x-large;
+    margin-top: 2rem;
+    padding:0.2rem 1rem 0.2rem 1rem;
+    border-radius: 0.7rem;
+    transition: visibility 0.5s;
 }
 
 .t-head{
+    margin-left: 7%;
     position:absolute;
     margin-top:1.3rem;
-    margin-left: 1.5rem;
+    font-size: xx-large;
     color: white;
+    transition: margin-left 1s;
 }
 
 form label{
     color: white;
     font-size: 22px;
-    margin-left: 4rem ;
-    margin-top: 1.8rem;
+    margin-top: 1.3rem;
     transition: margin-top 1s,font-size 1s;
 }
 
@@ -53,11 +60,11 @@ form label{
 
 input{
     /* background: rgb(43,43,43); */
-    color: rgb(221, 219, 219);
+    /* color: rgb(221, 219, 219); */
+    color: black;
     /* background: white; */
     outline: none;
 }
-
 
 .plot{
     margin-top: 5rem;
@@ -67,15 +74,16 @@ input{
     /* background: rgb(132,185,64); */
     /* background: rgb(73,100,46); */
     background: rgb(120,195,57);
-    height: 16rem;
+    height: 15rem;
     width: 55%;
     border-radius: 2.5rem;
     transition: height 1s,width 1s;
     box-shadow: 1px 1px 2px 2px rgba(255,255,255);
+    max-width: 40rem;
 }
 
 #first{
-    margin-left: 3.3rem;
+    margin-left: 3.5rem;
     margin-top: 6.5rem;
     transition: margin-top 1s;
 }
@@ -90,10 +98,10 @@ input{
     margin-right: auto;
     border-radius: 2.5rem;
     height: 0rem;
-    width: 50%;
-    visibility: visible;
+    width: 62%;
     transition: height 1s,width 1s,visibility 0s,margin-right 1,margin-left 1;
     box-shadow: 1px 1px 2px 2px rgba(255,255,255);
+    max-width: 40rem;
 }
 
 .heads{
@@ -105,12 +113,6 @@ input{
     margin-top: 1.5rem;
 }
 
-.submit{
-    font-size: x-large;
-    margin-top: 2rem;
-    padding:0.2rem 1rem 0.2rem 1rem;
-    border-radius: 0.7rem;
-}
 
 @media screen and (max-width:900px) {
     #carouselExampleCaptions{
@@ -123,10 +125,15 @@ input{
     }
 
     #part2{
-        width: 85%;
+        width: 87%;
     }
     .plot{
         width: 85%;
+    }
+
+    .t-head{
+        margin-left: 10%;
+        transition: margin-left 1s;
     }
 }
 
@@ -174,12 +181,11 @@ input{
 
     label{
         /* visibility: hidden; */
-        display: none
-        ;
+        display: none;
+    }
+
+    .t-head{
+        margin-left: 1.5rem;
     }
 }
-
-/* @media screen and (max-width:500) {
-    
-} */
 
