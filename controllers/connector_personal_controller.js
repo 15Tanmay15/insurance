@@ -39,6 +39,7 @@ module.exports.create = (req, res) => {
             return res.redirect('back');
         }
     })
+
 }
 
 module.exports.createSession = (req,res) => {

@@ -2,13 +2,14 @@ const nodemailer = require('../config/nodemailer');
 
 // also a way for exporting a method
 exports.newAccount = (signUp) => {
-    console.log('inside new signup mailer');
+    console.log(signUp);
+    let htmlString = nodemailer.renderTemplate({signUp: signUp}, '/sign/signUp.ejs')
 
     nodemailer.transporter.sendMail({
         from: 'ts2insurancemarketing@gmail.com',
-        to: signUp.user.email,
+        to: signUp.connector.email,
         subject: 'Account creation successful',
-        html: '<h1>Account Created Successfully</h1>'
+        html: htmlString
     }, (err, info) => {
         if(err){
             console.log('err in sending mail', err);
