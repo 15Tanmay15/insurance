@@ -86,8 +86,8 @@ div button{
 .details a{
     text-decoration: none;
     color: black;
-    visibility: hidden;
     font-size: large;
+    display: none;
     margin-left: 0.5rem;
     margin-top: 0.3rem;
 }
@@ -98,7 +98,12 @@ div button{
 
 .dropdown1:hover a{
     display: block;
-    visibility: visible;
+    animation: animat 1s;
+}
+
+@keyframes animat {
+    from{opacity: 0;}
+    to {opacity: 1;}
 }
 
 .dropdown2:hover{
@@ -107,7 +112,7 @@ div button{
 
 .dropdown2:hover a{
     display: block;
-    visibility: visible;
+    animation: animat 4s;
 }
 
 
@@ -117,7 +122,7 @@ div button{
 
 .dropdown3:hover a{
     display: block;
-    visibility: visible;
+    animation: animat 4s;
 }
 
 .dropdown4:hover{
@@ -126,7 +131,7 @@ div button{
 
 .dropdown4:hover a{
     display: block;
-    visibility: visible;
+    animation: animat 4s;
 }
 
 
@@ -136,7 +141,7 @@ div button{
 
 .dropdown5:hover a{
     display: block;
-    visibility: visible;
+    animation: animat 4s;
 }
 
 .dropdown6:hover{
@@ -145,7 +150,7 @@ div button{
 
 .dropdown6:hover a{
     display: block;
-    visibility: visible;
+    animation: animat 4s;
 }
 
 
