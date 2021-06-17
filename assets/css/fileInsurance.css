@@ -1,6 +1,13 @@
+body{
+    background: rgb(33, 33, 33);
+    /* background-color: white; */
+}
+
 #carouselExampleCaptions{
-height: 40%;
-width: 40%;
+height: 45%;
+width: 45%;
+margin:2rem auto;
+transition: height 1s, width 1s;
 }
 
 #Term-Plan{
@@ -18,4 +25,156 @@ width: 40%;
 #submit-btn{
     display: none;
 }
+
+.t-head{
+    position:absolute;
+    margin-top:1.3rem;
+    margin-left: 1.5rem;
+    color: white;
+}
+
+form label{
+    color: white;
+    font-size: 22px;
+    margin-left: 4rem ;
+    margin-top: 1.8rem;
+    transition: margin-top 1s,font-size 1s;
+}
+
+.first-inp{
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    border: none;
+    height: 2.1rem;
+    transition: height 1s;
+    background: rgb(43, 43, 43);
+}
+
+input{
+    background: rgb(43,43,43);
+    color: white;
+    outline: none;
+}
+
+
+.plot{
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(33, 33, 33);
+    height: 16rem;
+    width: 55%;
+    border-radius: 2.5rem;
+    transition: height 1s,width 1s;
+    box-shadow: 1px 1px 2px 2px rgba(255,255,255);
+}
+
+#first{
+    margin-left: 3.3rem;
+    margin-top: 6.5rem;
+    transition: margin-top 1s;
+}
+
+#part2{
+    background:rgb(33, 33, 33);
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-top: 5rem;
+    margin-right: auto;
+    border-radius: 2.5rem;
+    height: 0rem;
+    width: 50%;
+    visibility: visible;
+    transition: height 1s,width 1s,visibility 0s,margin-right 1,margin-left 1;
+    box-shadow: 1px 1px 2px 2px rgba(255,255,255);
+}
+
+.heads{
+    position: absolute;
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-left: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.submit{
+    font-size: x-large;
+    margin-top: 2rem;
+    padding:0.2rem 1rem 0.2rem 1rem;
+    border-radius: 0.7rem;
+}
+
+@media screen and (max-width:900px) {
+    #carouselExampleCaptions{
+        height: 70%;
+        width: 70%;
+    }
+    form label{
+        font-size: 20px;
+        margin-top: 1.8rem;
+    }
+
+    #part2{
+        width: 85%;
+    }
+    .plot{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    
+    #carouselExampleCaptions{
+        height: 90%;
+        width: 90%;
+    }
+    .plot{
+        height: 13rem;
+        width: 95%;
+    }
+    
+    #part2{
+        height: 0rem;
+        width: 95%;
+    }
+    
+    #first{
+        margin-top: 5rem;
+        margin-left: 1rem;
+        transition: margin-top 1s;
+    }
+    
+    form label{
+        z-index: 1;
+        font-size: large;
+        margin-left: 3rem;
+        margin-top: 1.3rem;
+    }
+    .first-inp{
+        z-index: 100;
+        height: 3rem;
+        width: 90%;
+        margin-top: 0.2rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        margin-bottom: 0.2rem;
+        position: relative;
+        align-self: center;
+        justify-content: center;
+        transition: height 1s;
+    }
+
+    label{
+        /* visibility: hidden; */
+        display: none
+        ;
+    }
+}
+
+/* @media screen and (max-width:500) {
+    
+} */
 
