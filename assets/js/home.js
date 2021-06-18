@@ -7,3 +7,5 @@ dropdownItem[i].addEventListener('focus', function(){
 })
 };
 
+// videotag=document.querySelector('video');
+// setInterval(function (){videotag.play()},1);

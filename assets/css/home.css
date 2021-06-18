@@ -34,16 +34,308 @@ body{
 }
 
 .heading{
+    font-size: 40px;
+    margin-left: 42%;
+    color: white;
+    color:rgb(0, 112, 110);
+    margin-top: 2%;
+    margin-bottom: -3%;
+    transition: height 1s,margin-top 1s;
+}
+
+.whole{
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+video{
+    margin-top: 4%;
+    width: 195%;
+    margin-left: 5%;
+    border-radius: 1rem;
+    /* transition: width 1s; */
+}
+
+.para{
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    color: rgb(151, 151, 151);
+    margin-top: 5%;
+    margin-left: 50%;
+    width: 45%;
+    transition: width 1s;
+}
+
+.paradiv{
+    margin-top: 1%;
+}
+
+/* .whole2{
+    width: 90%;
+    height: 5rem;
+    background:transparent;
+    margin: 0  auto;
+    margin-top: 20%;
+}
+
+.single1{
+    width: 10rem;
+    height: 10em;
+    background: transparent;
+}
+
+.single2{
+    margin-left: 80%;
+    width: 10rem;
+    height: 10em;
+    background: transparent;
+}
+
+.icon
+{
+    margin: 0 auto;
+    max-width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon i{
+    color:gray;
+    font-size: x-large;
+    margin: 0 auto;
+}
+
+.single1 p{
+    margin-top: 0.3rem;
+    text-align: center;
+    margin-left: -30%;
+    margin-right: auto;
+    color: white;
+}
+
+.single2 p{
+    margin-top: 0.3rem;
+    text-align: center;
+    margin-left: -30%;
+    margin-right: auto;
+    color: white;
+} */
+
+.head{
+    margin-top: 11%;
+    margin-bottom: 3%;
+    color: white;
+    color:rgb(0, 112, 110);
+    font-size: 40px;
+}
+
+.para2{
+    text-align: center;
+    font-size: 15px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 42rem;
+    color: gray;
+}
+
+.whole3
+{
+    margin: 5rem auto;
+}
+
+.big-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.big-btn button{
+    display: flex;
+    /* background-image: linear-gradient(to right, rgb(85, 126, 125),rgb(0, 129, 127)); */
+    background-image: linear-gradient(to right, rgb(53,53,53),rgb(0, 129, 127));
+    padding: 5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    width: 40%;
+    max-width: 32rem;
+    border-radius: 0.4rem;
+    margin: 1rem;
+    border: none;
+    transition: width 1s,padding-top 1s,padding-bottom 1s;
+}
+
+.big-btn button:hover{
+    background-image: linear-gradient(to right,rgb(6, 126, 124), rgb(5, 126, 124));
+    /* background-image: linear-gradient(to right, rgb(21,33,55),rgb(21,33,55)); */
+}
+
+.big-btn button h2{
+    color: rgb(231, 230, 230);
+    font-size: 23px;
+    margin-right: auto;
+    margin-left: 0;
+    white-space: nowrap;
+    transition: margin-right 1s,font-size 1s;
+}
+
+.big-btn button h2 .icon1{
+    float: left;
+    font-size: 35px;
+    margin-left: -3rem;
+    /* color: rgb(21,33,55); */
+    color: rgb(2, 179, 173);
+    transition: font-size 1s,margin-left 1s;
+}
+
+.icon2{
+    font-size: 25px;
+    float: right;
     color: white;
 }
 
 @media (min-width: 992px){
-.navbar-expand-lg {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .nav-flex{
+        display: flex;
+        flex-direction: row;
+    }
 }
-.nav-flex{
-    display: flex;
-    flex-direction: row;
+
+
+@media screen and (max-width:1015px) {
+    
+    .heading{
+        font-size: 30px;
+        margin-top: 8%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    video{
+        animation: video 1s;
+        width: 98vw;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        max-width: 40rem;
+    }
+    
+    @keyframes video {
+        from{width:100%}
+        to{width: 100%;}
+    }
+    
+    .para{
+        color: rgb(151, 151, 151);
+        text-align: center; 
+        margin-left: auto; 
+        margin-right: auto; 
+        margin-top: 2.5rem; 
+        font-size: 14px;
+        width: 75%;
+        line-height: 21px;
+        word-spacing: 1px;
+    }
+    
+    .whole{
+        display: flex;
+        flex-direction: column;
+    }
+    .icon
+    {
+        margin: 0 auto;
+        max-width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .big-btn{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .big-btn button{
+        padding-top: 3%;
+        padding-bottom: 1.3%;
+        width: 90%;
+        max-width: 90%;
+        display: flex;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .big-btn button h2{
+        color: rgb(231, 230, 230);
+        font-size: 19px;
+        margin-right: 6rem;
+        white-space: nowrap;
+    }
+    
+    .big-btn button h2 .icon1{
+        float: left;
+        font-size: 30px;
+    }
+    
+    .head{
+        font-size: 30px;
+    }
+    .icon2{
+        position: absolute;
+        margin-left: 70%;
+        font-size: 20px;
+        color: white;
+    }
 }
+
+@media screen and (max-width:700px) {
+    .big-btn button{
+        padding-top: 4%;
+    }
+    .big-btn button h2{
+        color: rgb(231, 230, 230);
+        font-size: 16px;
+        margin-right: 6rem;
+        white-space: nowrap;
+    }
+    
+    .big-btn button h2 .icon1{
+        float: left;
+        font-size: 25px;
+        margin-left: -3rem;
+    }
+    
+    .icon1{
+        margin-left: 0;
+    }
+    
+    .icon2{
+        font-size: 16px;
+        margin-left: 65%;
+        color: white;
+    }
+    
+    video{
+        animation: video 1s;
+        width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        max-width: 40rem;
+    }
+}
+
+@media screen and (max-width:403px) {
+    .icon2{
+        visibility: hidden;
+    }
 }
