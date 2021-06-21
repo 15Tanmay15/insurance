@@ -7,8 +7,5 @@ dropdownItem[i].addEventListener('focus', function(){
 })
 };
 
-$(document).ready(function(){
-    $(".navbar-toggler").click(function(){
-        (".login").toggleClass("hide-login");
-    });
-});
+// videotag=document.querySelector('video');
+// setInterval(function (){videotag.play()},1);

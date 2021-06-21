@@ -20,7 +20,6 @@ module.exports.create = (req, res)=>{
                 SChildName: req.body.SChildName,
                 vehicleName: req.body.vehicleName,
                 vehicleMake: req.body.vehicleMake,
-                TypeOfInsurance: insuranceType,
                 connector: req.body.connector
             }, function(err, insured){
                 if(err){

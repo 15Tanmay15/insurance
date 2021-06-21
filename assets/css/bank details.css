@@ -1,11 +1,12 @@
 #bcontain{
-    height: 32rem;
-    width: 75%;
+    height: 31rem;
+    width: 60%;
     /* background: rgb(120,195,57); */
     margin-top: 4rem;
     background: rgb(160,222,221);
-    border-radius: 2rem;
-    max-width: 35rem;
+    border-radius: 3rem;
+    max-width: 32rem;
+    transition: height 1s;
 }
 
 body{
@@ -24,18 +25,19 @@ input{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    transition: margin-top 1s;
 }
 
 .heads{
-    font-size: 38px;
-    margin-top: 2rem;
-    transition: font-size 1s;
+    font-size: 42px;
+    margin-top: 1rem;
+    transition: font-size 1s,margin-top 1s;
 }
 
 .bar{
     max-width: 30rem;
     border:solid;
-    width: 60%;
+    width: 65%;
     background: white;
     height: 2.7rem;
     display: flex;
@@ -43,6 +45,7 @@ input{
     align-items: center;
     justify-content: center;
     border-radius: 0.3rem;
+    transition: width 1s,margin-top 1s;
 }
 
 input{
@@ -59,8 +62,6 @@ input{
 }
 
 .bar i{
-    margin-left: auto;
-    margin-right: auto;
     float: left;
     font-size: 26px; 
     margin-left: 0.1rem;
@@ -79,12 +80,44 @@ input{
     padding-left: 0.6rem;
     padding-right: 0.6rem;
     border-radius: 0.5rem;
-    margin-top: 2.8rem;
+    margin-top: 2.2rem;
     font-size: 22px;
+    transition: margin-top 1s;
 }
 
-@media screen and (max-width:591px) {
+@media screen and (max-width:733px) {
     .heads{
+        margin-top: 0.4rem;
         font-size: 180%;
+    }
+
+    .all{
+        margin-top: 2.3rem;
+    }
+
+    .bar
+    {
+        width: 85%;
+        margin-top: 1.4rem;
+    }
+
+    #bcontain{
+        height: 24rem;
+        width:70%
+    }
+    
+    .submit{
+        margin-top: 1.8rem;
+    }
+}
+
+@media screen and (max-width:345) {
+    
+    #bcontain{
+        height: 24rem;
+        width:90%
+    }
+    .submit{
+        margin-top: 0rem;
     }
 }
