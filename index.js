@@ -14,7 +14,6 @@ const MongoStore = require('connect-mongo');
 app.use(express.urlencoded());
 app.use(cookieParser());
 
-
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
