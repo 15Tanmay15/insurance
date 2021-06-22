@@ -1,6 +1,14 @@
 body{
-    background: rgb(21,33,55);
+    background: black;
     /* background: white; */
+}
+
+#sec1{
+    background-color: white;
+}
+
+.sec2{
+    background-color: black;
 }
 
 .login{
@@ -148,6 +156,7 @@ video{
 .whole3
 {
     margin: 5rem auto;
+    background-color: white;
 }
 
 .big-btn{
