@@ -14,6 +14,12 @@ transition: height 1s, width 1s;
     margin-top:5rem; margin-bottom: 3rem; color: white;
 }
 
+.health-label1{
+    margin-top: -1rem;
+    margin-left: 2.2rem; 
+    transition: margin-top 1s; 
+}
+
 #Term-Plan{
     display: none;
 }
@@ -39,7 +45,7 @@ transition: height 1s, width 1s;
 .t-head{
     margin-left: 7%;
     position:absolute;
-    margin-top:1.3rem;
+    margin-top:1.6rem;
     font-size: xx-large;
     color: white;
     transition: margin-left 1s;
@@ -48,7 +54,7 @@ transition: height 1s, width 1s;
 form label{
     color: white;
     font-size: 22px;
-    margin-top: 1.3rem;
+    margin-top: 1.6rem;
     transition: margin-top 1s,font-size 1s;
 }
 
@@ -86,14 +92,31 @@ input{
     max-width: 40rem;
 }
 
-#first{
+#first-label{
     margin-left: 3.5rem;
-    margin-top: 6.5rem;
+    margin-top: 6.3rem;
+    transition: margin-top 1s;
+}
+
+#first1{
+    margin-left: 3.5rem;
+    margin-top: 5rem;
+    transition: margin-top 1s;
+}
+
+#first2{
+    margin-left: 3.5rem;
+    margin-top: 5.8rem;
+    transition: margin-top 1s;
+}
+
+#first3{
+    margin-left: 3.5rem;
+    margin-top: 4rem;
     transition: margin-top 1s;
 }
 
 #part2{
-    /* background:rgb(33, 33, 33); */
     align-items: center;
     background: rgb(120,195,57);
     justify-content: center;
@@ -123,6 +146,10 @@ input{
         height: 70%;
         width: 70%;
     }
+
+    #first-label{
+        margin-top: 6rem;
+    }
     form label{
         font-size: 20px;
         margin-top: 1.8rem;
@@ -134,6 +161,10 @@ input{
     .plot{
         width: 85%;
     }
+    
+    #first3{
+        margin-top: 3.5rem;
+    }
 
     .t-head{
         margin-left: 10%;
@@ -142,7 +173,7 @@ input{
 }
 
 @media screen and (max-width:600px) {
-    
+
     #carouselExampleCaptions{
         height: 90%;
         width: 90%;
@@ -156,9 +187,32 @@ input{
         height: 0rem;
         width: 95%;
     }
+
+    #first-label{
+        margin-top: 5.5rem;
+        margin-left: 1rem;
+    }
     
     #first{
         margin-top: 5rem;
+        margin-left: 1rem;
+        transition: margin-top 1s;
+    }    
+    
+    #first1{
+        margin-top: 5rem;
+        margin-left: 1rem;
+        transition: margin-top 1s;
+    }    
+    
+    #first2{
+        margin-top: 6rem;
+        margin-left: 1rem;
+        transition: margin-top 1s;
+    }
+    
+    #first3{
+        margin-top: 6rem;
         margin-left: 1rem;
         transition: margin-top 1s;
     }
@@ -182,14 +236,17 @@ input{
         justify-content: center;
         transition: height 1s;
     }
-
+    
     label{
         /* visibility: hidden; */
         display: none;
     }
-
+    
     .t-head{
         margin-left: 1.5rem;
     }
-}
+    .health-label1{
+        margin-top: 3rem; 
+    }
 
+}
