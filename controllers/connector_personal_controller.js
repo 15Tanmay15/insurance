@@ -2,7 +2,12 @@ const ConnectorData = require('../models/connector_personal_data');
 const ConnectorBankDetails = require('../models/connector_bankAccount_details');
 
 module.exports.profile = (req, res) => {
-        return res.render('connector_personal_profile')
+    ConnectorData.find({}).
+    populate('insurers').exec(function(err, insurers){
+        return res.render('connector_personal_profile', {
+            insurers: insurers
+        });
+    });
 }
 
 module.exports.signUp = (req, res) => {

@@ -60,8 +60,8 @@
                               </li>
                             </div>
                             <div class="login">
-                              <span><a class="name-css " style="text-decoration: none; font-size: x-large; margin-right: 0.2rem;" href="/connector/profile"><%= locals.user.first_name %></a></span>
-                              <button type="button" class="btn btn-danger ml-5" style="float: right;"><a class="display-name"  style="text-decoration: none; color: white;" href="/connector/sign-out">Sign Out</a></button>
+                              <span><a class="name-css " href="/connector/profile"><%= locals.user.first_name %></a></span>
+                              <button type="button" class="btn btn-danger ml-5"><a class="display-name" href="/connector/sign-out">Sign Out</a></button>
                             </div>
                           </div>
                         </ul>
@@ -71,56 +71,76 @@
               </section>
               
             </header>
-
-    <div class="minibar" style="display: flex;">
+            
+            <!-- <h1>Hi <%= locals.user.first_name %></h1> 
+              <h3><%= locals.user.phone %></h3> -->
+    <div class="minibar">
       <ul class="list">
-        <li><button type="button"  ><a class="home" style="text-decoration: none; color: black; font-weight: bold;" href="/connector/sign-out">HOME <i class='fas fa-angle-right'></i></a></button></li>
+        <li><button type="button"  ><a class="home" href="/connector/sign-out">HOME <i class='fas fa-angle-right'></i></a></button></li>
         <li><button ><a class="home">USER PROFILE </a></button></li>
       </ul>
-      <button type="button" class="btn btn-danger" style="position:absolute; right:0; margin-right: 1rem; margin-top: 0..3rem;">
-          <a href="/connector/file-insurance" style="text-decoration: none; color: white;">File Insurance</a>
+      <button type="button" class="btn btn-danger" id='minibar-btn'>
+          <a href="/connector/file-insurance">File Insurance</a>
       </button>
     </div>
     <center><div class="image">
       <img src="/images/car.jpeg">
       <h1 class="name"><%= locals.user.first_name[0].toUpperCase()  %><%= locals.user.first_name.slice(1,)  %> <%= locals.user.last_name[0].toUpperCase() %><%= locals.user.last_name.slice(1,) %></h1>
       <hr class="ala">
-      <p style="margin-top:3.6rem;">Complete your profile for the best results and ease up your application process</p>
+      <p class="paragraph">Complete your profile for the best results and ease up your application process</p>
     </div></center>
     
     <div class="details">
-      <div class="dropdown1">Personal Information<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
-          <a href="#" style="margin-top: 0.7rem;">Link 1</a>
+
+        <div class="dropdown2">Contact Information<button><i class='fas fa-angle-down'></i></button>
+          <ul>
+            <li>
+              Phone: <%= locals.user.phone %>
+            </li>
+            <li>
+              Email: <%= locals.user.email %>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="dropdown3">Work Information<button><i class='fas fa-angle-down'></i></button>
+          <ul>
+            <li>
+              Number of insured: <%= locals.user.insurers.length %>
+            </li>
+            <li>
+              Name of Insured:-
+            </li>
+              <% for(let i=0; i<insurers.length; i++){ %>
+                <% for(let j=0; j<insurers[i].insurers.length; j++){%>
+                  <% console.log(JSON.stringify(locals.user._id)) %>
+                  <% console.log(JSON.stringify(insurers[i].insurers[j].connector)) %>
+                  <li>
+                      <% if(JSON.stringify(locals.user._id) == JSON.stringify(insurers[i].insurers[j].connector)){ %>
+                        <%= insurers[i].insurers[j].nameOfInsured %>
+                      <% } %>
+
+                  </li>
+                <% } %>
+            <% } %>
+          </ul>
+
+        </div>
+        
+        <div class="dropdown4">Documents<button><i class='fas fa-angle-down'></i></button>
+          <a href="#" class="first-anchor">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </div>
         
-        <div class="dropdown2">Contact Information<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
-          <a href="#" style="margin-top: 0.7rem;">Link 1</a>
+        <div class="dropdown5">Application<button><i class='fas fa-angle-down'></i></button>
+          <a href="#" class="first-anchor">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </div>
         
-        <div class="dropdown3">Work Information<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
-          <a href="#" style="margin-top: 0.7rem;">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-        
-        <div class="dropdown4">Documents<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
-          <a href="#" style="margin-top: 0.7rem;">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-        
-        <div class="dropdown5">Application<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
-          <a href="#" style="margin-top: 0.7rem;">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-        
-        <div class="dropdown6">Offers<button  style="float: right;"><i class='fas fa-angle-down' style="float: right;"></i></button>
-          <a href="#" style="margin-top: 0.7rem;">Link 1</a>
+        <div class="dropdown6">Offers<button><i class='fas fa-angle-down'></i></button>
+          <a href="#" class="first-anchor">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </div>

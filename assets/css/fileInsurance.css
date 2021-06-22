@@ -10,6 +10,10 @@ margin:2rem auto;
 transition: height 1s, width 1s;
 }
 
+.h3{
+    margin-top:5rem; margin-bottom: 3rem; color: white;
+}
+
 #Term-Plan{
     display: none;
 }
