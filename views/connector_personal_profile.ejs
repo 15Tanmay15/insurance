@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/home.css">
     <title>Profile</title>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-</head>
+  </head>
 
 <body>
 
@@ -71,9 +71,7 @@
               </section>
               
             </header>
-            
-            <!-- <h1>Hi <%= locals.user.first_name %></h1> 
-              <h3><%= locals.user.phone %></h3> -->
+
     <div class="minibar" style="display: flex;">
       <ul class="list">
         <li><button type="button"  ><a class="home" style="text-decoration: none; color: black; font-weight: bold;" href="/connector/sign-out">HOME <i class='fas fa-angle-right'></i></a></button></li>
@@ -83,7 +81,6 @@
           <a href="/connector/file-insurance" style="text-decoration: none; color: white;">File Insurance</a>
       </button>
     </div>
-    
     <center><div class="image">
       <img src="/images/car.jpeg">
       <h1 class="name"><%= locals.user.first_name[0].toUpperCase()  %><%= locals.user.first_name.slice(1,)  %> <%= locals.user.last_name[0].toUpperCase() %><%= locals.user.last_name.slice(1,) %></h1>
