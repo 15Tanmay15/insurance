@@ -1,6 +1,7 @@
 body{
     /* background: rgb(33, 33, 33); */
-    background-color: rgb(21,33,55);
+    background-color: rgb(21,33,55) !important;
+
 }
 
 #carouselExampleCaptions{
@@ -112,7 +113,7 @@ input{
 
 #first3{
     margin-left: 3.5rem;
-    margin-top: 4rem;
+    margin-top: 5rem;
     transition: margin-top 1s;
 }
 
@@ -140,6 +141,15 @@ input{
     margin-top: 1.5rem;
 }
 
+#child1{
+    margin-left: 4.5rem;
+    width: 13rem;
+}
+
+#child2{
+    margin-left: 4rem;
+    width: 13rem;
+}
 
 @media screen and (max-width:900px) {
     #carouselExampleCaptions{
@@ -163,7 +173,7 @@ input{
     }
     
     #first3{
-        margin-top: 3.5rem;
+        margin-top: 5rem;
     }
 
     .t-head{
@@ -173,6 +183,16 @@ input{
 }
 
 @media screen and (max-width:600px) {
+
+    #child1{
+        margin-left: 1rem;
+        width: 90%;
+    }
+
+    #child2{
+        margin-left: 1rem;
+        width: 90%;
+    }
 
     #carouselExampleCaptions{
         height: 90%;

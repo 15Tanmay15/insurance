@@ -51,6 +51,7 @@ body{
     color:rgb(0, 112, 110);
     /* color: white; */
     color: black;
+    font-weight: bold;
     margin-top: 8%;
     margin-bottom: -2%;
     transition: height 1s,margin-top 1s;
@@ -155,6 +156,7 @@ body{
     color:rgb(0, 112, 110);
     color: white;
     font-size: 40px;
+    font-weight: bold;
     transition: font-size 1s;
 }
 
@@ -249,7 +251,7 @@ body{
     
     .heading{
         font-size: 30px;
-        margin-top: 8%;
+        margin-top: 3%;
         margin-left: auto;
         margin-right: auto;
     }

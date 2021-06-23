@@ -93,38 +93,24 @@
     <div class="details">
 
         <div class="dropdown2">Contact Information<button><i class='fas fa-angle-down'></i></button>
-          <ul>
-            <li>
-              Phone: <%= locals.user.phone %>
-            </li>
-            <li>
-              Email: <%= locals.user.email %>
-            </li>
-          </ul>
+              <a class="first-anchor">Phone: <%= locals.user.phone %></a>
+              <a>Email: <%= locals.user.email %></a>
         </div>
         
         <div class="dropdown3">Work Information<button><i class='fas fa-angle-down'></i></button>
-          <ul>
-            <li>
-              Number of insured: <%= locals.user.insurers.length %>
-            </li>
-            <li>
-              Name of Insured:-
-            </li>
+              <a class="first-anchor">Number of insured: <%= locals.user.insurers.length %></a>
+              <a>Name of Insured:-</a>
               <% for(let i=0; i<insurers.length; i++){ %>
                 <% for(let j=0; j<insurers[i].insurers.length; j++){%>
                   <% console.log(JSON.stringify(locals.user._id)) %>
                   <% console.log(JSON.stringify(insurers[i].insurers[j].connector)) %>
-                  <li>
+                  <a>
                       <% if(JSON.stringify(locals.user._id) == JSON.stringify(insurers[i].insurers[j].connector)){ %>
                         <%= insurers[i].insurers[j].nameOfInsured %>
                       <% } %>
-
-                  </li>
+                      </a>
                 <% } %>
             <% } %>
-          </ul>
-
         </div>
         
         <div class="dropdown4">Documents<button><i class='fas fa-angle-down'></i></button>

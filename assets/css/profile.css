@@ -115,9 +115,9 @@ div button{
 .details a{
     text-decoration: none;
     color: black;
-    font-size: large;
+    font-size: 17px;
     display: none;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
     margin-top: 0.3rem;
 }
 
@@ -130,17 +130,19 @@ div button{
     height: 10rem;
 }
 
-.dropdown1:hover a{
-    display: block;
-    animation: animat 1s;
+.details .dropdown2:hover{
+    height: 8rem;
 }
-
 
 .dropdown2:hover a{
     display: block;
     animation: animat 1s;
 }
 
+.dropdown2:hover li{
+    display: block;
+    animation: animat 1s;
+}
 
 .dropdown3:hover a{
     display: block;
@@ -218,6 +220,10 @@ div button{
         margin-bottom: 1.3rem;
         height: 3.4rem;
         transition: height 1s;
+    }
+
+    .details a{
+        margin-top: 0.6rem;
     }
     .name-css{
         font-size: medium;
