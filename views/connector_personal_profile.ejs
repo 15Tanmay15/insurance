@@ -100,10 +100,8 @@
         <div class="dropdown3">Work Information<button><i class='fas fa-angle-down'></i></button>
               <a class="first-anchor">Number of insured: <%= locals.user.insurers.length %></a>
               <a>Name of Insured:-</a>
-              <% for(let i=0; i<insurers.length; i++){ %>
-                <% for(let j=0; j<insurers[i].insurers.length; j++){%>
-                  <% console.log(JSON.stringify(locals.user._id)) %>
-                  <% console.log(JSON.stringify(insurers[i].insurers[j].connector)) %>
+              <% for(let i=0; i< insurers.length; i++){ %>
+                <% for(let j=0; j<locals.insurers[i].insurers.length; j++){%>
                   <a>
                       <% if(JSON.stringify(locals.user._id) == JSON.stringify(insurers[i].insurers[j].connector)){ %>
                         <%= insurers[i].insurers[j].nameOfInsured %>

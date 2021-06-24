@@ -3,7 +3,21 @@ const ConnectorData = require('../models/connector_personal_data');
 const signUpMailer = require('../mailers/signup_mailer');
 
 module.exports.enterBankDetails = (req, res) => {
-    res.render('connector_personal_bankDetails');
+    if(req.isAuthenticated){
+        ConnectorBankDetails.findOne({connector: req.user._id}, (err, user) =>{
+            if(err){
+                console.log('error in opening page');
+                return;
+            }
+
+            if(user){
+                res.redirect('/connector/profile')
+            }
+
+            res.render('connector_personal_bankDetails');
+        })
+    }
+
 }
 
 module.exports.create = (req, res) => {
@@ -26,7 +40,7 @@ module.exports.create = (req, res) => {
                 signUpMailer.newAccount(user)
         })
 
-        return res.render('connector_personal_profile')
+        return res.redirect('/connector/profile')
     }
     )
 }
