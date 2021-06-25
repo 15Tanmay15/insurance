@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+    <link rel="stylesheet" href="css/EMI-calculator.css">
+</head>
+<body>
+    <div class="whole">
+        <div class="col-one">
+         <form action="/" method="POST">
+            <input class="simple" id="p1" name="principle" type="number" onchange="frominput1()" placeholder="Loan amount in lakhs">
+            <input id="p2" class="slider" type="range" min="1000000" max="10000000" step="100000" onchange="slider1()">
+                <center><div class="one">
+                    <span class="span1">|</span>
+                    <span class="span1">|</span>
+                    <span class="span1">|</span>
+                    <span class="span1">|</span>
+                    <span class="span1">|</span>
+                    <span class="span1">|</span>
+                    <span class="span1">|</span>
+                    <span class="span1">|</span>
+                    <span class="span1">|</span>
+                    <span class="span1">|</span>
+                    </div>
+                <div class="two">
+                    <span>10</span>
+                    <span>20</span>
+                    <span>30</span>
+                    <span>40</span>
+                    <span>50</span>
+                    <span>60</span>
+                    <span>70</span>
+                    <span>80</span>
+                    <span>90</span>
+                    <span>100</span>
+                </div></center>
+                <input class="simple" id="r1" name="rate" type="number" step="0.01" onchange="frominput2()" placeholder="Interest rate">
+                <input id="r2" class="slider" type="range" min="5" max="20" step="1.25" onchange="slider2()">
+                <center><div class="one2">
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                    </div>
+                <div class="two2">
+                    <span id="first">5.0</span>
+                    <span>7.5</span>
+                    <span>10.0</span>
+                    <span>12.5</span>
+                    <span>15.0</span>
+                    <span>17.5</span>
+                    <span>20.0</span>
+                </div></center>
+                <input class="simple" id="m1" name="month" type="number" step="" onchange="frominput3()" placeholder="Loan Tenuare in months">
+                <input id='m2' class="slider" type="range" min="0" max="360" step="5" onchange="slider3()">
+                <center><div class="one3">
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                    </div>
+                <div class="two3">
+                    <span id="first3">0</span>
+                    <span>60</span>
+                    <span>120</span>
+                    <span id="fifth">180</span>
+                    <span>240</span>
+                    <span>300</span>
+                    <span>360</span>
+                </div></center>
+                <center><h2 id="head" style="color: white;"></h2></center>
+            </form>
+        </div>
+        <center><div class="col-two">
+            <div id="piechart" style="margin-left: 0;"></div>
+        </div>
+        </center>
+    </div>
+    
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="/js/EMI-calculator.js"></script>
+
+</body>
+</html>

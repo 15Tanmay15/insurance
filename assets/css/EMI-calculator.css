@@ -1,0 +1,356 @@
+input{
+    display: block;
+    margin: 0 auto;
+    /* height: 3rem; */
+    padding: 0.8rem;
+    width: 80%;
+    max-width: 35rem;
+    margin-top: 1.2rem;
+    border-radius: 0.3rem;
+    outline: none;
+    font-size: x-large;
+    background: rgb(60,60,60);
+    border: none;
+    color: white;
+    text-align: center;
+    transition: max-width 1s,width 1s;
+}
+
+.simple{
+    width: 85%;
+    max-width: 35rem;
+    margin-bottom: 1.3rem;
+    margin-top: 5rem;
+    transition: margin-top 1s;
+}
+
+.slider{
+    margin-top: -1.5rem;
+    margin-bottom: 0%;
+}
+
+#p1{
+    margin-top: 3rem;
+}
+
+body{
+    background: rgb(23,23,23);
+}
+
+button{
+    margin-top: 1.7rem;
+    padding: 1rem;
+    padding-block: 0.7rem;
+    border-radius: 0.3rem;
+    font-size: 20px;
+    background-color: teal;
+}
+
+.one{
+    margin-top: -1rem;
+    margin-left: 3.5rem;
+    transition: margin-top 1s,margin-left 1s;
+}
+.two{
+    margin-top: -0.3rem;
+    margin-left:3.2rem;
+    transition: margin-left 1s;
+}
+
+.one span{
+    color: white;
+    margin: 2rem auto;
+    margin-right: 3.4rem;
+    font-size: 10px;
+    transition: margin-right 1s;
+}
+
+.two span{
+    color: white;
+    margin: 1 auto;
+    margin-right: 2.9rem;
+    font-size: 10px;
+    transition: margin-right 1s;
+}
+
+.one2{
+    margin-top: -1rem;
+    margin-left: 5.4rem;
+    transition: margin-left 1s;
+}
+.two2{
+    margin-top: -0.3rem;
+    margin-left:4.8rem;
+    transition: margin-left 1s;
+}
+
+.one2 span{
+    color: white;
+    margin: 0 auto;
+    margin-right: 5.3rem;
+    font-size: 10px;
+    transition: margin-right 1s;
+}
+
+.two2 span{
+    color: white;
+    margin: -0.2rem auto;
+    margin-right: 4.4rem;
+    font-size: 10px;
+    transition: margin-right 1s;
+}
+
+.two2 #first{
+    margin-right: 4.7rem;
+    transition: margin-right 1s;
+}
+
+.one3{
+    margin-top: -1rem;
+    margin-left: 5.4rem;
+    transition: margin-left 1s;
+}
+.two3{
+    margin-top: -0.3rem;
+    margin-left:5.3rem;
+    transition: margin-left 1s;
+}
+
+.one3 span{
+    color: white;
+    margin: 0 auto;
+    margin-right: 5.3rem;
+    font-size: 10px;
+    transition: margin-right 1s;
+}
+
+.two3 span{
+    color: white;
+    margin: -0.2rem auto;
+    margin-right: 4.6rem;
+    font-size: 10px;
+    transition: margin-right 1s;
+}
+
+#piechart{
+    color: white;
+}
+
+#fifth{
+    margin-right: 4.4rem;
+    transition: margin-right 1s;
+}
+
+#first3{
+    margin-right: 4.9rem;
+    transition: margin-right 1s;
+}
+
+#head{
+    margin-top: 3rem;
+}
+
+.whole{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.col-two{
+    background: transparent;
+    padding: 5rem;
+    margin-top: 1rem;
+    /* margin-left: 5%; */
+    transition: max-width 1s,margin-left 1s;
+}
+
+.col-one{
+    border-radius: 0.4rem;
+    padding-top: 1%;
+    margin-top: 3rem;
+    padding-bottom: 1%;
+    margin-left: 5%;
+    background: gray;
+}
+
+
+
+@media screen and (max-width:1250px) {
+    .whole{
+        margin-top: 5rem;
+        align-items: center;
+        justify-content: center;
+        display: block;
+    }
+    
+    .col-one{
+        width: 90%;
+        max-width: 57rem;
+        margin: 4rem auto;
+    }
+    
+    .col-two{
+        margin-left: 0;
+        margin:1rem auto;
+    }
+}
+
+@media screen and (max-width:833px) {
+    
+    .col-one{
+        margin: 0 auto;
+    }
+    
+    .simple{
+        width: 80%;
+        max-width: 26rem;
+        margin-top: 5rem;
+        transition: margin-top 1s;
+    }
+    input{
+        width: 85%;
+        max-width: 25rem;
+    }
+    
+    .one{
+        margin-top: -1.2rem;
+        margin-left: 2.65rem;
+    }
+    .two{
+        margin-left: 2.3rem;
+    }
+    
+    .one span{
+        margin-right: 2.3rem;
+    }
+    
+    .two span{
+        margin-right: 1.8rem;
+    }
+    
+    .one2{
+        margin-top: -1rem;
+        margin-left: 4rem;
+    }
+    .two2{
+        margin-top: 0;
+        margin-left:3.6rem;
+    }
+    
+    .one2 span{
+        margin-right: 3.65rem;
+    }
+    
+    .two2 span{
+        margin-right: 2.8rem;
+    }
+    
+    .two2 #first{
+        margin-right: 2.9rem;
+    }
+    
+    .one3{
+        margin-left: 3.7rem;
+    }
+    
+    .two3{
+        margin-left:3.5rem;
+    }
+    
+    .one3 span{
+        margin-right: 3.66rem;
+    }
+    
+    .two3 span{
+        margin-right: 3rem;
+    }
+    
+    #first3{
+        margin-right: 3.3rem;
+    }
+    
+    #fifth{
+        margin-right: 2.6rem;
+    }
+    
+    .simple{
+        margin-top: 3rem;
+    }
+    
+    .col-one{
+        max-width: 32rem;
+    }
+    
+    .col-two{
+        margin-left: 0;
+        margin:1rem auto;
+    }
+    
+}
+
+@media screen and (max-width:610px) {
+    
+    #p1{
+        margin-top: 0;
+    }
+    
+    .simple{
+        width: 80%;
+        margin-top: 4rem;
+    }
+    
+    .slider{
+        display: none;
+    }
+    
+    .one span{
+        display: none;
+    }
+    
+    .two span{
+        display: none;
+    }
+    
+    .one2 span{
+        display: none;
+    }
+    
+    .two2 span{
+        display: none;
+    }
+    
+    .one3 span{
+        display: none;
+    }
+    
+    .two3 span{
+        display: none;
+    }
+    
+    input{
+        text-align: left;
+        padding-left:2rem;
+        height: 2.2rem;
+        font-size: 24px;
+    }
+    
+    .simple{
+        margin: 3.3rem auto;
+    }
+
+    .whole{
+        margin: 0 auto;
+    }
+    
+    .col-one{
+        width: 90%;
+        padding-top: 3.5rem;
+        padding-bottom: 2rem;
+        margin: 0rem auto;
+    }
+    
+    .col-two{
+        margin-left: 0;
+        margin:1rem auto;
+    }
+}
