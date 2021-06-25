@@ -91,43 +91,42 @@
     </div></center>
     
     <div class="details">
+      
+      <div class="dropdown3">Name<button><i class='fas fa-angle-down'></i></button>
+            <a class="first-anchor">Number of insured: <%= locals.user.insurers.length %></a>
+            <% for(let i=0; i< insurers.length; i++){ %>
+              <% for(let j=0; j<locals.insurers[i].insurers.length; j++){%>
+                
+                    <% if(JSON.stringify(locals.user._id) == JSON.stringify(insurers[i].insurers[j].connector)){ %>
+                      <a>Name of Insured:-<%= insurers[i].insurers[j].nameOfInsured %></a>
+                    <% } %>
+                    </a>
+              <% } %>
+          <% } %>
+      </div>
 
         <div class="dropdown2">Contact Information<button><i class='fas fa-angle-down'></i></button>
               <a class="first-anchor">Phone: <%= locals.user.phone %></a>
               <a>Email: <%= locals.user.email %></a>
         </div>
         
-        <div class="dropdown3">Work Information<button><i class='fas fa-angle-down'></i></button>
-              <a class="first-anchor">Number of insured: <%= locals.user.insurers.length %></a>
-              <a>Name of Insured:-</a>
-              <% for(let i=0; i< insurers.length; i++){ %>
-                <% for(let j=0; j<locals.insurers[i].insurers.length; j++){%>
-                  <a>
-                      <% if(JSON.stringify(locals.user._id) == JSON.stringify(insurers[i].insurers[j].connector)){ %>
-                        <%= insurers[i].insurers[j].nameOfInsured %>
-                      <% } %>
-                      </a>
-                <% } %>
-            <% } %>
-        </div>
-        
-        <div class="dropdown4">Documents<button><i class='fas fa-angle-down'></i></button>
+        <div class="dropdown4">Insurance Done<button><i class='fas fa-angle-down'></i></button>
           <a href="#" class="first-anchor">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </div>
         
-        <div class="dropdown5">Application<button><i class='fas fa-angle-down'></i></button>
+        <div class="dropdown5">Payment Log<button><i class='fas fa-angle-down'></i></button>
           <a href="#" class="first-anchor">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </div>
         
-        <div class="dropdown6">Offers<button><i class='fas fa-angle-down'></i></button>
+        <!-- <div class="dropdown6">Offers<button><i class='fas fa-angle-down'></i></button>
           <a href="#" class="first-anchor">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
-        </div>
+        </div> -->
       
     </div>
 

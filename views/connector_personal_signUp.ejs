@@ -11,15 +11,30 @@
 </head>
 
 <style>
+
   body{
     /* background-image:linear-gradient(to right, #E1BEE7, #B2EBF2);  } */
     /* background: url("/images/untitled.png") no-repeat center center; */
     /* background: url("/images/login.jpg") no-repeat center center; */
-    background: white;
+    background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67));
     color: black;
     font-family: monospace;
+    height: 100%;
+    margin: 0;
   }
   
+  /* body::before{
+    position: absolute;
+    background: url("/images/login.jpg") no-repeat center center/cover;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 8;
+  } */
+
   input{
     color: black;
   }
@@ -27,6 +42,10 @@
   #emailHelp{
     color: black;
     margin-left: 1rem;
+  }
+
+  label{
+    font-weight: bold;
   }
 
 </style>
@@ -89,6 +108,7 @@
       </nav>
     </section> 
   </header>
+  <div class="bg"></div>
   <div class="one">    
           <form class="col-sm-5" style="margin-left: auto; margin-right: auto; margin-top: 4rem;" action="/connector/create" method="POST">
             <div class="mb-3">
