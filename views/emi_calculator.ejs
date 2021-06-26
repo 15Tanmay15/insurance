@@ -3,9 +3,14 @@
 <html >
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/EMI-calculator.css">
 </head>
 <body>
+    
     <div class="whole">
         <div class="col-one">
          <form action="/" method="POST">
@@ -75,18 +80,26 @@
                     <span>300</span>
                     <span>360</span>
                 </div></center>
-                <center><h2 id="head" style="color: white;"></h2></center>
             </form>
         </div>
         <center><div class="col-two">
             <div id="piechart" style="margin-left: 0;"></div>
+            <div class="values">
+                <hr>
+                <h3 id="interest"></h3>
+                <hr>
+                <h3 id="principle"></h3>
+                <hr>
+                <h3 id="total"></h3>
+            </div>
         </div>
         </center>
     </div>
-    
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="/js/EMI-calculator.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load('visualization', '1.0', {'packages':['corechart']});</script>
 
 </body>
 </html>
