@@ -4,30 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/home.css">
     <title>Document</title>
 </head>
 
 <style>
-    body{
-    /* background-image:linear-gradient(to right,); */
-    /* background-image:linear-gradient(to right, #E1BEE7, #B2EBF2); */
-    background: white;
+  
+  body{
+    background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67));
     color: black;
-  font-family: monospace;
+    font-family: 'benne',sans-serif;
+    height: 100%;
+    margin: 0;
+    padding-bottom: 4rem;
+}
+
+
+header{
+    font-family: sans-serif!important;
+}
+
+
+label{
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 28px;
+}
+
+input{
+    width: 70%;
+    color: black;
+    height: 3rem;
+    font-family: sans-serif;
+    max-width: 30rem;
+  }
+  
+  form{
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 70%;
+    max-width: 31rem;
+}
+
+form div{
+  margin: 0 auto;
+}
+
+.submit{
+    margin-top: 2rem;
+    padding: 0.4rem 1rem;
+    padding-top: 0.7rem;
+    font-size: 20px;
+}
+
+@media screen and (max-width:900px) {
+  input{
+    width: 90%;
+  }
+  form{
+    width: 85%;
   }
 
-  /* label{
-    font-weight: bold;
-  } */
+  .submit{
+        font-size: 18px;
+        padding-block: 0.3rem;
+        padding-top: 0.55rem;
+    }
+}
+
 </style>
 
 <body>
 
   <header>
-
     <section id="Navbar">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -85,7 +138,7 @@
 
 </header>
 
-  <form class="col-sm-5" style="margin-left: auto; margin-right: auto; margin-top: 4rem;" action="/connector/create-session" method="POST">
+  <form action="/connector/create-session" method="POST">
 <!-- 
     <div>
       <label for="Email">Email</label>
@@ -109,7 +162,7 @@
       <label for="exampleInputPassword1" class="form-label">Password</label>
       <input type="password" name="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
     </div>
-    <button type="submit" class="btn btn-primary">Sign In</button>
+    <center><button type="submit" class="submit btn btn-primary">Sign In</button></center>
   </form>
 
   

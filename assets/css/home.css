@@ -17,10 +17,11 @@ body{
 }
 
 .sec2{
-    margin-top: 0;;
-    padding-top: 5%;
-    padding-bottom: 6%;
+    margin-top: 0;
+    padding-top: 4%;
+    padding-bottom: 1%;
     background-color: black;
+    transition: padding-top 0.5s;
 }
 
 .login{
@@ -79,6 +80,7 @@ body{
     height: 75%;
     margin-left: 10%;
     border-radius: 1rem;
+    box-shadow: 0px 0px 20px black;
     /* transition: width 1s; */
 }
 
@@ -160,6 +162,7 @@ body{
 } */
 
 .head{
+    margin-top: 0;
     margin-bottom: 4%;
     color:rgb(0, 112, 110);
     color: white;
@@ -245,6 +248,38 @@ body{
     font-size: 25px;
     float: right;
     color: white;
+}
+
+
+.cards{
+    margin: 4rem auto;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 70rem;
+}
+
+.text-box{
+    margin-top: 1.5rem;
+    color: white;
+}
+
+.card{
+    align-items: center;
+    padding-top: 2rem;
+    background: transparent;
+    height: 10rem;
+    width: 10rem;
+    /* border: solid white; */
+    /* box-shadow: 0px 0px 20px #2D8DBD; */
+    box-shadow: 0px 0px 15px white;
+}
+
+.divs{
+    display: block; 
+    margin: 0 auto; 
+    text-align: center;
 }
 
 @media (min-width: 992px){
@@ -342,6 +377,15 @@ body{
         font-size: 20px;
         color: white;
     }
+
+    .cards{
+        width:95%;
+    }
+
+    .sec2{
+        padding-top: 6%;
+    }
+
 }
 
 @media screen and (max-width:700px) {
@@ -395,6 +439,7 @@ body{
 
     .sec2{
         margin-top: 0;
+        padding-top: 0;
         padding-bottom: 0;
         background: white;
     }
@@ -423,6 +468,10 @@ body{
         padding-top: 4rem;
         padding-bottom: 4rem;
         background: #000;
+    }
+    
+    .cards{
+        display: none;
     }
 }
 

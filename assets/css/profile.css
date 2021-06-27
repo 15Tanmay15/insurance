@@ -85,7 +85,7 @@ img{
 }
 
 .details div .first-anchor{
-    margin-top: 0.7rem;
+    margin-top: 0.5rem;
 }
 
 .details div button li
@@ -131,6 +131,10 @@ div button{
 }
 
 .details .dropdown2:hover{
+    height: 8rem;
+}
+
+.details .dropdown3:hover{
     height: 8rem;
 }
 
