@@ -1,0 +1,122 @@
+body{
+    /* background-image:linear-gradient(to right, #E1BEE7, #B2EBF2);  } */
+    /* background: url("/images/untitled.png") no-repeat center center; */
+    /* background: url("/images/login.jpg") no-repeat center center; */
+    /* background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67)); */
+    background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67));
+    color: black;
+    font-family: 'benne',sans-serif;
+    height: 100%;
+    margin: 0;
+    padding-bottom: 4rem;
+}
+
+  /* body::before{
+    position: absolute;
+    background: url("/images/login.jpg") ;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 8;
+  } */
+
+header{
+    font-family: sans-serif!important;
+}
+
+input{
+    color: black;
+    height: 3rem;
+    font-family: sans-serif;
+}
+
+#emailHelp{
+    color: black;
+    margin-left: 1rem;
+}
+
+.label{
+    margin-top: 2.7rem;
+}
+
+label{
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.col-one{
+    margin-left: auto ;
+    margin-right: auto ;
+    width: 35%;
+}
+
+.col-two{
+    margin-left: auto -10rem;
+    margin-right: auto ;
+    width: 35%;
+}
+
+.main{
+    display: flex;
+}
+
+form{
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.submit{
+    margin-top: 3rem;
+    padding: 0.4rem 1rem;
+    padding-top: 0.7rem;
+    font-size: 20px;
+}
+
+@media screen and (max-width:1000px) {
+    form{
+        margin-top: 2rem;
+        margin-left: auto; 
+        margin-right: auto;
+        width: 80%;
+    }
+    
+    .main{
+        margin-left: auto; 
+        margin-right: auto;
+        display: block;
+    }
+
+    input{
+        margin-left: auto; 
+        margin-right: auto;
+        max-width: 30rem;
+    }
+
+    .col-one{
+        width: 100%;
+    }
+
+    .col-two{
+        width: 100%;
+    }
+
+    .label{
+        margin-top: 1.2rem;
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 30rem;
+    }
+
+    .submit{
+        margin-top: 2rem;
+        font-size: 18px;
+        padding-block: 0.3rem;
+        padding-top: 0.55rem;
+    }
+}
