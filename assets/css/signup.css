@@ -3,12 +3,18 @@ body{
     /* background: url("/images/untitled.png") no-repeat center center; */
     /* background: url("/images/login.jpg") no-repeat center center; */
     /* background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67)); */
-    background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67));
-    color: black;
-    font-family: 'benne',sans-serif;
+    /* background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67));
+    color: black; */
+    background-color: black;
+    color: white;
+    font-family: 'Balsamiq Sans',sans-serif;
     height: 100%;
     margin: 0;
     padding-bottom: 4rem;
+}
+
+#emailHelp{
+    display: none;
 }
 
   /* body::before{
@@ -45,6 +51,7 @@ input{
 label{
     font-weight: bold;
     font-size: 28px;
+    transition: font-size 1s;
 }
 
 .col-one{
@@ -79,7 +86,7 @@ form{
 
 @media screen and (max-width:1000px) {
     form{
-        margin-top: 2rem;
+        margin-top: 4rem;
         margin-left: auto; 
         margin-right: auto;
         width: 80%;
@@ -111,6 +118,10 @@ form{
         margin-left: auto;
         margin-right: auto;
         max-width: 30rem;
+    }
+
+    label{
+        font-size: 24px;
     }
 
     .submit{

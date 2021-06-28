@@ -1,0 +1,66 @@
+body{
+    /* background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67)); */
+    background-color: black;
+    color: white;
+    font-family: 'Balsamiq Sans',sans-serif;
+    height: 100%;
+    margin: 0;
+    padding-bottom: 4rem;
+}
+
+header{
+    font-family: sans-serif!important;
+}
+
+
+label{
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 28px;
+    transition: font-size 1s;
+}
+
+input{
+    width: 70%;
+    color: black;
+    height: 3rem;
+    font-family: sans-serif;
+    max-width: 30rem;
+  }
+  
+  form{
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 70%;
+    max-width: 31rem;
+}
+
+form div{
+  margin: 0 auto;
+}
+
+.submit{
+    margin-top: 2rem;
+    padding: 0.4rem 1rem;
+    padding-top: 0.7rem;
+    font-size: 20px;
+}
+
+@media screen and (max-width:900px) {
+  input{
+    width: 90%;
+  }
+  form{
+    width: 85%;
+  }
+
+  .submit{
+        font-size: 18px;
+        padding-block: 0.3rem;
+        padding-top: 0.55rem;
+  }
+
+  label{
+      font-size: 24px;
+  }
+}
