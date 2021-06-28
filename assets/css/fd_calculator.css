@@ -1,0 +1,167 @@
+.main{
+    display: flex;
+}
+
+.col-one{
+    margin: 5rem auto;
+    width: 45%;
+}
+
+.col-two{
+    margin: 0 auto;
+    width: 45%;
+}
+
+.span1
+{
+    display: flex;
+    justify-content: space-between;
+    width: 88.5%;
+    margin: -0.5rem auto;
+    max-width: 39.3rem;
+}
+
+.span2
+{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: -1.2rem auto;
+    max-width: 40.3rem;
+    margin-left: auto + 1rem;
+}
+
+.span1 p{
+    font-size: 10px;
+}
+
+.span2 p{
+    font-size: 10px;
+}
+
+
+.contain{
+    display: flex;
+    justify-content:space-between;
+    margin: 3rem auto;
+    margin-bottom: 0.3rem;
+    max-width: 90%;
+}
+
+label{
+    padding-top: 0.2rem;
+    font-family: 'benne',sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.bar{
+    height: 2.5rem;
+    display: flex;
+    background: white;
+    padding-right: 1rem;
+    border:solid black;
+    border-radius: 0.2rem;
+}
+
+.icon{
+    border-left: solid black;
+    padding-block: 0.5rem;
+    padding-left: 1rem;
+}
+
+.input{
+    border: none;
+    outline: none;
+}
+
+.slider{
+    /* margin-top: -1rem; */
+    width: 90%;
+}
+
+@media screen and (max-width:1000px) {
+    .main{
+        display: block;
+    }
+
+    .col-one{
+        margin: 4rem auto;
+        width: 85%;
+    }
+
+    .bar{
+        height: 2.4rem;
+        width: 10rem;
+    }
+
+    .input{
+        width: 6.5rem;
+    }
+
+    .slider{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 40rem;
+    }
+
+    .col-two{
+        margin: 5rem auto;
+        width: 90%;
+    }
+
+    .span1
+    {
+        width: 97%;
+        margin: -0.5rem auto;
+        max-width: 39.3rem;
+    }
+    
+    .span2
+    {
+        width: 100%;
+        margin: -1.2rem auto;
+        max-width: 40.3rem;
+    }
+
+    .contain{
+        margin-top: 2.5rem;
+        margin-bottom: 0.5rem;
+        max-width: 40rem;
+    }
+
+    label{
+        font-size: 25px;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .col-one{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contain{
+        margin-top: 1.5rem;
+        display: block;
+    }
+
+    .input{
+        width: 100%;
+    }
+
+    .slider{
+        margin-right:8%;
+    }
+
+    .bar{
+        height: 2.2rem;
+        width: 100%;
+        max-width: 32rem;
+    }
+
+    label{
+        font-size: 20px;
+    }
+}

@@ -216,12 +216,23 @@ body{
 .big-btn button:hover{
     /* background-image: linear-gradient(to right,rgb(88,171,46), rgb(146, 213, 65)); */
     /* background: rgb(109,184,187); */
-    background: rgb(5,100,122);
+    /* background: rgb(5,100,122); */
+    background: rgb(158, 158, 158);
+    color: black;
+    /* background-image: linear-gradient(to right, rgb(21,33,55),rgb(21,33,55)); */
+}
+
+.big-btn button:hover h2{
+    /* background-image: linear-gradient(to right,rgb(88,171,46), rgb(146, 213, 65)); */
+    /* background: rgb(109,184,187); */
+    /* background: rgb(5,100,122); */
+    background: rgb(158, 158, 158);
+    color: black;
     /* background-image: linear-gradient(to right, rgb(21,33,55),rgb(21,33,55)); */
 }
 
 .big-btn button:hover .icon1{
-    color: white;
+    color: black;
 }
 
 .big-btn button h2{
@@ -262,18 +273,17 @@ body{
 
 .text-box{
     margin-top: 1.5rem;
-    color: white;
+    color: black;
 }
 
 .card{
     align-items: center;
     padding-top: 2rem;
-    background: transparent;
+    background: rgb(202, 200, 200);
     height: 10rem;
     width: 10rem;
     /* border: solid white; */
     /* box-shadow: 0px 0px 20px #2D8DBD; */
-    box-shadow: 0px 0px 15px white;
 }
 
 .divs{
