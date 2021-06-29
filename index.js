@@ -29,7 +29,7 @@ app.use(session({
     // TODO Change mongoUrl
     store: MongoStore.create(
         {
-        mongoUrl: 'mongodb://localhost:27017/insurance_db',
+        mongoUrl: 'mongodb+srv://ts2insurance:Tanmay%409590@cluster0.57suw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
         autoRemove: "disabled"
     },
     (err) => {
