@@ -16,16 +16,17 @@ header{
 label{
     font-weight: bold;
     margin-top: 1rem;
-    font-size: 28px;
+    font-size: 25px;
     transition: font-size 1s;
 }
 
 input{
     width: 70%;
     color: black;
-    height: 3rem;
+    height: 2.7rem;
     font-family: sans-serif;
     max-width: 30rem;
+    transition: width 1s,height 1s;
   }
   
   form{
@@ -42,13 +43,16 @@ form div{
 .submit{
     margin-top: 2rem;
     padding: 0.4rem 1rem;
-    padding-top: 0.7rem;
+    padding-top: 0.6rem;
     font-size: 20px;
+    transition: margin-top 1s,padding 1s,padding-top 1s, font-size 1s;
 }
 
 @media screen and (max-width:900px) {
   input{
+    height: 2.1rem;
     width: 90%;
+    transition: height 1s;
   }
   form{
     width: 85%;
@@ -57,10 +61,40 @@ form div{
   .submit{
         font-size: 18px;
         padding-block: 0.3rem;
-        padding-top: 0.55rem;
+        padding-top: 0.5rem;
   }
 
   label{
-      font-size: 24px;
+      font-size: 18px;
+  }
+
+  input,input::-webkit-input-placeholder {
+    font-size: 15px;
+}
+}
+
+@media screen and (max-width:450px) {
+  form{
+    margin-top: 5rem;
+  }
+  label{
+    font-size: 15px;
+    margin-top: 0rem;
+  }
+
+  input{
+    height: 2rem;
+  }
+
+  input,input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 3;
+  }
+  
+  .submit{
+    font-size: 15px;
+    margin-top: 1rem;
+    padding-block: 0.3rem;
+    padding-top: 0.4rem;
   }
 }

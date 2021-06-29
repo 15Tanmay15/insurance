@@ -1,18 +1,22 @@
 body{
     /* background: rgb(33, 33, 33); */
-    background-color: rgb(21,33,55) !important;
+    /* background-color: rgb(21,33,55) !important; */
+    background: rgb(201, 197, 197) !important;
 
 }
 
 #carouselExampleCaptions{
 height: 45%;
 width: 45%;
-margin:2rem auto;
+margin:0 auto;
 transition: height 1s, width 1s;
 }
 
 .h3{
-    margin-top:5rem; margin-bottom: 3rem; color: white;
+    margin-top:4rem; 
+    margin-bottom: 2rem; 
+    color: white;
+    font-weight: bold;
 }
 
 .health-label1{
@@ -34,22 +38,28 @@ transition: height 1s, width 1s;
 }
 
 #submit-btn{
+    color: silver;
+    background: rgb(48,50,69);
     visibility: hidden;
     display: none;
+    border: none;
     font-size: x-large;
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding:0.2rem 1rem 0.2rem 1rem;
     border-radius: 0.7rem;
-    transition: visibility 0.5s;
+    margin-bottom: 2rem;
+    transition: visibility 0.5s,font-size 1s;
 }
 
 .t-head{
+    white-space: nowrap;
     margin-left: 7%;
     position:absolute;
     margin-top:1.6rem;
     font-size: xx-large;
     color: white;
     transition: margin-left 1s;
+    font-weight: bold;
 }
 
 form label{
@@ -70,12 +80,18 @@ form label{
 }
 
 input{
-    /* background: rgb(43,43,43); */
+    background: rgb(48,50,69);
     /* color: rgb(221, 219, 219); */
-    color: black;
+    color: white;
     /* background: white; */
     outline: none;
+    
 }
+
+input::placeholder { 
+    color: rgb(179, 174, 174);
+    opacity: 1; 
+  }
 
 .plot{
     margin-top: 5rem;
@@ -84,12 +100,16 @@ input{
     /* background: rgb(33, 33, 33); */
     /* background: rgb(132,185,64); */
     /* background: rgb(73,100,46); */
-    background: rgb(120,195,57);
+    /* background: rgb(120,195,57); */
+    background: rgb(21,33,55) ;
+    /* background: rgb(124, 124, 124); */
+    /* background: rgb(33,33,33); */
+    /* background: white; */
     height: 15rem;
     width: 55%;
-    border-radius: 2.5rem;
+    border-radius: 2rem;
     transition: height 1s,width 1s;
-    box-shadow: 1px 1px 2px 2px rgba(255,255,255);
+    /* box-shadow: 1px 1px 2px 2px rgba(255,255,255); */
     max-width: 40rem;
 }
 
@@ -119,16 +139,17 @@ input{
 
 #part2{
     align-items: center;
-    background: rgb(120,195,57);
+    /* background: rgb(120,195,57); */
+    background: rgb(21,33,55) ;
+    /* background: silver; */
     justify-content: center;
     margin-left: auto;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-right: auto;
     border-radius: 2.5rem;
     height: 0rem;
     width: 62%;
     transition: height 1s,width 1s,visibility 0s,margin-right 1,margin-left 1;
-    box-shadow: 1px 1px 2px 2px rgba(255,255,255);
     max-width: 40rem;
 }
 
@@ -269,4 +290,9 @@ input{
         margin-top: 3rem; 
     }
 
+    #submit-btn{
+        padding-block: 0.3rem;
+        font-size: 20px;
+    }
 }
+
