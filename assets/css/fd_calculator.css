@@ -1,10 +1,25 @@
+body{
+    background:rgb(207, 207, 207);
+}
+
 .main{
     display: flex;
 }
 
 .col-one{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    border-radius: 0.3rem;
+    border: dashed rgb(71, 71, 71);
     margin: 5rem auto;
+    background: rgb(223, 223, 223);
     width: 45%;
+    /* outline-style: solid;
+    outline-color: rgb(192, 191, 191);
+    outline-width: 15px; */
+    box-shadow: 0 0 15px rgb(71, 71, 71) ;
 }
 
 .col-two{
@@ -12,11 +27,15 @@
     width: 45%;
 }
 
+.first1{
+    margin-left: 0.2rem;
+}
+
 .span1
 {
     display: flex;
     justify-content: space-between;
-    width: 88.5%;
+    width: 88.3%;
     margin: -0.5rem auto;
     max-width: 39.3rem;
 }
@@ -25,18 +44,23 @@
 {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 91%;
     margin: -1.2rem auto;
     max-width: 40.3rem;
     margin-left: auto + 1rem;
 }
 
+.hide{
+    visibility: visible;
+}
+
+
 .span1 p{
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .span2 p{
-    font-size: 10px;
+    font-size: 9px;
 }
 
 
@@ -58,7 +82,7 @@ label{
 .bar{
     height: 2.5rem;
     display: flex;
-    background: white;
+    background: rgb(223, 223, 223);
     padding-right: 1rem;
     border:solid black;
     border-radius: 0.2rem;
@@ -87,7 +111,7 @@ label{
 
     .col-one{
         margin: 4rem auto;
-        width: 85%;
+        width: 90%;
     }
 
     .bar{
@@ -114,14 +138,27 @@ label{
     {
         width: 97%;
         margin: -0.5rem auto;
-        max-width: 39.3rem;
+        max-width: 39rem;
     }
     
     .span2
     {
         width: 100%;
         margin: -1.2rem auto;
-        max-width: 40.3rem;
+        max-width: 40.5rem;
+    }
+
+    
+    .first1{
+        margin-left: 0.3rem;
+    }
+
+    .first2{
+        margin-left: 0.3rem;
+    }
+
+    .first3{
+        margin-left: 0.2rem;
     }
 
     .contain{
@@ -137,6 +174,9 @@ label{
 
 
 @media screen and (max-width:500px) {
+    .hide{
+        visibility: hidden;
+    }
     .col-one{
         margin-left: auto;
         margin-right: auto;
@@ -163,5 +203,31 @@ label{
 
     label{
         font-size: 20px;
+    }
+
+    .span1
+    {
+        width: 97%;
+        margin: -0.5rem auto;
+        max-width: 39rem;
+    }
+    
+    .span2
+    {
+        width: 101%;
+        margin: -1.2rem auto;
+        max-width: 40.5rem;
+    }
+
+    .first1{
+        margin-left: 0.1rem;
+    }
+
+    .first2{
+        margin-left: 0.1rem;
+    }
+
+    .first3{
+        margin-left: 0rem;
     }
 }
