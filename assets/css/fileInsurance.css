@@ -1,15 +1,17 @@
 body{
     /* background: rgb(33, 33, 33); */
     /* background-color: rgb(21,33,55) !important; */
-    background: rgb(201, 197, 197) !important;
-
+    /* background: rgb(201, 197, 197) !important; */
+    /* background: #227093 !important; */
+    /* background: #218c74 !important; */
+    background: #40739e!important;
 }
 
 #carouselExampleCaptions{
-height: 45%;
-width: 45%;
-margin:0 auto;
-transition: height 1s, width 1s;
+    height: 45%;
+    width: 45%;
+    margin:0 auto;
+    transition: height 1s, width 1s;
 }
 
 .h3{

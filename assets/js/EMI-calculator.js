@@ -32,7 +32,7 @@ function calculate()
                 ['Interest money',Number(principle)*Number(rate)*0.01 ],
                 ['Loan amount', Number(principle)]]);
 
-                var options = { pieStartAngle: 120,slices: {  0: {offset: 0.2,color:"rgb(54, 190, 54)"},1: {color:"#008080"}},is3D: true,animation:
+            var options = { pieStartAngle: 120,slices: {  0: {offset: 0.2,color:"rgb(54, 190, 54)"},1: {color:"#008080"}},is3D: true,animation:
            {
                startup: true,
                duration: 2000,
