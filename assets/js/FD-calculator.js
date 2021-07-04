@@ -1,25 +1,26 @@
-
 google.charts.load('current', { 'packages': ['bar'] });
 google.charts.setOnLoadCallback(drawChart);
-var x=0
+var x=0;
+var y=0;
 function drawChart() {
     principle = document.querySelector("#A1").value;
     rate = document.querySelector("#R1").value;
     month = document.querySelector("#P1").value;
     interest = (Number(principle) * Number(rate)) * 0.01* Math.floor(Number(month)/12);
-    console.log(principle)
     total = (Number(principle) / Number(month)) + interest;
     if (Number.isFinite(total)) 
     {
+        document.getElementById('amount1').innerText="Total : "+ Number(Number(principle)+Number(interest)) ;
+        document.getElementById('amount2').innerText="Deposit : "+ Number(principle);
+        document.getElementById('amount3').innerText="Profit : "+ Number(interest);
+        document.querySelector('#barchart_material').style.marginTop="0rem";
         var tot = Number(Number(interest) * Number(month)) + Number(principle);
         var data = google.visualization.arrayToDataTable([
-            ['Amount', '₹ Total', '₹ Fixed ', '₹ Interest'],
+            ['', '₹ Total', '₹ Fixed ', '₹ Interest'],
             ['Analysis', Number(principle)+Number(interest), Number(principle), Number(interest)],
         ]);
-
         var ytickmin=0;
-        var ytickmax=Number(principle)+Number(interest);
-
+        var ytickmax=Number(principle)+Number(interest)+(Number(principle)+Number(interest))*0.1;
         if(window.innerWidth>1000) {
             var options = {vAxis	: {
 						// title : "Marks Scored",
@@ -39,17 +40,17 @@ function drawChart() {
 							max : ytickmax 
 						}
 					},
-                // height: 500, width: window.innerWidth/2 -150,
-                height: 500, width: "100%",
+                // height: 450, width: window.innerWidth/2 -150,
+                height: 450, width: "100%",
                 chart: {
                     title: 'Fixed Deposit Calculator', animation: {
                         duration: 1000},
                 },
-                bars: 'vertical',
-                "backgroundColor": "transparent"
+                bars: 'vertical',legend: {position: 'top', textStyle: {fontSize: 14}},
+                "backgroundColor": "#daf0eb"
             };
         }
-        else if (window.innerWidth < 1000 & window.innerWidth > 607) {
+        else if (window.innerWidth < 1000 & window.innerWidth > 550) {
             var options = {vAxis	: {
 						// title : "Marks Scored",
 						// titleTextStyle : {
@@ -68,15 +69,16 @@ function drawChart() {
 							max : ytickmax 
 						}
 					},
-                height: 500, width: (window.innerWidth - 170),
+                height: 450, width: "100%",
                 chart: {
                     title: 'Fixed Deposit Calculator', animation: {
                         duration: 1000},
                 },
-                bars: 'vertical', "backgroundColor": "transparent"
+                bars: 'vertical',legend: {position: 'top', textStyle: {fontSize: 14}}, "backgroundColor": "#daf0eb"
             };
         }
-        else if (window.innerWidth < 607 & window.innerWidth > 400) {
+        else if (window.innerWidth < 550 & window.innerWidth > 400) {
+            document.querySelector('#barchart_material').style.marginTop="1rem";
             var options = {vAxis	: {
 						// title : "Marks Scored",
 						// titleTextStyle : {
@@ -100,7 +102,7 @@ function drawChart() {
                     title: 'Fixed Deposit Calculator', animation: {
                         duration: 1000},
                 },
-                bars: 'vertical', "backgroundColor": "transparent"
+                bars: 'vertical',legend: {position: 'top', textStyle: {fontSize: 14}}, "backgroundColor": "#daf0eb"
             };
         }
         else {
@@ -126,10 +128,9 @@ function drawChart() {
                 chart: {
                     title: 'Fixed Deposit Calculator', animation: {
                         duration: 1000},
-                }
-                ,
-                bars: 'vertical',
-                "backgroundColor": "transparent"
+                },
+                bars: 'vertical',legend: {position: 'top',textStyle: {fontSize: 14}},
+                "backgroundColor": "#daf0eb"
             };
         }
         // chart.draw(data, google.charts.Bar.convertOptions(options));
@@ -143,8 +144,8 @@ function drawChart() {
             var change1=(Number(principle)+Number(interest))*0.01;
             var change2=(Number(principle)*0.01);
             var change3=(Number(interest)*0.01);
-            // start the animation loop
             var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+            // start the animation loop
             var handler = setInterval(function(){
                 // values increment
                 percent += 2;
@@ -154,9 +155,15 @@ function drawChart() {
                 data.setValue(0, 3, percent*change3);
                 // update the pie
                 chart.draw(data, google.charts.Bar.convertOptions(options));
-                if (percent > 74)
-                // stop the loop
-                clearInterval(handler);
+                if (percent > 98)
+                {
+                    // stop the loop
+                    data.setValue(0, 1, (Number(principle)+Number(interest)));
+                    data.setValue(0, 2, 100*change2);
+                    data.setValue(0, 3, 100*change3);
+                    chart.draw(data, google.charts.Bar.convertOptions(options));
+                    clearInterval(handler);
+                }
             }, 0);
         }
         else{
@@ -164,7 +171,41 @@ function drawChart() {
             chart.draw(data, google.charts.Bar.convertOptions(options));
         }
     }
+    else{
+        var options = {vAxis	: {
+            minorGridlines : {
+                count : 19
+            },
+            gridlines : {
+                count : 20
+            }
+            ,viewWindow : {
+                min : 0,
+                max : 1000000 
+            }
+                },
+            height: 350, width: "100%",
+            chart: {
+                title: 'Fixed Deposit Calculator', animation: {
+                    duration: 1000},
+            },
+            bars: 'vertical',legend: {position: 'top',textStyle: {fontSize: 14}},
+            "backgroundColor": "#daf0eb"
+        };
+        var data = google.visualization.arrayToDataTable([
+            ['', '₹ Total', '₹ Fixed ', '₹ Interest'],
+            ['Analysis', 0,0,0],
+        ]);
+        document.querySelector('#barchart_material').style.marginTop="3rem";
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
 }
+
+window.onload = ()=>{
+    drawChart();
+}
+
 
 var check=0;
 window.onresize = () => {
