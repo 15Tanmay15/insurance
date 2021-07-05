@@ -1,15 +1,15 @@
-body,html {
-  background-color: #EBECF0!important;
+body, html {
+  background-color: #EBECF0;
 }
 
-body,form p, form input,form select,form textarea, form button {
-  font-family: 'Balsamiq Sans', sans-serif;
+body, p, input, select, textarea, button {
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: -0.2px;
   font-size: 16px;
 }
 
-form div, form p {
-  color: rgb(97, 96, 96);
+div, p {
+  color: #BABECC;
   text-shadow: 1px 1px 1px #FFF;
 }
 
@@ -24,23 +24,23 @@ form {
   text-align: center;
 }
 
-form button,form input {
+button, input {
   border: 0;
   outline: 0;
   font-size: 16px;
   border-radius: 320px;
-  padding: 14px;
+  padding: 16px;
   background-color: #EBECF0;
   text-shadow: 1px 1px 0 #FFF;
 }
 
-form label {
+label {
   display: block;
   margin-bottom: 24px;
   width: 100%;
 }
 
-form input {
+input {
   margin-right: 8px;
   -webkit-box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
           box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
@@ -54,12 +54,12 @@ form input {
   -webkit-appearance: none;
 }
 
-form input:focus {
+input:focus {
   -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
           box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
 
-form button {
+button {
   color: #61677C;
   font-weight: bold;
   -webkit-box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
@@ -70,21 +70,21 @@ form button {
   font-weight: 600;
 }
 
-form button:hover {
+button:hover {
   -webkit-box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
           box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
 }
 
-form button:active {
+button:active {
   -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
           box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
 
-form button .icon {
+button .icon {
   margin-right: 8px;
 }
 
-form button.unit {
+button.unit {
   border-radius: 8px;
   line-height: 0;
   width: 48px;
@@ -102,14 +102,32 @@ form button.unit {
   font-size: 19.2px;
 }
 
-form button.unit .icon {
+button.unit .icon {
   margin-right: 0;
 }
 
-form button.red {
+button.red {
   display: block;
   width: 100%;
   color: #AE1100;
 }
 
+.input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.input-group label {
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 /*# sourceMappingURL=signin.css.map */
