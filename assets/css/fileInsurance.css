@@ -4,7 +4,7 @@ body{
     /* background: rgb(201, 197, 197) !important; */
     /* background: #227093 !important; */
     /* background: #218c74 !important; */
-    background: #40739e!important;
+    background: #1a3246!important;
 }
 
 #carouselExampleCaptions{
@@ -40,8 +40,9 @@ body{
 }
 
 #submit-btn{
-    color: silver;
-    background: rgb(48,50,69);
+    color: rgb(65, 64, 64);
+    /* background: rgb(48,50,69); */
+    background: rgb(20, 175, 175);
     visibility: hidden;
     display: none;
     border: none;
@@ -55,13 +56,14 @@ body{
 
 .t-head{
     white-space: nowrap;
-    margin-left: 7%;
-    position:absolute;
-    margin-top:1.6rem;
+    /* position:absolute; */
+    /* margin-top:2.6rem; */
+    padding-top: 1.3rem;
     font-size: xx-large;
     color: white;
-    transition: margin-left 1s;
     font-weight: bold;
+    text-align: center;
+    width: 100%;
 }
 
 form label{
@@ -107,7 +109,7 @@ input::placeholder {
     /* background: rgb(124, 124, 124); */
     /* background: rgb(33,33,33); */
     /* background: white; */
-    height: 15rem;
+    height: 14rem;
     width: 55%;
     border-radius: 2rem;
     transition: height 1s,width 1s;
@@ -117,25 +119,25 @@ input::placeholder {
 
 #first-label{
     margin-left: 3.5rem;
-    margin-top: 6.3rem;
+    margin-top: 1rem;
     transition: margin-top 1s;
 }
 
 #first1{
     margin-left: 3.5rem;
-    margin-top: 5rem;
+    margin-top: 1rem;
     transition: margin-top 1s;
 }
 
 #first2{
     margin-left: 3.5rem;
-    margin-top: 5.8rem;
+    margin-top: 1.8rem;
     transition: margin-top 1s;
 }
 
 #first3{
     margin-left: 3.5rem;
-    margin-top: 5rem;
+    margin-top: 1rem;
     transition: margin-top 1s;
 }
 
@@ -145,6 +147,7 @@ input::placeholder {
     background: rgb(21,33,55) ;
     /* background: silver; */
     justify-content: center;
+    padding-top: 0.1rem;
     margin-left: auto;
     margin-top: 3rem;
     margin-right: auto;
@@ -156,12 +159,12 @@ input::placeholder {
 }
 
 .heads{
-    position: absolute;
     color: white;
     font-size: xx-large;
     font-weight: bold;
-    margin-left: 2.5rem;
     margin-top: 1.5rem;
+    text-align: center;
+    width: 100%;
 }
 
 #child1{
@@ -180,15 +183,13 @@ input::placeholder {
         width: 70%;
     }
 
-    #first-label{
-        margin-top: 6rem;
-    }
     form label{
         font-size: 20px;
         margin-top: 1.8rem;
     }
 
     #part2{
+        /* padding-top: 0.1rem; */
         width: 87%;
     }
     .plot{
@@ -196,11 +197,10 @@ input::placeholder {
     }
     
     #first3{
-        margin-top: 5rem;
+        margin-top: 1rem;
     }
 
     .t-head{
-        margin-left: 10%;
         transition: margin-left 1s;
     }
 }
@@ -232,7 +232,7 @@ input::placeholder {
     }
 
     #first-label{
-        margin-top: 5.5rem;
+        margin-top: 1rem;
         margin-left: 1rem;
     }
     
@@ -243,19 +243,19 @@ input::placeholder {
     }    
     
     #first1{
-        margin-top: 5rem;
+        margin-top: 1rem;
         margin-left: 1rem;
         transition: margin-top 1s;
     }    
     
     #first2{
-        margin-top: 6rem;
+        margin-top: 1rem;
         margin-left: 1rem;
         transition: margin-top 1s;
     }
     
     #first3{
-        margin-top: 6rem;
+        margin-top: 1rem;
         margin-left: 1rem;
         transition: margin-top 1s;
     }
@@ -285,9 +285,6 @@ input::placeholder {
         display: none;
     }
     
-    .t-head{
-        margin-left: 1.5rem;
-    }
     .health-label1{
         margin-top: 3rem; 
     }

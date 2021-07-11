@@ -4,7 +4,7 @@
 }
 
 footer{
-    background: #000;
+    background: rgb(41,44,50);
 }
 
 .container1{
@@ -14,9 +14,10 @@ footer{
     display: flex;
     margin: 0rem auto;
     width: 98%;
-    padding-top: 1rem;
-    padding-block: 5rem;
+    padding-block: 1rem;
+    padding-top: 2rem;
     max-width: 80rem;
+    transition: all 1s;
 }
 
 .footer-card{
@@ -26,22 +27,25 @@ footer{
     margin: 0.7rem;
     width: 30%;
     background: white;
-    max-width: 23rem;
+    max-width: 22rem;
     padding: 1rem;
-    padding-block: 1rem;
+    padding-block: 0.7rem;
     /* border-bottom: solid 0.3rem gray; */
     height: 11rem;
-    border-bottom: solid 0.5rem rgb(10, 165, 165);
+    border-bottom: solid 0.5rem rgb(0, 135, 135);
+    transition: all 1s;
 }
 
 .footer-card .footer-icon1 {
     text-align: center;
     width: 100%;
     font-size: 25px;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+    margin-top: 1.7rem;
     background: white;
     color: rgb(10, 165, 165);
     background: white;
+    transition: all 1s;
 }
 
 .button-div{
@@ -52,6 +56,7 @@ footer{
     /* margin-top: -2.5rem; */
     width: 168px;
     background: rgb(41,44,50);
+    transition: all 1s;
 }
 
 .footer-button{
@@ -64,6 +69,7 @@ footer{
     border: solid gray;
     border-width:2px;
     background: rgb(41,44,50);
+    transition: all 1s;
 }
 
 .footer-icon2 {
@@ -82,12 +88,13 @@ footer{
 
 .footer-card h3{
     background: white;
-    font-size: 13px;
-    margin-top: 0.7rem;
+    font-size: 14px;
+    margin-top: 0.9rem;
     letter-spacing: 0.2rem;
     text-align: center;
     font-weight: 100;
     font-family: Arial, Helvetica, sans-serif;
+    transition: all 1s;
 }
 
 /* .footer-card center{
@@ -98,11 +105,14 @@ footer{
 } */
 
 .footer-card hr{
-    margin: 1rem auto;
-    height: 1rem;
+    margin: 0.5rem auto;
+    /* height: 1rem; */
+    padding: 0.1rem;
     width: 8rem;
+    opacity: 0.7;
     color: rgb(10, 165, 165);
     background: rgb(10, 165, 165);
+    transition: all 1s;
 }
 /* 
 hr{
@@ -112,13 +122,14 @@ hr{
 } */
 
 .footer-card p{
-    margin-top: 1rem;
+    margin-top: 1.2rem;
     color: rgb(10, 165, 165);
-    font-size: 12px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1rem;
     background: white;
     text-align: center;
+    transition: all 1s;
 }
 
 .footer-card a{
@@ -134,6 +145,7 @@ hr{
     height: 11rem;
     background: rgb(41,44,50);
     max-width:56.5rem;
+    transition: all 1s;
 }
 
 .container2 li{
@@ -145,6 +157,7 @@ hr{
     margin-left: 0.2rem; 
     background: rgb(41,44,50);
     list-style-type: none;
+    transition: all 1s;
 }
 
 .container2 ul{
@@ -154,14 +167,16 @@ hr{
     margin-top: 0rem;
     background: rgb(41,44,50);
     list-style-type: none;
+    transition: all 1s;
 }
 
-.container2 h2{
+.container2 .container2-head{
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     font-size: 21px;
     margin-top: 0.3rem;
     background: rgb(41,44,50);
+    transition: all 1s;
 }
 
 .container2 p{
@@ -173,6 +188,7 @@ hr{
     word-spacing: 0.15rem;
     width: 100%;
     background: rgb(41,44,50);
+    transition: all 1s;
 }
 
 .tomany{
@@ -180,6 +196,7 @@ hr{
     width: 100%;
     bottom: 0;
     background: rgb(41,44,50);
+    transition: all 1s;
 }
 
 .footer-list{
@@ -187,6 +204,7 @@ hr{
     display: flex;
     background: rgb(41,44,50);
     max-width: 32rem;
+    transition: all 1s;
 }
 
 .footer-list1{
@@ -194,6 +212,7 @@ hr{
     width: 50%;
     max-width: 16rem;
     min-width: 10rem;
+    transition: all 1s;
 }
 
 .footer-list2{
@@ -201,15 +220,18 @@ hr{
     width: 50%;
     max-width: 16rem;
     min-width: 10rem;
+    transition: all 1s;
 }
 
 .about{
     margin: 0;
     padding: 0;
+    margin-right: -3rem;
     margin-bottom: 1rem;
     background: rgb(41,44,50);
     width: 100%;
     max-width: 25rem;
+    transition: all 1s;
 }
 
 .copyright{
@@ -220,6 +242,7 @@ hr{
     color: rgb(105, 104, 104);
     text-align: center;
     background: rgb(41,44,50);
+    transition: all 1s;
 }
 
 
@@ -238,11 +261,13 @@ hr{
         margin-top: 2rem;
     }
     .container1{
+        width: 100%;
         display: block;
     }
 
     .footer-card hr{
         margin: 0 auto;
+        margin-top: 0.8rem;
     }
     
     .footer-card{
@@ -250,6 +275,15 @@ hr{
         margin: 1rem auto;
         width: 100%;
         padding-block: 0rem;
+    }
+
+    .footer-card h3{
+        font-size: 13px;
+    }
+
+    .footer-card p{
+        margin-top: 0.9rem;
+        font-size: 13px;
     }
 /* 
     .container2{
@@ -282,7 +316,7 @@ hr{
         text-align: center!important;
     }
     
-    .container2 ul,h2{
+    .container2 ul,.container2-head{
         background: rgb(41,44,50);
         text-align: center!important;
     }

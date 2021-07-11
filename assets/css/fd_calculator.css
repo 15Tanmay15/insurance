@@ -1,5 +1,9 @@
 body{
-    background: #192a56;
+    /* background: #192a56; */
+    /* background: white; */
+    color:rgb(61, 61, 61);
+    /* background: rgb(231, 230, 230); */
+    background: #006266;
 }
 
 .main{
@@ -15,55 +19,60 @@ body{
 }
 
 .full{
-    background: #daf0eb;
+    /* display: none; */
+    background: rgb(185, 201, 212);
     border-radius: 0.3rem;
     width: 95%;
-    max-width: 65rem;
+    max-width: 60rem;
     margin: 0 auto;
+    margin-bottom: 5rem;
     padding-inline: 0.7rem;
 }
 
 .head-div{
-    padding: 0.7rem;
+    /* background: #22a6b3; */
+    padding: 1rem;
+    width: 100%;
 }
 
 .table-head{
-    color: black;
+    color: rgb(61, 61, 61);
     margin: 0 auto;
     text-align: center;
+    text-shadow:1px 1px 1px black;
 }
 
 hr{
-    color: black;
-    margin: 0;
+    color: rgb(61, 61, 61);
+    margin: 0 auto;
+    width: 100%;
 }
 
 .data{
     margin: 0rem auto;
     display: flex;
     width: 95%;
-    max-width: 65rem;
-    max-width: 65rem;
+    max-width: 50rem;
     justify-content: space-between;
 }
 
 #amount1{
-    color: white;
-    background: #55E6C1;
+    color: black;
+    background: #82ccdd;
 }
 
 #amount2{
-    color: white;
-    background: #82589F;
+    color: #522f2f;
+    background: #22a6b3;
 }
 
 #amount3{
-    color: white;
-    background: #FC427B;
+    color: rgb(233, 231, 231);
+    background: #747d8c;
 }
 
 .data button{
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     border: none;
     font-size: 18px;
     border-radius: 0.3rem;
@@ -79,32 +88,64 @@ hr{
     border-radius: 0.3rem;
     border: dashed rgb(71, 71, 71);
     margin: 5rem auto;
-    background: #daf0eb;
+    /* background: #daf0eb; */
+    background: rgb(185, 201, 212);
     /* daf0eb */
     width: 45%;
     /* outline-style: solid;
     outline-color: rgb(192, 191, 191);
     outline-width: 15px; */
-    box-shadow: 0 0 0 1rem #daf0eb;
+    box-shadow: 0 0 0 1rem rgb(185, 201, 212);
 }
 
 .col-two{
     padding: 1rem;
     padding-bottom: 0.5rem;
     padding-left: 0.2rem;
-    border: dashed black;
-    background: #daf0eb;
+    border: dashed rgb(71, 71, 71);
+    background: rgb(185, 201, 212);
     margin: 5rem auto;
-    box-shadow: 0 0 0 1rem #daf0eb;
+    box-shadow: 0 0 0 1rem rgb(185, 201, 212);
     border-radius: 0.3rem;
     width: 45%;
     align-items: center;
     justify-content: center;
 }
 
-.first1{
-    margin-left: 0.2rem;
+#barchart_material div div svg g text{
+    fill: rgb(61, 61, 61)!important;
+    font-weight: bold;
 }
+
+#barchart_material div div svg g:last-child text{
+    fill: black!important;
+}
+
+/* svg g:nth-child(3) path:hover  svg g:nth-child(8) g text{
+    fill: rgb(185, 201, 212)!important;
+} */
+/* svg g:nth-child(3) path:hover + svg g:nth-child(8) g text{
+    fill: rgb(185, 201, 212)!important;
+} */
+
+
+/* path:hover + g:nth-child(8) g text{
+    fill: none!important;
+} */
+/* 
+path:hover ~ g:nth-child(8) g text{
+    fill: none!important;
+} */
+/* path:hover > g:nth-child(8) g text{
+    fill: none!important;
+} */
+/* path:hover  g:nth-child(8) g text{
+    fill: none!important;
+} */
+
+/* .first1{
+    margin-left: 0.2rem;
+} */
 
 .span1
 {
@@ -119,7 +160,7 @@ hr{
 {
     display: flex;
     justify-content: space-between;
-    width: 91%;
+    width: 90%;
     margin: -1.2rem auto;
     max-width: 40.3rem;
     margin-left: auto + 1rem;
@@ -131,10 +172,12 @@ hr{
 
 
 .span1 p{
+    font-weight: bold;
     font-size: 9px;
 }
 
 .span2 p{
+    font-weight: bold;
     font-size: 9px;
 }
 
@@ -144,6 +187,28 @@ hr{
     margin: 3rem auto;
     margin-bottom: 0.3rem;
     max-width: 90%;
+}
+
+thead{
+    /* background: gray; */
+    font-size: 20px;
+    color: rgb(159, 159, 159);
+    background: rgb(64,64,64);
+}
+
+tbody tr
+{
+    background: rgb(223, 221, 221);
+}
+
+tbody tr:hover{
+    background: rgba(197, 213, 224, 0.5);
+    opacity: 0.7;
+    color: black;
+}
+
+th{
+    background: rgb(64,64,64);
 }
 
 label{
@@ -156,29 +221,88 @@ label{
 .bar{
     height: 2.5rem;
     display: flex;
-    background: #daf0eb;
+    /* rgb(223, 221, 221) */
+    background: rgb(185, 201, 212);
     padding-right: 1rem;
-    border:solid rgb(71, 71, 71);
+    border:solid rgb(104, 104, 104);
     border-radius: 0.2rem;
 }
 
-.icon{
-    border-left: solid black;
-    padding-block: 0.5rem;
-    padding-left: 1rem;
-}
-
 .input{
+    padding-left: 0.5rem;
     border: none;
     outline: none;
 }
 
 .slider{
-    /* margin-top: -1rem; */
     width: 90%;
 }
 
+.mon-data{
+    margin: 1rem auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 50rem;
+}
 
+.table{
+    width: 100%;
+    /* border: solid  black; */
+}
+
+.table tr{
+    text-align: center;
+    width: 100%;
+}
+
+#fd-icon{
+    height: 2.2rem;
+}
+
+.analysis{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 1.5rem;
+    font-family: sans-serif;
+    /* color: rgb(61, 61, 61); */
+    color: #006266;
+    text-shadow:1px 1px 1px white;
+    font-weight: bold;
+}
+
+.blog{
+    margin:auto;
+    margin-top: 2rem;
+    width: 95%;
+    max-width: 50rem;
+}
+
+.blog-h2{
+    font-size: auto;
+    margin-left: 0.1rem;
+    text-shadow:1px 1px 1px black;
+    font-family: sans-serif;
+}
+
+.blog-p{
+    margin-top: 1rem;
+    font-size: auto;
+    margin-left: 1rem;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.blog-h2-two{
+    font-size: auto;
+    margin-left: 0.1rem;
+    text-align: center;
+    font-size: 20px;
+    text-shadow:1px 1px 1px black;
+    font-family: sans-serif;
+    background: white;
+}
 
 @media screen and (max-width:1000px) {
     .main{
@@ -209,7 +333,7 @@ label{
     .col-two{
         
         margin: 5rem auto;
-        width: 95%;
+        width: 90%;
         max-width: 44rem;
     }
     
@@ -219,26 +343,26 @@ label{
         margin: -0.5rem auto;
         max-width: 39rem;
     }
-    
+
     .span2
     {
-        width: 100%;
+        width: 99%;
         margin: -1.2rem auto;
-        max-width: 40.5rem;
+        max-width: 39.5rem;
     }
     
-    
+/*     
     .first1{
         margin-left: 0.3rem;
     }
     
     .first2{
-        margin-left: 0.3rem;
+        margin-left: 0.2rem;
     }
     
     .first3{
-        margin-left: 0.2rem;
-    }
+        margin-left: 0rem;
+    } */
     
     .contain{
         margin-top: 2.5rem;
@@ -254,6 +378,23 @@ label{
         margin-top: 1rem;
     }
 
+    #fd-icon{
+        height: 2.1rem;
+    }   
+    
+    .analysis{
+        margin-top: 3rem;
+        text-align: center;
+        font-size: 27px;
+    }
+    
+    /* .blog-h2{
+        wi
+    } */
+
+    blog{
+        width: 90%;
+    }
 }
 
 @media screen and (max-width:860px) 
@@ -261,6 +402,34 @@ label{
     #barchart_material{
         margin-left: 10%;
     }
+
+    .data{
+        margin-top: 1rem;
+        width: 100%;
+        display: block;
+    }
+
+    .data div{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #amount1{
+        margin-top: 0.5rem;
+    }
+    
+    .data button{
+        margin-top: 0.4rem;
+        width: 100%;
+    }
+
+    #fd-icon{
+        height: 2.1rem;
+    }
+    
 }
 @media screen and (max-width:500px)
 {
@@ -304,22 +473,33 @@ label{
     
     .span2
     {
-        width: 101%;
+        width: 99.5%;
         margin: -1.2rem auto;
         max-width: 40.5rem;
     }
 
-    .first1{
+    /* .first1{
         margin-left: 0.1rem;
     }
 
     .first2{
-        margin-left: 0.1rem;
+        margin-left: 0rem;
     }
 
     .first3{
         margin-left: 0rem;
+    } */
+
+    #fd-icon{
+        height: 2rem;
+    }    
+
+    .analysis{
+        margin-top: 3rem;
+        font-size: 25px;
+        color: #006266;
     }
+    
 }
 
 @media screen and (max-width:400px) {
@@ -328,4 +508,10 @@ label{
         margin-right: 0;
         width: 100%;
     }
+
+    .mon-data{
+        width: 100%;
+    }
+
+    
 }

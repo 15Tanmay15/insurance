@@ -4,15 +4,15 @@ var x=0;
 var y=0;
 function drawChart() {
     principle = document.querySelector("#A1").value;
-    rate = document.querySelector("#R1").value;
+    rate=document.querySelector('#R1').value ;
     month = document.querySelector("#P1").value;
-    interest = (Number(principle) * Number(rate)) * 0.01* Math.floor(Number(month)/12);
+    interest = (Number(principle) *( Math.pow((1+(Number(rate)/100)), Math.floor(Number(month)/12)) -1));
     total = (Number(principle) / Number(month)) + interest;
     if (Number.isFinite(total)) 
     {
-        document.getElementById('amount1').innerText="Total : "+ Number(Number(principle)+Number(interest)) ;
+        document.getElementById('amount1').innerText="Total : "+ Number(Number(principle)+Number(interest)).toFixed(2) ;
         document.getElementById('amount2').innerText="Deposit : "+ Number(principle);
-        document.getElementById('amount3').innerText="Profit : "+ Number(interest);
+        document.getElementById('amount3').innerText="Profit : "+ Number(interest).toFixed(2);
         document.querySelector('#barchart_material').style.marginTop="0rem";
         var tot = Number(Number(interest) * Number(month)) + Number(principle);
         var data = google.visualization.arrayToDataTable([
@@ -22,7 +22,9 @@ function drawChart() {
         var ytickmin=0;
         var ytickmax=Number(principle)+Number(interest)+(Number(principle)+Number(interest))*0.1;
         if(window.innerWidth>1000) {
-            var options = {vAxis	: {
+            var options = {colors: ["#82ccdd",'#22a6b3',"#747d8c"],titleTextStyle: {
+                            color: 'black'
+                        },vAxis	: {
 						// title : "Marks Scored",
 						// titleTextStyle : {
 						// 	fontName : "Oswald",
@@ -46,12 +48,16 @@ function drawChart() {
                     title: 'Fixed Deposit Calculator', animation: {
                         duration: 1000},
                 },
-                bars: 'vertical',legend: {position: 'top', textStyle: {fontSize: 14}},
-                "backgroundColor": "#daf0eb"
+                bars: 'vertical',legend: {position: 'top', textStyle: {color: 'black',fontSize: 12}},"backgroundColor":"rgb(185, 201, 212)",
+                chartArea: {
+      backgroundColor: 'rgb(211, 210, 210)'
+    }
             };
         }
         else if (window.innerWidth < 1000 & window.innerWidth > 550) {
-            var options = {vAxis	: {
+            var options = {colors: ["#82ccdd",'#22a6b3',"#747d8c"],titleTextStyle: {
+                            color: 'black'
+                        },vAxis	: {
 						// title : "Marks Scored",
 						// titleTextStyle : {
 						// 	fontName : "Oswald",
@@ -74,12 +80,17 @@ function drawChart() {
                     title: 'Fixed Deposit Calculator', animation: {
                         duration: 1000},
                 },
-                bars: 'vertical',legend: {position: 'top', textStyle: {fontSize: 14}}, "backgroundColor": "#daf0eb"
+                bars: 'vertical',legend: {position: 'top', textStyle: {color: 'black',fontSize: 12}},"backgroundColor":"rgb(185, 201, 212)",
+                chartArea: {
+      backgroundColor: 'rgb(211, 210, 210)'
+    }
             };
         }
         else if (window.innerWidth < 550 & window.innerWidth > 400) {
             document.querySelector('#barchart_material').style.marginTop="1rem";
-            var options = {vAxis	: {
+            var options = {colors: ["#82ccdd",'#22a6b3',"#747d8c"],titleTextStyle: {
+                            color: 'black'
+                        },vAxis	: {
 						// title : "Marks Scored",
 						// titleTextStyle : {
 						// 	fontName : "Oswald",
@@ -97,16 +108,21 @@ function drawChart() {
 							max : ytickmax 
 						}
 					},
-                height: 400, width: (window.innerWidth - 100),
+                height: 400, width: "100%",
                 chart: {
                     title: 'Fixed Deposit Calculator', animation: {
                         duration: 1000},
                 },
-                bars: 'vertical',legend: {position: 'top', textStyle: {fontSize: 14}}, "backgroundColor": "#daf0eb"
+                bars: 'vertical',legend: {position: 'top', textStyle: {color: 'black',fontSize: 12}},"backgroundColor":"rgb(185, 201, 212)",
+                chartArea: {
+      backgroundColor: 'rgb(211, 210, 210)'
+    }
             };
         }
         else {
-            var options = {vAxis	: {
+            var options = {colors: ["#82ccdd",'#22a6b3',"#747d8c"],titleTextStyle: {
+                            color: 'black'
+                        },vAxis	: {
 						// title : "Marks Scored",
 						// titleTextStyle : {
 						// 	fontName : "Oswald",
@@ -129,8 +145,11 @@ function drawChart() {
                     title: 'Fixed Deposit Calculator', animation: {
                         duration: 1000},
                 },
-                bars: 'vertical',legend: {position: 'top',textStyle: {fontSize: 14}},
-                "backgroundColor": "#daf0eb"
+                bars: 'vertical',
+                legend: {position: 'top', textStyle: {color: 'black',fontSize: 12}},"backgroundColor":"rgb(185, 201, 212)",
+                chartArea: {
+      backgroundColor: 'rgb(211, 210, 210)'
+    }
             };
         }
         // chart.draw(data, google.charts.Bar.convertOptions(options));
@@ -162,6 +181,9 @@ function drawChart() {
                     data.setValue(0, 2, 100*change2);
                     data.setValue(0, 3, 100*change3);
                     chart.draw(data, google.charts.Bar.convertOptions(options));
+                    document.querySelector(".full").style.display="block";
+                    document.getElementById("full-div").scrollIntoView();
+                    tablecal(Number(principle),Number(rate),Math.floor(Number(month)/12));
                     clearInterval(handler);
                 }
             }, 0);
@@ -172,7 +194,9 @@ function drawChart() {
         }
     }
     else{
-        var options = {vAxis	: {
+        var options = {colors: ["#82ccdd",'#22a6b3',"#747d8c"],titleTextStyle: {
+                            color: 'black'
+                        },vAxis	: {
             minorGridlines : {
                 count : 19
             },
@@ -184,28 +208,65 @@ function drawChart() {
                 max : 1000000 
             }
                 },
-            height: 350, width: "100%",
+            height: 400, width: "100%",
             chart: {
                 title: 'Fixed Deposit Calculator', animation: {
                     duration: 1000},
             },
-            bars: 'vertical',legend: {position: 'top',textStyle: {fontSize: 14}},
-            "backgroundColor": "#daf0eb"
+            bars: 'vertical',legend: {position: 'top', textStyle: {color: 'black',fontSize: 12}},
+            "backgroundColor":"rgb(185, 201, 212)",
+            chartArea: {
+      backgroundColor: 'rgb(211, 210, 210)'
+    }
         };
         var data = google.visualization.arrayToDataTable([
             ['', '₹ Total', '₹ Fixed ', '₹ Interest'],
             ['Analysis', 0,0,0],
         ]);
-        document.querySelector('#barchart_material').style.marginTop="3rem";
+        document.querySelector('#barchart_material').style.marginTop="1rem";
         var chart = new google.charts.Bar(document.getElementById('barchart_material'));
         chart.draw(data, google.charts.Bar.convertOptions(options));
     }
 }
 
+let count=0;
+function tablecal(principle,rate,month)
+{
+    arr=['st','nd','rd','th']
+    main=principle;
+    inter=0;
+    console.log(count);
+    if(count!=0){
+        for(i=0;i<count;i++)
+        {
+            document.getElementsByTagName('table')[0].deleteRow(1);
+        }
+    }
+    
+    for(i=0;i<month;i++)
+    {
+        var tbodyRef = document.getElementsByTagName('table')[0].getElementsByTagName('tbody')[0];
+        var newRow = tbodyRef.insertRow();
+        var newCell1 = newRow.insertCell(0);
+        var newCell2 = newRow.insertCell(1);
+        var newCell3 = newRow.insertCell(2);
+        if(i<=2){
+            newCell1.innerText=i+1+arr[i]+' year';
+        }
+        else{
+            newCell1.innerText=i+1+arr[3]+' year';
+        }
+        newCell2.innerText=(main).toFixed(2);
+        newCell3.innerText=(inter+main*rate*0.01).toFixed(2);
+        inter=inter+main*rate*0.01;
+        main=main*rate*0.01+main;
+    }
+    count=month;
+}
+
 window.onload = ()=>{
     drawChart();
 }
-
 
 var check=0;
 window.onresize = () => {

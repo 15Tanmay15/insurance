@@ -2,13 +2,18 @@ body, html {
   background-color: #EBECF0;
 }
 
-body, p, input, select, textarea, button {
+body {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: -0.2px;
   font-size: 16px;
 }
 
-div, p {
+header{
+  font-family: sans-serif!important;
+  text-shadow: none!important;
+}
+
+form div, p {
   color: #BABECC;
   text-shadow: 1px 1px 1px #FFF;
 }
@@ -20,11 +25,13 @@ form {
 }
 
 .segment {
+  margin-top: 1rem;
   padding: 32px 0;
+  color: rgb(65, 63, 63);
   text-align: center;
 }
 
-button, input {
+form button, input {
   border: 0;
   outline: 0;
   font-size: 16px;
@@ -34,13 +41,13 @@ button, input {
   text-shadow: 1px 1px 0 #FFF;
 }
 
-label {
+form label {
   display: block;
   margin-bottom: 24px;
   width: 100%;
 }
 
-input {
+form input {
   margin-right: 8px;
   -webkit-box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
           box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
@@ -54,12 +61,17 @@ input {
   -webkit-appearance: none;
 }
 
-input:focus {
+form input::placeholder { 
+  color: rgb(131, 129, 129);
+  opacity: 1; 
+}
+
+form input:focus {
   -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
           box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
 
-button {
+form button {
   color: #61677C;
   font-weight: bold;
   -webkit-box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
@@ -70,21 +82,21 @@ button {
   font-weight: 600;
 }
 
-button:hover {
+form button:hover {
   -webkit-box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
           box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
 }
 
-button:active {
+form button:active {
   -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
           box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
 
-button .icon {
+form button .icon {
   margin-right: 8px;
 }
 
-button.unit {
+form button.unit {
   border-radius: 8px;
   line-height: 0;
   width: 48px;
@@ -101,12 +113,12 @@ button.unit {
   margin: 0 8px;
   font-size: 19.2px;
 }
-
-button.unit .icon {
+form button.unit .icon {
   margin-right: 0;
 }
 
-button.red {
+form button.red {
+  margin-top: 2rem;
   display: block;
   width: 100%;
   color: #AE1100;
@@ -130,4 +142,10 @@ button.red {
       -ms-flex: 1;
           flex: 1;
 }
-/*# sourceMappingURL=signin.css.map */
+
+
+@media screen and (max-width:400px) {
+  form {
+    width: 100%;
+  }
+}

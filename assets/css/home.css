@@ -279,9 +279,14 @@ body{
     height: 10rem;
     width: 10rem;
     font-weight: bold;
+    border: none;
     /* border: solid white; */
-    /* box-shadow: 0px 0px 20px #2D8DBD; */
+    /* box-shadow: 2px 2px 2px 1px white, inset 1px 1px 1px 1px black; */
 }
+
+/* .card:hover{
+    box-shadow: 3px 3px 4px 1px white, inset 1px 1px 2px 1px black;
+} */
 
 .divs{
     display: block; 
@@ -340,13 +345,13 @@ body{
         display: flex;
         flex-direction: column;
     }
-    .icon
+    /* .icon
     {
         margin: 0 auto;
         max-width: 80%;
         display: flex;
         justify-content: space-between;
-    }
+    } */
     
     .big-btn{
         display: flex;
