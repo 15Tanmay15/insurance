@@ -27,18 +27,19 @@ body{
     margin: 0 auto;
     margin-bottom: 5rem;
     padding-inline: 0.7rem;
+    padding-bottom: 0.7rem;
 }
 
 .head-div{
     /* background: #22a6b3; */
-    padding: 1rem;
+    padding: 0.7rem;
     width: 100%;
 }
 
 .table-head{
     color: rgb(61, 61, 61);
     margin: 0 auto;
-    text-align: center;
+    text-align: center;font-size: 30px;
     text-shadow:1px 1px 1px black;
 }
 
@@ -291,17 +292,36 @@ label{
     font-size: auto;
     margin-left: 1rem;
     width: 100%;
+    color: black;
+    font-weight: 501;
     font-family: sans-serif;
+    font-size: 17px;
 }
 
 .blog-h2-two{
     font-size: auto;
     margin-left: 0.1rem;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     text-shadow:1px 1px 1px black;
     font-family: sans-serif;
     background: white;
+    padding: 0.3rem;
+    width: auto;
+    margin-block: 1.3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.blog-p-two{
+    margin-top: 1rem;
+    font-size: auto;
+    color: black;
+    margin-left: 1rem;
+    width: 100%;
+    font-weight: 501;
+    font-family: sans-serif;
+    font-size: 17px;
 }
 
 @media screen and (max-width:1000px) {
@@ -388,12 +408,19 @@ label{
         font-size: 27px;
     }
     
+    .blog-p{
+        font-size: 16px;
+    }
+    
+    .blog-p-two{
+        font-size: 16px;
+    }
     /* .blog-h2{
         wi
     } */
-
-    blog{
-        width: 90%;
+    
+    .blog-h2{
+        font-size: 28px;
     }
 }
 
@@ -402,13 +429,13 @@ label{
     #barchart_material{
         margin-left: 10%;
     }
-
+    
     .data{
         margin-top: 1rem;
         width: 100%;
         display: block;
     }
-
+    
     .data div{
         width: 95%;
         margin-left: auto;
@@ -425,12 +452,27 @@ label{
         margin-top: 0.4rem;
         width: 100%;
     }
-
+    
     #fd-icon{
         height: 2.1rem;
     }
     
+    .blog-h2-two{
+        font-size: 17px;
+    }
+    
+    .blog-p{
+        font-size: 16px;
+    }
+    
+    .blog-p-two{
+        font-size: 16px;
+    }
+    .blog-h2{
+        font-size: 25px;
+    }
 }
+
 @media screen and (max-width:500px)
 {
     .hide{
@@ -445,25 +487,25 @@ label{
         margin-top: 1.5rem;
         display: block;
     }
-
+    
     .input{
         width: 100%;
     }
-
+    
     .slider{
         margin-right:8%;
     }
-
+    
     .bar{
         height: 2.2rem;
         width: 100%;
         max-width: 32rem;
     }
-
+    
     label{
         font-size: 20px;
     }
-
+    
     .span1
     {
         width: 96%;
@@ -477,29 +519,43 @@ label{
         margin: -1.2rem auto;
         max-width: 40.5rem;
     }
-
+    
     /* .first1{
         margin-left: 0.1rem;
     }
-
+    
     .first2{
         margin-left: 0rem;
     }
-
+    
     .first3{
         margin-left: 0rem;
     } */
-
+    
     #fd-icon{
         height: 2rem;
     }    
-
+    
     .analysis{
         margin-top: 3rem;
         font-size: 25px;
         color: #006266;
     }
     
+    .blog-h2-two{
+        font-size: 15px;
+    }
+    
+    .blog-p{
+        font-size: 15px;
+    }
+    
+    .blog-p-two{
+        font-size: 15px;
+    }
+    .blog-h2{
+        font-size: 22px;
+    }
 }
 
 @media screen and (max-width:400px) {
@@ -508,10 +564,10 @@ label{
         margin-right: 0;
         width: 100%;
     }
-
+    
     .mon-data{
         width: 100%;
     }
-
+    
     
 }
