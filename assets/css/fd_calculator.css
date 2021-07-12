@@ -77,7 +77,9 @@ hr{
     border: none;
     font-size: 18px;
     border-radius: 0.3rem;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0.8rem;
+    font-family:sans-serif;
+    font-weight: 510;
     padding-bottom: 0.3rem;
 }
 
@@ -248,7 +250,10 @@ label{
 }
 
 .table{
+    font-family: 'nunito';
     width: 100%;
+    font-size: 14px;
+    font-weight: bolder;
     /* border: solid  black; */
 }
 
@@ -283,6 +288,7 @@ label{
 .blog-h2{
     font-size: auto;
     margin-left: 0.1rem;
+    margin-bottom: 1.5rem;
     text-shadow:1px 1px 1px black;
     font-family: sans-serif;
 }
@@ -305,7 +311,7 @@ label{
     font-size: 18px;
     text-shadow:1px 1px 1px black;
     font-family: sans-serif;
-    background: white;
+    background: rgb(221, 221, 221);
     padding: 0.3rem;
     width: auto;
     margin-block: 1.3rem;
@@ -315,7 +321,6 @@ label{
 
 .blog-p-two{
     margin-top: 1rem;
-    font-size: auto;
     color: black;
     margin-left: 1rem;
     width: 100%;
@@ -323,6 +328,18 @@ label{
     font-family: sans-serif;
     font-size: 17px;
 }
+
+.blog-p-three{
+    margin-top: 1rem;
+    color: black;
+    margin-left: 3rem;
+    width: 80%;
+    font-weight: 501;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+
 
 @media screen and (max-width:1000px) {
     .main{
@@ -422,6 +439,10 @@ label{
     .blog-h2{
         font-size: 28px;
     }
+
+    .table{
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width:860px) 
@@ -470,6 +491,10 @@ label{
     }
     .blog-h2{
         font-size: 25px;
+    }
+
+    .table{
+        font-size: 12px;
     }
 }
 
@@ -547,11 +572,18 @@ label{
     }
     
     .blog-p{
-        font-size: 15px;
+        margin-left: 0.5rem;
+        font-size: 14px;
     }
     
     .blog-p-two{
-        font-size: 15px;
+        margin-left: 0.5rem;
+        font-size: 14px;
+    }
+    
+    .blog-p-three{
+        margin-left: 1rem;
+        font-size: 13px;
     }
     .blog-h2{
         font-size: 22px;

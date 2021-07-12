@@ -1,15 +1,8 @@
 let x=0;
+
 window.onresize = window.onload = function() {
-    width = this.innerWidth;
-    height = this.innerHeight;
-    if(width<505 & x==0){
-        calculate();
-        x=1;
-    }
-    else if(width>505 & x==1){
-        calculate();
-        x=0;
-    }
+    calculate();
+    console.log("aedf")
   }
 
 function calculate()
@@ -21,74 +14,43 @@ function calculate()
     total=(Number(principle)/Number(month))+interest;
     if(Number.isFinite(total)){
         var tot=Number(Number(interest)*Number(month))+Number(principle);
-        document.querySelector('#interest').innerHTML="Loan EMI : ₹ "+ (Number(principle)*Number(rate)*0.01)/Number(month);
-        document.querySelector('#principle').innerHTML="Interest Amount : ₹ "+ (Number(principle)*Number(rate)*0.01);
-        document.querySelector('#total').innerHTML="Total Money : ₹ "+ tot;
+        document.querySelector('#interest').innerHTML="Loan EMI : ₹ "+ ((Number(principle)*Number(rate)*0.01)/Number(month)).toFixed(2);
+        document.querySelector('#principle').innerHTML="Interest Amount : ₹ "+ (Number(principle)*Number(rate)*0.01).toFixed(2);
+        document.querySelector('#total').innerHTML="Total Money : ₹ "+ tot.toFixed(2);
         document.querySelector(".values").style.display="block";
         document.querySelector(".col-two").style.display="block";
-        if(window.width<505){
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Interest money',Number(principle)*Number(rate)*0.01 ],
-                ['Loan amount', Number(principle)]]);
+        var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Interest money',Number(principle)*Number(rate)*0.01 ],
+            ['Loan amount', Number(principle)]]);
 
-            var options = { pieStartAngle: 120,slices: {  0: {offset: 0.2,color:"rgb(54, 190, 54)"},1: {color:"#008080"}},is3D: true,animation:
-           {
-               startup: true,
-               duration: 2000,
-               easing: 'out'
-           },legend:{textStyle: {color: 'white'}}, 'width':"100%", 'height':250,chartArea: {width: "80%", height: "100%"} ,'backgroundColor':'transparent'};
-
-                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-                chart.draw(data, options)
-                var percent = 0;
-                // start the animation loop
-                var handler = setInterval(function(){
-                    // values increment
-                    percent += 1;
-                    // apply new values
-                    data.setValue(0, 1, 100 - percent);
-                    data.setValue(1, 1, percent);
-                    // update the pie
+        if(window.innerWidth<1000 || window.innerWidth<505)
+        {
+            var options={ pieStartAngle: 120,slices: {  0: {offset: 0.2,color:"rgb(54, 190, 54)"},1: {color:"#008080"}},is3D: true,animation:{ startup: true, duration: 2000, easing: 'out' },legend:{textStyle: {color: 'white'}}, 'width':"100%", 'height':"100%",chartArea: {width: "300", height: "250"} ,'backgroundColor':'transparent'};
+        }
+        else
+        {
+            var options = { pieStartAngle: 120,slices: {  0: {offset: 0.2,color:"rgb(54, 190, 54)"},1: {color:"#008080"}},is3D: true,animation:{ startup: true,duration: 2000,easing: 'out'},legend:{textStyle: {color: 'white'}}, 'width':"100%", 'height':"100%",chartArea: {width: "500", height: "350"} ,'backgroundColor':'transparent'};
+        }
+        if(x==0){
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options)
+            var percent = 0;
+            var handler = setInterval(function(){
+                percent += 1;
+                data.setValue(0, 1, 100 - percent);
+                data.setValue(1, 1, percent);
+                chart.draw(data, options);
+                if (percent > 100*Number(principle)/((Number(principle)*Number(rate))*0.01+Number(principle))){
                     chart.draw(data, options);
-                    // check if we have reached the desired value
-                    if (percent > 100*Number(principle)/((Number(principle)*Number(rate))*0.01+Number(principle)))
-                        // stop the loop
-                        clearInterval(handler);
-                }, 20);
-
+                    clearInterval(handler);
+                }
+            }, 2);
+            x=1;
         }
         else{
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Interest money',Number(principle)*Number(rate)*0.01 ],
-                ['Loan amount', Number(principle)],]);
-
-                var options = { pieStartAngle: 120,slices: {  0: {offset: 0.2,color:"rgb(54, 190, 54)"},1: {color:"#008080"}},is3D: true,animation:
-           {
-               startup: true,
-               duration: 2000,
-               easing: 'out'
-           },legend:{textStyle: {color: 'white'}}, 'width':450, 'height':320,chartArea: {width: "80%", height: "100%"} ,'backgroundColor':'transparent'};
-
-                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-                chart.draw(data, options)
-                var percent = 0;
-            // start the animation loop
-                var handler = setInterval(function(){
-                    // values increment
-                    percent += 1;
-                    // apply new values
-                    data.setValue(0, 1, 100 - percent);
-                    data.setValue(1, 1, percent);
-                    // update the pie
-                    chart.draw(data, options);
-                    // check if we have reached the desired value
-                    if (percent > 100*Number(principle)/((Number(principle)*Number(rate))*0.01+Number(principle)))
-                        // stop the loop
-                        clearInterval(handler);
-            }, 20);
-
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
         }
     }
 }
@@ -99,6 +61,7 @@ function slider1()
     {
         document.getElementById("p1").value= document.querySelector("#p2").value;
     }
+    x=0;
     calculate();
 }
 
@@ -108,6 +71,7 @@ function slider2()
     {
         document.getElementById("r1").value= document.querySelector("#r2").value;
     }
+    x=0;
     calculate();
 }
 function slider3()
@@ -116,6 +80,7 @@ function slider3()
     {
         document.getElementById("m1").value= document.querySelector("#m2").value;
     }
+    x=0;
     calculate();
 }
 
@@ -125,6 +90,7 @@ function frominput1()
     {
         document.querySelector("#p2").value=document.getElementById("p1").value;
     }
+    x=0;
     calculate();
 }
 
@@ -134,6 +100,7 @@ function frominput2()
     {
         document.querySelector("#r2").value=document.getElementById("r1").value;
     }
+    x=0;
     calculate();
 }
 
@@ -143,6 +110,7 @@ function frominput3()
     {
         document.querySelector("#m2").value=document.getElementById("m1").value;
     }
+    x=0;
     calculate();
 }
 

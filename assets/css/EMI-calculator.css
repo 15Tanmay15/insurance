@@ -1,385 +1,632 @@
- input{
-    display: block;
-    margin: 0 auto;
-    /* height: 3rem; */
-    padding: 0.8rem;
-    width: 80%;
-    max-width: 35rem;
-    margin-top: 1.2rem;
-    border-radius: 0.3rem;
-    outline: none;
-    font-size: x-large;
-    background: rgb(60,60,60);
-    border: none;
-    color: white;
-    text-align: center;
-    transition: max-width 0.5s,width 0.5s;
-}
-
-.simple{
-    width: 85%;
-    max-width: 35rem;
-    margin-bottom: 1.3rem;
-    margin-top: 4rem;
-    transition: margin-top 1s;
-}
-
-.slider{
-    margin-top: -1.5rem;
-    margin-bottom: 0%;
-}
-
-#p1{
-    margin-top: 3rem;
-}
-
 body{
-    background: rgb(23,23,23)!important;
-}
-/* 
-button{
-    margin-top: 1.7rem;
-    padding: 1rem;
-    padding-block: 0.7rem;
-    border-radius: 0.3rem;
-    font-size: 20px;
-    background-color: teal;
-} */
-
-.one{
-    margin-top: -1rem;
-    margin-left: 3.5rem;
-    transition: margin-top 1s,margin-left 1s;
-}
-.two{
-    margin-top: -0.3rem;
-    margin-left:3.2rem;
-    transition: margin-left 1s;
+    /* background: #192a56; */
+    /* background: white; */
+    color:rgb(61, 61, 61);
+    /* background: rgb(231, 230, 230); */
+    background: #006266;
 }
 
-.one span{
-    color: white;
-    margin: 2rem auto;
-    margin-right: 3.4rem;
-    font-size: 10px;
-    transition: margin-right 1s;
-}
-
-.two span{
-    color: white;
-    margin: 1 auto;
-    margin-right: 2.9rem;
-    font-size: 10px;
-    transition: margin-right 1s;
-}
-
-.one2{
-    margin-top: -1rem;
-    margin-left: 5.4rem;
-    transition: margin-left 1s;
-}
-.two2{
-    margin-top: -0.3rem;
-    margin-left:4.8rem;
-    transition: margin-left 1s;
-}
-
-.one2 span{
-    color: white;
-    margin: 0 auto;
-    margin-right: 5.3rem;
-    font-size: 10px;
-    transition: margin-right 1s;
-}
-
-.two2 span{
-    color: white;
-    margin: -0.2rem auto;
-    margin-right: 4.4rem;
-    font-size: 10px;
-    transition: margin-right 1s;
-}
-
-.two2 #first{
-    margin-right: 4.7rem;
-    transition: margin-right 1s;
-    /* background-color: rgb(44, 180, 44); */
-}
-
-.one3{
-    margin-top: -1rem;
-    margin-left: 5.4rem;
-    transition: margin-left 1s;
-}
-.two3{
-    margin-top: -0.3rem;
-    margin-left:5.3rem;
-    transition: margin-left 1s;
-}
-
-.one3 span{
-    color: white;
-    margin: 0 auto;
-    margin-right: 5.3rem;
-    font-size: 10px;
-    transition: margin-right 1s;
-}
-
-.two3 span{
-    color: white;
-    margin: -0.2rem auto;
-    margin-right: 4.6rem;
-    font-size: 10px;
-    transition: margin-right 1s;
-}
-
-#piechart{
-    color: white;
-}
-
-#fifth{
-    margin-right: 4.4rem;
-    transition: margin-right 1s;
-}
-
-#first3{
-    margin-right: 4.9rem;
-    transition: margin-right 1s;
-}
-
-#head{
-    margin-top: 3rem;
-}
-
-.whole{
-    margin-top: 1.5rem;
+.main{
     display: flex;
-    flex-direction: row;
+    margin-top: -1rem;
+    margin: 0;
+    margin-bottom: -1.3rem;
 }
 
-.col-two{
-    display: none;
-    border: solid rgb(197, 196, 196);
-    background: transparent;
-    padding: 2rem 0rem 0rem 1rem;
-    margin-top: 1rem;
-    margin-left: 10%;
-    transition: max-width 1s,margin-left 1s;
+#barchart_material{
+    display: block;
+    margin-left: 7%;
 }
 
-.col-one{
-    border-radius: 0.4rem;
-    padding-top: 1%;
-    margin-top: 2rem;
-    padding-bottom: 1%;
-    margin-left: 1%;
-    margin-right: 6%;
+.full{
+    /* display: none; */
+    background: rgb(185, 201, 212);
+    border-radius: 0.3rem;
+    width: 95%;
+    max-width: 60rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    padding-inline: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.head-div{
+    /* background: #22a6b3; */
+    padding: 0.7rem;
+    width: 100%;
+}
+
+.table-head{
+    color: rgb(61, 61, 61);
+    margin: 0 auto;
+    text-align: center;font-size: 30px;
+    text-shadow:1px 1px 1px black;
 }
 
 hr{
-    position: relative;
-    margin-right: 1rem;
+    color: rgb(61, 61, 61);
+    margin: 0 auto;
+    width: 100%;
 }
+
+
+.data{
+    margin: 0rem auto;
+    display: flex;
+    width: 95%;
+    max-width: 50rem;
+    justify-content: space-between;
+}
+
+#amount1{
+    color: black;
+    background: #82ccdd;
+}
+
+#amount2{
+    color: #522f2f;
+    background: #22a6b3;
+}
+
+#amount3{
+    color: rgb(233, 231, 231);
+    background: #747d8c;
+}
+
+.data button{
+    margin-top: 1.5rem;
+    border: none;
+    font-size: 18px;
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.8rem;
+    font-family:sans-serif;
+    font-weight: 510;
+    padding-bottom: 0.3rem;
+}
+
+.col-one{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 3rem;
+    border-radius: 0.3rem;
+    border: dashed rgb(71, 71, 71);
+    margin: 5rem auto;
+    /* background: #daf0eb; */
+    background: rgb(185, 201, 212);
+    /* daf0eb */
+    width: 45%;
+    /* outline-style: solid;
+    outline-color: rgb(192, 191, 191);
+    outline-width: 15px; */
+    box-shadow: 0 0 0 1rem rgb(185, 201, 212);
+}
+
+.col-two{
+    padding: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.2rem;
+    border: dashed rgb(71, 71, 71);
+    background: rgb(185, 201, 212);
+    margin: 5rem auto;
+    box-shadow: 0 0 0 1rem rgb(185, 201, 212);
+    border-radius: 0.3rem;
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+}
+
+#barchart_material div div svg g text{
+    fill: rgb(61, 61, 61)!important;
+    font-weight: bold;
+}
+
+#barchart_material div div svg g:last-child text{
+    fill: black!important;
+}
+
+/* svg g:nth-child(3) path:hover  svg g:nth-child(8) g text{
+    fill: rgb(185, 201, 212)!important;
+} */
+/* svg g:nth-child(3) path:hover + svg g:nth-child(8) g text{
+    fill: rgb(185, 201, 212)!important;
+} */
+
+
+/* path:hover + g:nth-child(8) g text{
+    fill: none!important;
+} */
+/* 
+path:hover ~ g:nth-child(8) g text{
+    fill: none!important;
+} */
+/* path:hover > g:nth-child(8) g text{
+    fill: none!important;
+} */
+/* path:hover  g:nth-child(8) g text{
+    fill: none!important;
+} */
+
+/* .first1{
+    margin-left: 0.2rem;
+} */
 
 .values{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    border: solid 1px black;
     display: none;
-    color: rgb(197, 196, 196);
-    font-family: 'Roboto', sans-serif;
+    max-width: 25rem;
 }
 
-@media screen and (max-width:1265px) {
-    .whole{
-        margin-top: 5rem;
-        align-items: center;
-        justify-content: center;
+#interest{
+    margin-block: 0.7rem;
+    text-align: center;
+    font-size:18px;
+}
+
+#principle{
+    margin-block: 0.7rem;
+    text-align: center;
+    font-size:18px;
+}
+
+#total{
+    margin-block: 0.7rem;
+    text-align: center;
+    font-size:18px;
+}
+
+.span1
+{
+    display: flex;
+    justify-content: space-between;
+    width: 88.3%;
+    margin: -0.5rem auto;
+    max-width: 39.3rem;
+}
+
+.span2
+{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: -1.2rem auto;
+    max-width: 40.3rem;
+    margin-left: auto + 1rem;
+}
+
+.hide{
+    visibility: visible;
+}
+
+
+.span1 p{
+    font-weight: bold;
+    font-size: 9px;
+}
+
+.span2 p{
+    font-weight: bold;
+    font-size: 9px;
+}
+
+.contain{
+    display: flex;
+    justify-content:space-between;
+    margin: 3rem auto;
+    margin-bottom: 0.3rem;
+    max-width: 90%;
+}
+
+thead{
+    /* background: gray; */
+    font-size: 20px;
+    color: rgb(159, 159, 159);
+    background: rgb(64,64,64);
+}
+
+tbody tr
+{
+    background: rgb(223, 221, 221);
+}
+
+tbody tr:hover{
+    background: rgba(197, 213, 224, 0.5);
+    opacity: 0.7;
+    color: black;
+}
+
+th{
+    background: rgb(64,64,64);
+}
+
+label{
+    padding-top: 0.2rem;
+    font-family: 'benne',sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.bar{
+    height: 2.5rem;
+    display: flex;
+    /* rgb(223, 221, 221) */
+    background: rgb(185, 201, 212);
+    padding-right: 1rem;
+    border:solid rgb(104, 104, 104);
+    border-radius: 0.2rem;
+}
+
+.input{
+    padding-left: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+.slider{
+    width: 90%;
+}
+
+.mon-data{
+    margin: 1rem auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 50rem;
+}
+
+.table{
+    font-family: 'nunito';
+    width: 100%;
+    font-size: 14px;
+    font-weight: bolder;
+    /* border: solid  black; */
+}
+
+.table tr{
+    text-align: center;
+    width: 100%;
+}
+
+#fd-icon{
+    height: 2.2rem;
+}
+
+.analysis{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 1.5rem;
+    font-family: sans-serif;
+    /* color: rgb(61, 61, 61); */
+    color: #006266;
+    text-shadow:1px 1px 1px white;
+    font-weight: bold;
+}
+
+.blog{
+    margin:auto;
+    margin-top: 2rem;
+    width: 95%;
+    max-width: 50rem;
+}
+
+.blog-h2{
+    font-size: auto;
+    margin-left: 0.1rem;
+    margin-bottom: 1.5rem;
+    text-shadow:1px 1px 1px black;
+    font-family: sans-serif;
+}
+
+.blog-p{
+    margin-top: 1rem;
+    font-size: auto;
+    margin-left: 1rem;
+    width: 100%;
+    color: black;
+    font-weight: 501;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+.blog-h2-two{
+    font-size: auto;
+    margin-left: 0.1rem;
+    text-align: center;
+    font-size: 18px;
+    text-shadow:1px 1px 1px black;
+    font-family: sans-serif;
+    background: rgb(221, 221, 221);
+    padding: 0.3rem;
+    width: auto;
+    margin-block: 1.3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.blog-p-two{
+    margin-top: 1rem;
+    color: black;
+    margin-left: 1rem;
+    width: 100%;
+    font-weight: 501;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+.blog-p-three{
+    margin-top: 1rem;
+    color: black;
+    margin-left: 3rem;
+    width: 80%;
+    font-weight: 501;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+@media screen and (max-width:1000px) {
+    .main{
         display: block;
     }
     
     .col-one{
-        width: 90%;
-        max-width: 57rem;
         margin: 4rem auto;
+        width: 90%;
+        max-width: 44rem;
     }
     
-    .col-two{
-        padding: 1rem 0rem 1rem 1rem;
-        margin:1rem auto;
-        width: 80%;
-        max-width: 35rem;
+    .bar{
+        height: 2.4rem;
+        width: 10rem;
     }
-}
+    
+    .input{
+        width: 6.5rem;
+    }
 
-@media screen and (max-width:833px) {
-    
-    .col-one{
+    .slider{
         margin: 0 auto;
-    }
-
-    .simple{
-        width: 80%;
-        max-width: 26rem;
-        margin-top: 5rem;
-        transition: margin-top 1s;
-    }
-    input{
-        width: 85%;
-        max-width: 25rem;
-    }
-    
-    .one{
-        margin-top: -1.2rem;
-        margin-left: 2.65rem;
-    }
-    .two{
-        margin-left: 2.3rem;
-    }
-    
-    .one span{
-        margin-right: 2.3rem;
-    }
-    
-    .two span{
-        margin-right: 1.8rem;
-    }
-    
-    .one2{
-        margin-top: -1rem;
-        margin-left: 4rem;
-    }
-    .two2{
-        margin-top: 0;
-        margin-left:3.6rem;
-    }
-    
-    .one2 span{
-        margin-right: 3.65rem;
-    }
-    
-    .two2 span{
-        margin-right: 2.8rem;
-    }
-    
-    .two2 #first{
-        margin-right: 2.9rem;
-    }
-    
-    .one3{
-        margin-left: 3.7rem;
-    }
-    
-    .two3{
-        margin-left:3.5rem;
-    }
-    
-    .one3 span{
-        margin-right: 3.66rem;
-    }
-    
-    .two3 span{
-        margin-right: 3rem;
-    }
-    
-    #first3{
-        margin-right: 3.3rem;
-    }
-    
-    #fifth{
-        margin-right: 2.6rem;
-    }
-    
-    .simple{
-        margin-top: 3rem;
-    }
-    
-    .col-one{
-        max-width: 32rem;
+        width: 100%;
+        max-width: 40rem;
     }
     
     .col-two{
-        padding-left: 5%;
-        margin:5rem auto;
-        width: 80%;
-        max-width: 25rem;
+        
+        margin: 5rem auto;
+        width: 90%;
+        max-width: 44rem;
     }
     
+    .span1
+    {
+        width: 97%;
+        margin: -0.5rem auto;
+        max-width: 39rem;
+    }
+
+    .span2
+    {
+        width: 99%;
+        margin: -1.2rem auto;
+        max-width: 39.5rem;
+    }
+    
+/*     
+    .first1{
+        margin-left: 0.3rem;
+    }
+    
+    .first2{
+        margin-left: 0.2rem;
+    }
+    
+    .first3{
+        margin-left: 0rem;
+    } */
+    
+    .contain{
+        margin-top: 2.5rem;
+        margin-bottom: 0.5rem;
+        max-width: 40rem;
+    }
+    
+    label{
+        font-size: 25px;
+    }
+    
+    #barchart_material{
+        margin-top: 1rem;
+    }
+
+    #fd-icon{
+        height: 2.1rem;
+    }   
+    
+    .analysis{
+        margin-top: 3rem;
+        text-align: center;
+        font-size: 27px;
+    }
+    
+    .blog-p{
+        font-size: 16px;
+    }
+    
+    .blog-p-two{
+        font-size: 16px;
+    }
+    /* .blog-h2{
+        wi
+    } */
+    
+    .blog-h2{
+        font-size: 28px;
+    }
+
+    .table{
+        font-size: 13px;
+    }
 }
 
-@media screen and (max-width:610px) {
-    
-    #p1{
-        margin-top: 0;
+@media screen and (max-width:860px) 
+{
+    #barchart_material{
+        margin-left: 10%;
     }
     
-    .simple{
-        margin-top: 5rem;
-        width: 70%;
+    .data{
+        margin-top: 1rem;
+        width: 100%;
+        display: block;
+    }
+    
+    .data div{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #amount1{
+        margin-top: 0.5rem;
+    }
+    
+    .data button{
+        margin-top: 0.4rem;
+        width: 100%;
+    }
+    
+    #fd-icon{
+        height: 2.1rem;
+    }
+    
+    .blog-h2-two{
+        font-size: 17px;
+    }
+    
+    .blog-p{
+        font-size: 16px;
+    }
+    
+    .blog-p-two{
+        font-size: 16px;
+    }
+    .blog-h2{
+        font-size: 25px;
+    }
+
+    .table{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:500px)
+{
+    .hide{
+        visibility: hidden;
+    }
+    .col-one{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contain{
+        margin-top: 1.5rem;
+        display: block;
+    }
+    
+    .input{
+        width: 100%;
     }
     
     .slider{
-        display: none;
+        margin-right:8%;
     }
     
-    .one span{
-        display: none;
+    .bar{
+        height: 2.2rem;
+        width: 100%;
+        max-width: 32rem;
     }
     
-    .two span{
-        display: none;
+    label{
+        font-size: 20px;
     }
     
-    .one2 span{
-        display: none;
+    .span1
+    {
+        width: 96%;
+        margin: -0.5rem auto;
+        max-width: 39rem;
     }
     
-    .two2 span{
-        display: none;
+    .span2
+    {
+        width: 99.5%;
+        margin: -1.2rem auto;
+        max-width: 40.5rem;
     }
     
-    .one3 span{
-        display: none;
+    /* .first1{
+        margin-left: 0.1rem;
     }
     
-    .two3 span{
-        display: none;
+    .first2{
+        margin-left: 0rem;
     }
     
-    input{
-        text-align: left;
-        padding-left:2rem;
-        height: 1.8rem;
-        font-size: 24px;
+    .first3{
+        margin-left: 0rem;
+    } */
+    
+    #fd-icon{
+        height: 2rem;
+    }    
+    
+    .analysis{
+        margin-top: 3rem;
+        font-size: 25px;
+        color: #006266;
     }
     
-    .simple{
-        margin: 3.3rem auto;
-    }
-
-    .whole{
-        margin: 0 auto;
+    .blog-h2-two{
+        font-size: 15px;
     }
     
-    .col-one{
-        width: 90%;
-        padding-top: 3.5rem;
-        padding-bottom: 2rem;
-        margin: 0rem auto;
+    .blog-p{
+        margin-left: 0.5rem;
+        font-size: 14px;
     }
     
-    .col-two{
-        background: transparent;
-        margin:-1rem auto;
-        width: 90%;
+    .blog-p-two{
+        margin-left: 0.5rem;
+        font-size: 14px;
     }
-
-    #piechart{
-        width: 90%;
-        margin-right: 1rem;
-        margin-left: 0;
+    
+    .blog-p-three{
+        margin-left: 1rem;
+        font-size: 13px;
+    }
+    .blog-h2{
+        font-size: 22px;
     }
 }
 
-@media screen and (max-width:430px) {
-    .col-two{
-        margin-left: 3%;
+@media screen and (max-width:400px) {
+    #barchart_material{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
     }
+    
+    .mon-data{
+        width: 100%;
+    }
+    
+    
 }
