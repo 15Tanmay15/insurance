@@ -212,30 +212,37 @@
         </div>
         <div class="col-two">
             <center><div id="piechart" style="margin-left: 8%;" ></div></center>
-            <center><div class="values">
+            <!-- <center><div class="values">
                 <hr>
                 <h3 id="interest"></h3>
                 <hr>
                 <h3 id="principle"></h3>
                 <hr>
                 <h3 id="total"></h3>
-            </div></center>
+            </div></center> -->
+            <h2 style="text-align: center; margin-top: 2rem; font-family:sans-serif; font-weight: 400;">Details</h2>
+            <center><table class="table" style=" width: 95%;">
+                <thead>
+                    <tr>
+                        <th>EMI</th>
+                        <th>Interest</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table></center>
         </div>
     </div>
     
     <div class="full" id="full-div">
         <div class="head-div"><h1 class="table-head">Analysis</h1></div>
         <hr>
-        <div class="data">
-            <div><button id="amount1"></button></div>
-            <div><button id="amount2"></button></div>
-            <div><button id="amount3"></button></div>
-        </div>
-        
+
         <div class="table-div">
-            <h1 class="analysis">Details/Year</h1>
+            <!-- <h1 class="analysis">Details/Year</h1> -->
             <div class="mon-data">
-                <table class="table">
+                <table class="table2">
                     <thead>
                         <tr>
                             <th>Years</th>
@@ -250,22 +257,21 @@
         </div>
         
         <div class="blog">
-            <h2 class="blog-h2">The formula to determine FD maturity amount</h2>
+            <h2 class="blog-h2">What is EMI?</h2>
             <p class="blog-p">
-                The formula to determine FD maturity amount
-                There are two types of FD that you may avail – simple interest FD and compound interest FD. Groww has calculators for both these types of FD.
-                The fixed deposit calculator for simple interest FD uses the following formula –
+                Equated Monthly Installment - EMI for short - is the amount payable every month to the bank or any other financial institution until the loan amount is fully paid off. It consists of the interest on loan as well as part of the principal amount to be repaid. The sum of principal amount and interest is divided by the tenure, i.e., number of months, in which the loan has to be repaid. This amount has to be paid monthly. The interest component of the EMI would be larger during the initial months and gradually reduce with each payment. The exact percentage allocated towards payment of the principal depends on the interest rate. Even though your monthly EMI payment won't change, the proportion of principal and interest components will change with time. With each successive payment, you'll pay more towards the principal and less in interest.
+Here's the formula to calculate EMI:
             </p>
             
-            <center><h3 class="blog-h2-two" style="max-width: 20rem; margin-bottom: 0.7rem;">M = P + (P x r x t/100), where –</h3></center>
-            <p class="blog-p-three" style="margin-top: 0rem;">P is the principal amount that you deposit
-                <br>r is the rate of interest per annum
-                <br>t is the tenure in years</p>
+            <center><h3 class="blog-h2-two" style="max-width: 25rem; margin-bottom: 0.7rem;">E = ( P x r x (1 + r)^n ) / ( (1 + r)^n -1 ), where –</h3></center>
+            <p class="blog-p-three" style="margin-top: 0rem; "><b>P</b> is Principal Loan Amount
+                <br><b>r</b> is rate of interest calculated on monthly basis. (i.e., r = Rate of Annual interest/12/100. If rate of interest is 10.5% per annum, then r = 10.5/12/100=0.00875)
+                <br><b>n</b> is loan term / tenure / duration in number of months
                 <p class="blog-p-two">For example, if you deposit a sum of Rs. 1,00,000 for 5 years at 10% interest, the equation reads –
                 </p>
                 
                 <center><h3 class="blog-h2-two" style="width: auto; max-width: 35rem;">    
-                    M= Rs. 1,00,000 + (1,00,000 x 10 x 5/100)= Rs. 1,50,000</h3></center>
+                    M= Rs. 1,00,000 x  x () = Rs. 1,50,000</h3></center>
                     <p class="blog-p-two">
                         For compound interest FD, the FD return calculator uses the following formula –
                     </p>

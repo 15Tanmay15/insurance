@@ -14,10 +14,11 @@ function calculate()
     total=(Number(principle)/Number(month))+interest;
     if(Number.isFinite(total)){
         var tot=Number(Number(interest)*Number(month))+Number(principle);
-        document.querySelector('#interest').innerHTML="Loan EMI : ₹ "+ ((Number(principle)*Number(rate)*0.01)/Number(month)).toFixed(2);
-        document.querySelector('#principle').innerHTML="Interest Amount : ₹ "+ (Number(principle)*Number(rate)*0.01).toFixed(2);
-        document.querySelector('#total').innerHTML="Total Money : ₹ "+ tot.toFixed(2);
-        document.querySelector(".values").style.display="block";
+        val1=((Number(principle)*Number(rate)*0.01)/Number(month)).toFixed(2);
+        val2=(Number(principle)*Number(rate)*0.01).toFixed(2);
+        val3=tot.toFixed(2);
+        tablecal(val1,val2,val3);
+        // document.querySelector(".values").style.display="block";
         document.querySelector(".col-two").style.display="block";
         var data = google.visualization.arrayToDataTable([
             ['Task', 'Hours per Day'],
@@ -26,7 +27,7 @@ function calculate()
 
         if(window.innerWidth<1000 || window.innerWidth<505)
         {
-            var options={ pieStartAngle: 120,slices: {  0: {offset: 0.2,color:"rgb(54, 190, 54)"},1: {color:"#008080"}},is3D: true,animation:{ startup: true, duration: 2000, easing: 'out' },legend:{textStyle: {color: 'white'}}, 'width':"100%", 'height':"100%",chartArea: {width: "300", height: "250"} ,'backgroundColor':'transparent'};
+            var options={ pieStartAngle: 120,slices: {  0: {offset: 0.2,color:"rgb(54, 190, 54)"},1: {color:"#008080"}},is3D: true,animation:{ startup: true, duration: 2000, easing: 'out' },legend:{textStyle: {color: 'white'}}, 'width':"100%", 'height':"100%",chartArea: {width: "350", height: "250"} ,'backgroundColor':'transparent'};
         }
         else
         {
@@ -54,6 +55,24 @@ function calculate()
         }
     }
 }
+
+let count=0;
+function tablecal(EMI,interest,total)
+{
+    if(count!=0){
+        document.getElementsByTagName('table')[0].deleteRow(1);
+    }
+    var tbodyRef = document.getElementsByTagName('table')[0].getElementsByTagName('tbody')[0];
+    var newRow = tbodyRef.insertRow();
+    var newCell1 = newRow.insertCell(0);
+    var newCell2 = newRow.insertCell(1);
+    var newCell3 = newRow.insertCell(2);
+    newCell1.innerText=EMI;
+    newCell2.innerText=interest;
+    newCell3.innerText=total;
+    count=month;
+}
+
 
 function slider1()
 {
