@@ -102,7 +102,10 @@ body{
     /* margin-left:30%; */
     width:100%;
     transition: width 1s;
+    overflow: hidden;
+    /* border-right: 3px solid; */
 }
+
 
 .paradiv{
     margin-top: 5%;

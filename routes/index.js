@@ -6,4 +6,5 @@ router.get('/', homeController.home);
 router.use('/connector', require('./connector.js'));
 router.get('/emi_calculator',homeController.emi_calculator)
 router.get('/fd_calculator',homeController.fd_calculator)
+router.get('/rd_calculator',homeController.rd_calculator)
 module.exports = router;

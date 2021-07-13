@@ -13,6 +13,9 @@ function drawChart() {
         document.getElementById('amount1').innerText="Total : "+ Number(Number(principle)+Number(interest)).toFixed(2) ;
         document.getElementById('amount2').innerText="Deposit : "+ Number(principle);
         document.getElementById('amount3').innerText="Profit : "+ Number(interest).toFixed(2);
+        document.getElementById('amount1').style.display='block';
+        document.getElementById('amount2').style.display='block';
+        document.getElementById('amount3').style.display='block';
         document.querySelector('#barchart_material').style.marginTop="0rem";
         var tot = Number(Number(interest) * Number(month)) + Number(principle);
         var data = google.visualization.arrayToDataTable([

@@ -3,7 +3,7 @@ body{
     /* background: white; */
     color:rgb(61, 61, 61);
     /* background: rgb(231, 230, 230); */
-    background: #006266;
+    background: #227093;
 }
 
 .main{
@@ -292,27 +292,39 @@ label{
 .blog{
     margin:auto;
     margin-top: 2rem;
+    padding-bottom: 2rem;
     width: 95%;
     max-width: 50rem;
 }
 
 .blog-h2{
     font-size: auto;
-    margin-left: 0.1rem;
-    margin-bottom: 0.8rem;
+    width: 95%;
+    max-width:45rem;
+    margin: 0 auto;
+    margin-bottom: 1.2rem;
     text-shadow:1px 1px 1px black;
     font-family: sans-serif;
 }
 
 .blog-p{
+    margin: 0 auto;
     margin-top: 0.3rem;
     font-size: auto;
-    margin-left: 0.5rem;
+    /* margin-left: 0.5rem; */
     width: 90%;
     color: black;
     font-weight: 501;
     font-family: sans-serif;
     font-size: 17px;
+}
+
+.where{
+    width: 90%;
+    margin:0.8rem auto;
+    margin-top: 0rem;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .blog-h2-two{
@@ -326,15 +338,16 @@ label{
     padding: 0.3rem;
     width: auto;
     margin-block: 1.3rem;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 .blog-p-two{
     margin-top: 1rem;
     color: black;
-    margin-left: 1rem;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
     font-weight: 501;
     font-family: sans-serif;
     font-size: 17px;
@@ -344,10 +357,17 @@ label{
     margin-top: 1rem;
     color: black;
     margin-left: 3rem;
-    width: 80%;
+    width: 90%;
     font-weight: 501;
     font-family: sans-serif;
     font-size: 15px;
+}
+
+.where p{
+    margin: 0;
+    font-size: 17px;
+    font-family: sans-serif;
+    color: black;
 }
 
 @media screen and (max-width:1000px) {
@@ -461,10 +481,15 @@ label{
         font-size: 18px;
     }
 
+    
 }
 
 @media screen and (max-width:860px) 
 {
+    .where p{
+        margin: 0;
+        font-size: 16px;
+    }
     #barchart_material{
         margin-left: 10%;
     }
@@ -518,6 +543,10 @@ label{
 
 @media screen and (max-width:500px)
 {
+    
+    .where{
+        display: block;
+    }
     .hide{
         visibility: hidden;
     }
@@ -603,12 +632,19 @@ label{
     }
     
     .blog-p-three{
+        width: 95%;
         margin-left: 1rem;
         font-size: 13px;
     }
     .blog-h2{
         font-size: 22px;
     }
+
+    .where p{
+        margin: 0;
+        font-size: 13px;
+    }
+    
 }
 
 @media screen and (max-width:400px) {
