@@ -50,7 +50,9 @@ form {
   align-items: center;
   padding: 16px;
   width: 35%;
-  margin: 0rem auto;
+  margin: 1rem auto;
+  margin-left: 1rem;
+  min-width: 25rem;
 
   /* margin-top: 2rem; */
 }
@@ -165,7 +167,7 @@ form button.red {
   margin-right: auto;
   justify-content: space-between;
   display: flex;
-  max-width: 70rem;
+  max-width: 80rem;
 }
 
 .input-group {
@@ -187,18 +189,79 @@ form button.red {
           flex: 1;
 }
 
+.animated-text {
+  margin-top: 8rem;
+  margin-left:8.5rem;
+  background: 50% 100% / 50% 50% no-repeat
+              radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: rgb(41, 41, 41);
+  font-size: 60px;
+  position: absolute;
+  font-family: "Source Sans Pro", sans-serif;
+  animation: reveal 2000ms ease-in-out forwards 200ms,
+  glow 1500ms linear 5 1000ms,
+  float 2000ms;
+  opacity: 1;
+  z-index: 9999;
+}  
+
+  @keyframes float{
+    80%{
+      margin-left: 5rem;
+    }
+    100%{
+      margin-left: 11rem;
+      filter:blur(1px);
+    }
+  }
+
+  @keyframes reveal {
+    80%{
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow {
+    40% {
+      text-shadow: 1px 1px 6px black;
+    }
+  }
+
+
+.slogan{
+  font-size: 18px; 
+  color: white; 
+  margin-top: -1rem; 
+  margin-left: 15rem;
+  animation: glow 1500ms 6;
+}
 
 .img-div{
   width: 100%;
   margin: 0 auto;
-  max-width: 30rem;
+  max-width: 35rem;
 }
 
 .img-div img{
-  width: 100%;
-  height: 300px;
+  width: 110%;
+  height: 370px;
   margin-left: 0.7rem;
   border-radius: 0.2rem;
+  z-index: -2;
+  animation: blur 2000ms forwards;
+}
+
+@keyframes blur {
+  0%{
+    filter: blur(0);
+  }
+  100%{
+    filter:blur(2px);
+  }
 }
 
 .landscape h3{
