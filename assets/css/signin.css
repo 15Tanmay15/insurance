@@ -1,5 +1,32 @@
 body, html {
-  background-color: #EBECF0 !important;
+  background-color: #f5f6fa !important;
+}
+/* #EBECF0 */
+
+.body-head::before{
+  content: '..';
+  background: url('../images/cherry.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  filter: brightness(.7);
+  position: absolute;
+  /* display: inline!important; */
+  width: 100%;
+  height: 100%;
+  min-height: 35rem;
+  max-width: 80rem;
+  max-height: 35rem;
+  z-index: 0;
+}
+
+.body-head{
+  padding-top: 0.1rem;
+  padding-bottom: 1rem;
+  max-width: 80rem;
+  border-radius: 0.3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
 }
 
 body {
@@ -15,50 +42,36 @@ header{
 
 form div, p {
   color: #BABECC;
-  text-shadow: 1px 1px 1px #FFF;
+  text-shadow: 1px 1px 1px #d7d8db;
 }
 
 .main-head {
+  position: relative;
   font-weight: 700;
   text-align: center;
-  /* text-transform: uppercase; */
-  background: linear-gradient(90deg, #000, #000);
-  /* letter-spacing: 5px; */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 89%;
-  animation: shine 4s linear 1;
-  position: relative;
   font-size: 40px;
   font-family: 'calibri' ;
   margin: 2.5rem ;
-  text-shadow: 0px 0px 1px black;
+  text-shadow: 0px 0px 1px white;
+  color: #2C3A47!important;
 }
-
-@keyframes shine {
-  10% {
-    background-position-x: -600%;
-  }
-
-}
-
 
 form {
   justify-content: center;
   align-items: center;
   padding: 16px;
   width: 35%;
+  padding-top: 4rem;
   margin: 1rem auto;
   margin-left: 1rem;
   min-width: 25rem;
-
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.37);
   /* margin-top: 2rem; */
 }
 
 .segment {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding: 32px 0;
   color: rgb(65, 63, 63);
   text-align: center;
@@ -71,7 +84,7 @@ form button, input {
   border-radius: 320px;
   padding: 16px;
   background-color: #EBECF0;
-  text-shadow: 1px 1px 0 #FFF;
+  text-shadow: 1px 1px 0 #d7d8db;
 }
 
 form label {
@@ -82,10 +95,31 @@ form label {
   max-width: 20rem;
 }
 
+.welcome{
+  position: absolute;
+  text-align: center;
+  width: 20rem;
+  color: black;
+  font-size: 20px;
+  margin-left: 8.5rem;
+  margin-top: 13rem;
+  opacity: 0;
+  animation: reveal 2s forwards;
+  animation-delay: 1s;
+  text-shadow: 0.5px 0.5px 0.5px rgb(36, 35, 35);
+}
+
+@keyframes reveal {
+  to{
+    opacity: 1;
+  }
+}
+
 form input {
+  margin-top: 0.5rem;
   margin-right: 8px;
-  -webkit-box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
-          box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+  -webkit-box-shadow: inset 2px 2px 5px #7f8fa6, inset -5px -5px 10px #EBECF0;
+  box-shadow: inset 2px 2px 5px #7f8fa6, inset -5px -5px 10px #EBECF0;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -102,15 +136,15 @@ form input::placeholder {
 }
 
 form input:focus {
-  -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
-          box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+  -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #d7d8db;
+          box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #d7d8db;
 }
 
 form button {
   color: #61677C;
   font-weight: bold;
-  -webkit-box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
-          box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+  -webkit-box-shadow: -5px -5px 20px #7f8fa6, 5px 5px 20px #7f8fa6;
+  box-shadow: -5px -5px 20px #7f8fa6, 5px 5px 20px #7f8fa6;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -118,13 +152,13 @@ form button {
 }
 
 form button:hover {
-  -webkit-box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
-          box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+  -webkit-box-shadow: -2px -2px 5px #7f8fa6, 2px 2px 5px #7f8fa6;
+  box-shadow: -2px -2px 5px #7f8fa6, 2px 2px 5px #7f8fa6;
 }
 
 form button:active {
-  -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
-          box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+  -webkit-box-shadow: inset 1px 1px 2px #8390a3, inset -1px -1px 2px #8390a3;
+  box-shadow: inset 1px 1px 2px #8390a3, inset -1px -1px 2px #8390a3;
 }
 
 form button .icon {
@@ -140,11 +174,11 @@ form button.unit {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0 8px;
   font-size: 19.2px;
 }
@@ -154,7 +188,7 @@ form button.unit .icon {
 
 form button.red {
   margin:0 auto;
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: block;
   width: 80%;
   color: #AE1100;
@@ -162,12 +196,12 @@ form button.red {
 }
 
 .signin-main{
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
   display: flex;
-  max-width: 80rem;
+  max-width: 85rem;
 }
 
 .input-group {
@@ -190,54 +224,42 @@ form button.red {
 }
 
 .animated-text {
-  margin-top: 8rem;
-  margin-left:8.5rem;
+  margin-top: 4rem;
+  margin-left:5rem;
   background: 50% 100% / 50% 50% no-repeat
-              radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+              radial-gradient(ellipse at bottom, #d7d8db, transparent, transparent);
   -webkit-background-clip: text;
   background-clip: text;
   color: rgb(41, 41, 41);
-  font-size: 60px;
+  font-size: 65px;
   position: absolute;
   font-family: "Source Sans Pro", sans-serif;
-  animation: reveal 2000ms ease-in-out forwards 200ms,
-  glow 1500ms linear 5 1000ms,
-  float 2000ms;
+  animation: reveal 2000ms ease-in-out forwards 200ms, float 2000ms;
   opacity: 1;
   z-index: 9999;
+  text-shadow: 1px 1px 3px black;
 }  
 
-  @keyframes float{
-    80%{
-      margin-left: 5rem;
+@keyframes float{
+    from{
+      margin-top: 10rem;
     }
-    100%{
-      margin-left: 11rem;
-      filter:blur(1px);
-    }
-  }
+}
 
-  @keyframes reveal {
-    80%{
-      letter-spacing: 8px;
-    }
-    100% {
-      background-size: 300% 300%;
-    }
+@keyframes glow {
+  40% {
+    text-shadow: 1px 1px 3px black;
   }
-  @keyframes glow {
-    40% {
-      text-shadow: 1px 1px 6px black;
-    }
-  }
+}
 
 
 .slogan{
   font-size: 18px; 
-  color: white; 
+  color: #CAD3C8; 
   margin-top: -1rem; 
   margin-left: 15rem;
-  animation: glow 1500ms 6;
+  animation: glow 1000ms 1 forwards;
+  text-shadow: 1px 1px 3px black;
 }
 
 .img-div{
@@ -251,7 +273,6 @@ form button.red {
   height: 370px;
   margin-left: 0.7rem;
   border-radius: 0.2rem;
-  z-index: -2;
   animation: blur 2000ms forwards;
 }
 
@@ -260,7 +281,7 @@ form button.red {
     filter: blur(0);
   }
   100%{
-    filter:blur(2px);
+    filter:blur(0.5px);
   }
 }
 
@@ -283,10 +304,33 @@ form button.red {
   font-size: 28px;
 } */
 
+.text-1{
+  display: none;
+}
 
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1050px) {
 
+  .body-head::before{
+    content: '..';
+    background: url('../images/cherry2.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    filter: brightness(.7);
+    position: absolute;
+    width: 88%;
+    margin: 1rem auto;
+    height: 100%;
+    max-width: 35rem;
+    max-height: 20rem;
+    z-index: 0;
+  }
+  .body-head{
+    margin: 1rem auto;
+    max-height: 20rem;
+    width: 88%;
+    max-width: 35rem;
+  }
   .signin-main{
     margin-top: 1.4rem;
   }
@@ -297,8 +341,14 @@ form button.red {
   }
   
   form{
-    margin-top: 1rem;
+    position: relative;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    margin-top: 3rem;
     width: 100%;
+    min-width: unset;
+    z-index: 100;
   }
   
   form label {
@@ -306,55 +356,140 @@ form button.red {
     margin-bottom: 18px;
     width: 85%;
     margin-top: 1.5rem;
-    max-width: 19rem;
-    min-width: 19rem;
+    max-width: 19.5rem;
+    min-width: 19.5rem;
   }
   
   form button.red {
     margin-top: 1.8rem;
     width: 85%;
-    min-width: 19rem;
-    max-width: 19rem;
+    min-width: 19.5rem;
+    max-width: 19.5rem;
   }
   
   .segment{
-    margin-top: 2rem;
-    padding: 10px;
+      margin-top: 2rem;
+      padding: 10px;
   }
   
   .signin-main{
-    display: block;
+      display: block;
   }
   
   .main-head{
-    font-size: 32px;
-    margin-bottom: 1.5rem;
-    background-size: 100%;
+      font-size: 32px;
+      margin-top: 0rem;
+      margin-bottom: 1.5rem;
+      background-size: 100%;
+      display: none;
   }
+  
+  .text-1{
+      margin-top: 3.5rem;
+      position: relative;
+      display: block;
+  }
+  
+  .animated-text {
+      position: relative;
+      margin-top:1rem;
+      margin-left: 0;
+      text-align: center;
+      font-size: 50px;
+      position: static;
+    }  
+
+  @keyframes float{
+    80%{
+      margin-left: -3rem;
+    }
+    100%{
+      margin-left: 5rem;
+      filter:blur(0.5px);
+    }
+  }
+
+  @keyframes reveal {
+    80%{
+      letter-spacing: 4px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow {
+    40% {
+      text-shadow: 1px 1px 3px black;
+    }
+  }
+
+  .slogan{
+    text-align: center;
+    font-size: 16px; 
+    margin: 0;
+    margin-top: -0.5rem; 
+    margin-left: 0rem;
+  }
+
 }
 
 @media screen and (max-width:600px) {
   .main-head{
     font-size: 28px;
   }
+  
+  .animated-text{
+    font-size: 40px;
+  }
+
+  @keyframes float{
+    80%{
+      margin-left: -1rem;
+    }
+    100%{
+      margin-left: 1rem;
+      filter:blur(1px);
+    }
+  }
+
+  form{
+    margin-top: 2.5rem;
+  }
+  
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:450px) {
   .main-head{
     font-size: auto;
   }
-  form {
-    margin-top: 2rem;
-    width: 100%;
+  .animated-text{
+    font-size: 40px;
+    animation: none;
   }
-
+  form {
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 90%;
+    min-width: unset;
+    z-index: 100;
+  }
+  
   form label{
     width: 100%;
     min-width: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  form input{
+    width: 100%;
+    height: 3rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   form button.red{
     width: 100%;
-    min-width: 0rem;
+    min-width: unset;
   }
 }

@@ -5,8 +5,7 @@ body{
     /* background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67)); */
     /* background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67));
     color: black; */
-    background-color: black;
-    color: white;
+    background-color: #58B19F;
     font-family: 'Balsamiq Sans',sans-serif;
     height: 100%;
     margin: 0;
@@ -16,6 +15,8 @@ body{
 #emailHelp{
     display: none;
 }
+
+
 
   /* body::before{
     position: absolute;
@@ -35,8 +36,9 @@ header{
 
 input{
     color: black;
-    height: 3rem;
+    height: 2.5rem;
     font-family: sans-serif;
+    max-width: 30rem;
 }
 
 #emailHelp{
@@ -45,12 +47,13 @@ input{
 }
 
 .label{
-    margin-top: 2.7rem;
+    margin-top: 1.8rem;
 }
 
 label{
-    font-weight: bold;
-    font-size: 28px;
+    color: black;
+    font-size: 22px;
+    text-shadow: 0.5px 0.5px 0.5px black;
     transition: font-size 1s;
 }
 
@@ -73,23 +76,85 @@ label{
 form{
     margin-left: auto; 
     margin-right: auto;
-    margin-top: 3rem;
+    margin-top: 2rem;
     width: 100%;
+    max-width: 78rem;
 }
 
 .submit{
-    margin-top: 3rem;
-    padding: 0.4rem 1rem;
-    padding-top: 0.7rem;
+    margin-top: 2rem;
+    padding: 0.2rem 0.7rem;
+    padding-top: 0.3rem;
     font-size: 20px;
+}
+
+.animated-text {
+  margin-top: 3rem;
+  text-align: center;
+  background: 50% 100% / 50% 50% no-repeat
+              radial-gradient(ellipse at bottom, #d7d8db, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: rgb(41, 41, 41);
+  font-size: 50px;
+  font-family: "Source Sans Pro", sans-serif;
+  animation: reveal 2000ms ease-in-out forwards 200ms,
+  glow 1000ms forwards 1 1000ms ,
+  float 2000ms;
+  opacity: 1;
+  white-space: nowrap;
+  z-index: 9999;
+  text-shadow: 1px 1px 3px black;
+}  
+
+@keyframes float{
+  80%{
+    margin-left: -5rem;
+  }
+  100%{
+    margin-left: 5rem;
+    filter:blur(1px);
+  }
+}
+
+@keyframes reveal {
+  80%{
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+
+@keyframes glow {
+  40% {
+    text-shadow: 1px 1px 3px black;
+  }
+}
+
+.slogan{
+  font-size: 18px; 
+  color: black; 
+  margin-top: -1rem; 
+  margin-left: 15rem;
+  margin-bottom: 0;
+  animation: glow 1000ms 1 forwards;
+  text-shadow: 1px 1px 3px black;
+}
+  
+input,input::-webkit-input-placeholder {
+    font-size: 17px;
+    line-height: 3;
+    color: black;
+    text-shadow: 0.1px 0.1px 0.1px black;
 }
 
 @media screen and (max-width:1000px) {
     form{
-        margin-top: 4rem;
+        margin-top: 2rem;
         margin-left: auto; 
         margin-right: auto;
-        width:70%;
+        width:75%;
     }
     
     .main{
@@ -99,32 +164,34 @@ form{
     }
 
     input{
-        height:2.3rem;
+        height:2.1rem;
         margin-left: auto; 
         margin-right: auto;
-        max-width: 30rem;
+        max-width: 27rem;
     }
-
+    
     .col-one{
         width: 100%;
     }
-
+    
     .col-two{
         width: 100%;
     }
-
+    
     .label{
         margin-top: 1.2rem;
         width:100%;
         margin-left: auto;
         margin-right: auto;
-        max-width: 30rem;
+        max-width: 27rem;
     }
-
+    
     label{
+        margin-left: auto;
+        margin-right: auto;
         font-size: 18px;
     }
-
+    
     .submit{
         margin-top: 2rem;
         font-size: 18px;
@@ -136,11 +203,35 @@ form{
         font-size: 15px;
         line-height: 3;
     }
+
+    .animated-text{
+        font-size: 45px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .animated-text{
+        font-size: 37px;
+    }
+    .slogan{
+        text-align: center;
+        margin-left: 0;
+        margin-top: -0.2rem;
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width:450px) {
-    label{
+    .animated-text{
+        font-size: 30px;
+        animation: none;
+    }
+    .slogan{
         font-size: 15px;
+    }
+    label{
+        font-size: 16px;
     }
 
     input{
