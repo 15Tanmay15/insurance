@@ -74,48 +74,50 @@
     TS2 Insurance
     <p class="slogan">Helo</p>
   </div>
-  <div class="one">    
-          <form action="/connector/create" method="POST">
+  
+  <div class="one">  
+    <form action="/connector/create" method="POST">
+      <h2 class="head-signup">Welcome! Signup</h2>  
             <div class="main">
               <div class="col-one">
-                <div class="label mb-3">
-                  <label for="exampleInputName" class="form-label">First Name</label>
-                  <input type="text" name="first_name" class="form-control" id="exampleInputfirstName" placeholder="Enter your first name" required>
+                <div class="label" id="label-one">
+                  <input type="text" name="first_name" placeholder="First name" required>
                 </div>
                 
-                <div class="label mb-3">
-                  <label for="exampleInputName" class="form-label">Last Name</label>
-                  <input type="text" name="last_name" class="form-control" id="exampleInputlastName" placeholder="Enter your last name">
+                <div class="label">
+                  <input type="text" name="last_name" placeholder="Last name">
                 </div>
                 
-                <div class="label mb-3">
-                  <label for="exampleInputPhone" class="form-label">Phone No.</label>
-                  <input type="number" minlength="10" name="phone" class="form-control" id="exampleInputPhone" placeholder="Enter 10 digit phone number" required>
+                <div class="label">
+                  <input type="number" minlength="10" name="phone" placeholder="Phone number" required>
                 </div>
-              </div>
-              
-              <div class="col-two">
-                <div class="label mb-3">
-                  <label for="exampleInputEmail" class="form-label">Email</label>
-                  <input type="email" name="email" class="form-control" id="exampleInputEmail" onclick="func()" placeholder="Enter your email id" required>
+                <div class="label">
+                  <input type="email" name="email" onclick="func()" placeholder="Email id" required>
                   <div id="emailHelp" class="form-text" style="position: absolute;">We'll never share your email with anyone else.</div>
                 </div>
                 
-                <div class="label mb-3">
-                  <label for="exampleInputPassword" class="form-label">Password</label>
-                  <input type="password" name="password" class="form-control" id="exampleInputPassword" placeholder="Password"  required>
+              </div>
+              
+              <div class="col-two">
+                <div class="label" id="label-two">
+                  <input type="password" name="password" placeholder="Password"  required>
                 </div>
                 
-                <div class="label mb-3">
-                  <label for="exampleInputConfirmPassword" class="form-label">Confirm Password</label>
-                  <input type="text" name="confirm_password" class="form-control" id="exampleInputConfirmPassword"  placeholder="Confirm password" required>
+                <div class="label">
+                  <input type="text" name="confirm_password" placeholder="Confirm password" required>
+                </div>
+                <div class="label" id="form-button-one">
+                  <center><button type="submit" class="submit">Sign Up</button></center>
+                </div>
+                <p class="forget">If already have an account</p>
+                <div class="label" id="form-button-two">
+                  <center><a href="/connector/sign-in"><button type="button" class="submit">Sign In</button></a></center>
                 </div>
               </div>
             </div>
             
-            <center><button type="submit" class="submit btn btn-primary">Sign Up</button></center>
-            </form>
-            
+          </form>
+          
             
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>

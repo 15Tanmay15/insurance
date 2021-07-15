@@ -104,8 +104,11 @@ form label {
   margin-left: 8.5rem;
   margin-top: 13rem;
   opacity: 0;
+  padding: 1.5rem;
   animation: reveal 2s forwards;
   animation-delay: 1s;
+  border-radius: 0.3rem;
+  background: rgba(255,255,255,0.1);
   text-shadow: 0.5px 0.5px 0.5px rgb(36, 35, 35);
 }
 

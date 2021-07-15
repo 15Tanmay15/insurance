@@ -5,15 +5,19 @@ body{
     /* background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67)); */
     /* background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67));
     color: black; */
-    background-color: #58B19F;
+    /* background-color: #58B19F; */
+    background-color: white;
+    background: linear-gradient(to bottom, #74ebd5, #acb6e5);
     font-family: 'Balsamiq Sans',sans-serif;
     height: 100%;
     margin: 0;
     padding-bottom: 4rem;
+    transition: all 0.5s;
 }
 
 #emailHelp{
     display: none;
+    transition: all 0.5s;
 }
 
 
@@ -32,145 +36,241 @@ body{
 
 header{
     font-family: sans-serif!important;
-}
-
-input{
-    color: black;
-    height: 2.5rem;
-    font-family: sans-serif;
-    max-width: 30rem;
+    transition: all 0.5s;
 }
 
 #emailHelp{
+    position: absolute;
     color: black;
-    margin-left: 1rem;
+    width: 25rem;
+    margin-top: -0.7rem;
+    margin-left: 0.5rem;
+    transition: all 0.5s;
 }
 
 .label{
-    margin-top: 1.8rem;
+    margin-top: 2.8rem;
+    transition: all 0.5s;
 }
 
-label{
-    color: black;
-    font-size: 22px;
-    text-shadow: 0.5px 0.5px 0.5px black;
-    transition: font-size 1s;
-}
 
 .col-one{
     margin-left: auto ;
     margin-right: auto ;
-    width: 35%;
+    width: 40%;
+    transition: all 0.5s;
 }
 
 .col-two{
     margin-left: auto -10rem;
     margin-right: auto ;
-    width: 35%;
+    width: 40%;
+    transition: all 0.5s;
+}
+
+#label-one,#label-two{
+    margin-top: 0.5rem;
+    transition: all 0.5s;
 }
 
 .main{
+    margin-top: 0;
     display: flex;
+    transition: all 0.5s;
+}
+
+.forget{
+    margin: 1.3rem auto;
+    font-size: 14px; 
+    color: black; 
+    margin-bottom: 0.2rem; 
+    text-align: center;
+    transition: all 0.5s;
 }
 
 form{
+    padding-bottom: 4rem;
+    padding-top: 1.5rem;
+    background: rgb(255,255,255,0.5);
     margin-left: auto; 
     margin-right: auto;
     margin-top: 2rem;
     width: 100%;
     max-width: 78rem;
+    transition: all 0.5s;
+}
+
+#form-button-one{
+    margin-top: 2.6rem;
+    transition: all 0.5s;
+}
+
+#form-button-two{
+    margin-top: 0rem;
+    transition: all 0.5s;
 }
 
 .submit{
-    margin-top: 2rem;
-    padding: 0.2rem 0.7rem;
-    padding-top: 0.3rem;
-    font-size: 20px;
+    border: none;
+    background: #273c75;
+    /* margin-top: 0.7rem; */
+    height: 2.5rem;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    max-width: 29.5rem;
+    border-radius: 0.2rem;
+    transition: all 0.5s;
 }
 
 .animated-text {
-  margin-top: 3rem;
-  text-align: center;
-  background: 50% 100% / 50% 50% no-repeat
-              radial-gradient(ellipse at bottom, #d7d8db, transparent, transparent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: rgb(41, 41, 41);
-  font-size: 50px;
-  font-family: "Source Sans Pro", sans-serif;
-  animation: reveal 2000ms ease-in-out forwards 200ms,
-  glow 1000ms forwards 1 1000ms ,
-  float 2000ms;
-  opacity: 1;
-  white-space: nowrap;
-  z-index: 9999;
-  text-shadow: 1px 1px 3px black;
+    margin-top: 2rem;
+    text-align: center;
+    background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #d7d8db, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: rgb(41, 41, 41);
+    font-size: 50px;
+    font-family: "Source Sans Pro", sans-serif;
+    animation: reveal 2000ms ease-in-out forwards 200ms,
+    glow 1000ms forwards 1 1000ms ,
+    float 2000ms;
+    opacity: 1;
+    white-space: nowrap;
+    z-index: 9999;
+    text-shadow: 1px 1px 3px black;
+    transition: all 0.5s;
 }  
 
 @keyframes float{
-  80%{
-    margin-left: -5rem;
-  }
-  100%{
-    margin-left: 5rem;
-    filter:blur(1px);
-  }
+    80%{
+        margin-left: -5rem;
+    }
+    100%{
+        margin-left: 5rem;
+        filter:blur(1px);
+    }
 }
 
 @keyframes reveal {
-  80%{
-    letter-spacing: 8px;
-  }
-  100% {
-    background-size: 300% 300%;
-  }
+    80%{
+        letter-spacing: 8px;
+    }
+    100% {
+        background-size: 300% 300%;
+    }
 }
 
 @keyframes glow {
-  40% {
-    text-shadow: 1px 1px 3px black;
-  }
+    40% {
+        text-shadow: 1px 1px 3px black;
+    }
 }
 
 .slogan{
-  font-size: 18px; 
-  color: black; 
-  margin-top: -1rem; 
-  margin-left: 15rem;
-  margin-bottom: 0;
-  animation: glow 1000ms 1 forwards;
-  text-shadow: 1px 1px 3px black;
+    font-size: 18px; 
+    color: black; 
+    margin-top: -1rem; 
+    margin-left: 15rem;
+    margin-bottom: 0;
+    animation: glow 1000ms 1 forwards;
+    text-shadow: 1px 1px 3px black;
+    transition: all 0.5s;
 }
-  
+
 input,input::-webkit-input-placeholder {
     font-size: 17px;
     line-height: 3;
     color: black;
     text-shadow: 0.1px 0.1px 0.1px black;
+    transition: all 0.5s;
+}
+
+input{
+    background: transparent;
+    padding-left: 0.2rem;
+    color: black;
+    height: 2.5rem;
+    font-family: sans-serif;
+    margin: 0.8rem auto;
+    width: 100%;
+    max-width: 30rem;
+    border: none!important;
+    outline: none!important;
+    border-bottom: solid 2px #273c75!important;
+    display: block;
+    transition: all 0.5s;
+}
+
+.head-signup{
+    text-align: center;
+    font-weight: 1000;
+    font-size: 40px;
+    color:#273c75;
+    font-family: 'calibri';
+    margin: 1rem auto 2rem auto;
+    transition: all 0.5s;
 }
 
 @media screen and (max-width:1000px) {
-    form{
-        margin-top: 2rem;
-        margin-left: auto; 
-        margin-right: auto;
-        width:75%;
+    
+    .head-signup{
+        font-size: 35px;
     }
     
+    .submit{
+        border: none;
+        background: #273c75;
+        /* margin-top: 0.7rem; */
+        height: 2.5rem;
+        width: 99%;
+        font-size: 18px;
+        max-width: 28.5rem;
+        border-radius: 0.2rem;
+    }
+
+    #label-two{
+        margin-top: 2.5rem;
+    }
+
+    .forget{
+        margin-top: 1rem;
+    }
+
+    form{
+        margin-top: 1rem;
+        margin-left: auto; 
+        margin-right: auto;
+        width:95%;
+        max-width: 40rem;
+    }
+
+    #form-button-one{
+        margin-top: 2rem;
+    }
+
     .main{
         margin-left: auto; 
         margin-right: auto;
         display: block;
     }
 
+    #emailHelp{
+        width: 20rem;
+        margin-left: 1rem;
+    }
+
     input{
-        height:2.1rem;
+        width: 95%;
+        height:2.3rem;
         margin-left: auto; 
         margin-right: auto;
-        max-width: 27rem;
+        max-width: 30rem;
     }
     
     .col-one{
+        margin: 1rem auto;
         width: 100%;
     }
     
@@ -179,41 +279,40 @@ input,input::-webkit-input-placeholder {
     }
     
     .label{
-        margin-top: 1.2rem;
-        width:100%;
+        margin-top: 2.5rem;
+        width:85%;
         margin-left: auto;
         margin-right: auto;
-        max-width: 27rem;
+        max-width: 30rem;
     }
     
-    label{
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 18px;
-    }
     
     .submit{
-        margin-top: 2rem;
-        font-size: 18px;
-        padding-block: 0.3rem;
-        padding-top: 0.55rem;
+        font-size: 16px;
     }
 
     input,input::-webkit-input-placeholder {
-        font-size: 15px;
+        font-size: 16px;
         line-height: 3;
     }
 
     .animated-text{
+        margin-top: 2rem;
         font-size: 45px;
     }
 
 }
 
 @media screen and (max-width:600px) {
+
+    .head-signup{
+        font-size: 28px;
+    }
+
     .animated-text{
         font-size: 37px;
     }
+
     .slogan{
         text-align: center;
         margin-left: 0;
@@ -230,17 +329,22 @@ input,input::-webkit-input-placeholder {
     .slogan{
         font-size: 15px;
     }
-    label{
-        font-size: 16px;
-    }
 
     input{
         height: 1.9rem;
         font-size: 14px;
     }
 
+    #emailHelp{
+        width: unset;
+        max-width: 12rem;
+        display: none;
+        font-size: 10px;
+        margin-left: 1rem;
+    }
+
     input,input::-webkit-input-placeholder {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 3;
     }
 
