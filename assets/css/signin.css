@@ -1,5 +1,5 @@
 body, html {
-  background-color: #f5f6fa !important;
+  background-color: #CAD3C8 !important;
 }
 /* #EBECF0 */
 
@@ -17,6 +17,7 @@ body, html {
   max-width: 80rem;
   max-height: 35rem;
   z-index: 0;
+  transition: all 0.5s;
 }
 
 .body-head{
@@ -27,22 +28,26 @@ body, html {
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem;
+  transition: all 0.5s;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: -0.2px;
   font-size: 16px;
+  transition: all 0.5s;
 }
 
 header{
   font-family: sans-serif!important;
   text-shadow: none!important;
+  transition: all 0.5s;
 }
 
 form div, p {
   color: #BABECC;
   text-shadow: 1px 1px 1px #d7d8db;
+  transition: all 0.5s;
 }
 
 .main-head {
@@ -54,6 +59,7 @@ form div, p {
   margin: 2.5rem ;
   text-shadow: 0px 0px 1px white;
   color: #2C3A47!important;
+  transition: all 0.5s;
 }
 
 form {
@@ -67,6 +73,7 @@ form {
   min-width: 25rem;
   z-index: 100;
   background: rgba(0, 0, 0, 0.37);
+  transition: all 0.5s;
   /* margin-top: 2rem; */
 }
 
@@ -75,6 +82,7 @@ form {
   padding: 32px 0;
   color: rgb(65, 63, 63);
   text-align: center;
+  transition: all 0.5s;
 }
 
 form button, input {
@@ -85,6 +93,7 @@ form button, input {
   padding: 16px;
   background-color: #EBECF0;
   text-shadow: 1px 1px 0 #d7d8db;
+  transition: all 0.5s;
 }
 
 form label {
@@ -93,6 +102,7 @@ form label {
   margin-bottom: 24px;
   width: 80%;
   max-width: 20rem;
+  transition: all 0.5s;
 }
 
 .welcome{
@@ -110,6 +120,7 @@ form label {
   border-radius: 0.3rem;
   background: rgba(255,255,255,0.1);
   text-shadow: 0.5px 0.5px 0.5px rgb(36, 35, 35);
+  transition: all 0.5s;
 }
 
 @keyframes reveal {
@@ -131,16 +142,19 @@ form input {
   -moz-appearance: none;
        appearance: none;
   -webkit-appearance: none;
+  transition: all 0.5s;
 }
 
 form input::placeholder { 
   color: rgb(131, 129, 129);
-  opacity: 1; 
+  opacity: 1;
+  transition: all 0.5s; 
 }
 
 form input:focus {
   -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #d7d8db;
           box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #d7d8db;
+    transition: all 0.5s;
 }
 
 form button {
@@ -152,6 +166,7 @@ form button {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   font-weight: 600;
+  transition: all 0.5s;
 }
 
 form button:hover {
@@ -166,6 +181,7 @@ form button:active {
 
 form button .icon {
   margin-right: 8px;
+  transition: all 0.5s;
 }
 
 form button.unit {
@@ -184,9 +200,11 @@ form button.unit {
   align-items: center;
   margin: 0 8px;
   font-size: 19.2px;
+  transition: all 0.5s;
 }
 form button.unit .icon {
   margin-right: 0;
+  transition: all 0.5s;
 }
 
 form button.red {
@@ -196,6 +214,7 @@ form button.red {
   width: 80%;
   color: #AE1100;
   max-width: 20rem;
+  transition: all 0.5s;
 }
 
 .signin-main{
@@ -205,6 +224,7 @@ form button.red {
   justify-content: space-between;
   display: flex;
   max-width: 85rem;
+  transition: all 0.5s;
 }
 
 .input-group {
@@ -217,6 +237,7 @@ form button.red {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+          transition: all 0.5s;
 }
 
 .input-group label {
@@ -224,6 +245,7 @@ form button.red {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+          transition: all 0.5s;
 }
 
 .animated-text {
@@ -241,6 +263,7 @@ form button.red {
   opacity: 1;
   z-index: 9999;
   text-shadow: 1px 1px 3px black;
+  transition: all 0.5s;
 }  
 
 @keyframes float{
@@ -263,39 +286,28 @@ form button.red {
   margin-left: 15rem;
   animation: glow 1000ms 1 forwards;
   text-shadow: 1px 1px 3px black;
+  transition: all 0.5s;
 }
 
 .img-div{
   width: 100%;
   margin: 0 auto;
   max-width: 35rem;
+  transition: all 0.5s;
 }
 
-.img-div img{
-  width: 110%;
-  height: 370px;
-  margin-left: 0.7rem;
-  border-radius: 0.2rem;
-  animation: blur 2000ms forwards;
-}
 
-@keyframes blur {
-  0%{
-    filter: blur(0);
-  }
-  100%{
-    filter:blur(0.5px);
-  }
-}
 
 .landscape h3{
   margin-top: 1rem;
   font-size: 20px;
   text-align: center;
+  transition: all 0.5s;
 }
 
 .landscape{
   width: 60%;
+  transition: all 0.5s;
   /* margin-right: 2rem; */
 }
 /* 
@@ -309,6 +321,7 @@ form button.red {
 
 .text-1{
   display: none;
+  transition: all 0.5s;
 }
 
 
@@ -325,11 +338,11 @@ form button.red {
     margin: 1rem auto;
     height: 100%;
     max-width: 35rem;
-    max-height: 20rem;
+    max-height: 30rem;
     z-index: 0;
   }
   .body-head{
-    margin: 1rem auto;
+    margin: 2rem auto;
     max-height: 20rem;
     width: 88%;
     max-width: 35rem;
@@ -391,9 +404,9 @@ form button.red {
       margin-top: 3.5rem;
       position: relative;
       display: block;
-  }
-  
-  .animated-text {
+    }
+    
+    .animated-text {
       position: relative;
       margin-top:1rem;
       margin-left: 0;
@@ -401,15 +414,15 @@ form button.red {
       font-size: 50px;
       position: static;
     }  
-
-  @keyframes float{
-    80%{
-      margin-left: -3rem;
-    }
-    100%{
-      margin-left: 5rem;
-      filter:blur(0.5px);
-    }
+    
+    @keyframes float{
+      80%{
+        margin-left: -3rem;
+      }
+      100%{
+        margin-left: 5rem;
+        filter:blur(2px);
+      }
   }
 
   @keyframes reveal {

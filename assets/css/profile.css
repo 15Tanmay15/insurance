@@ -1,21 +1,42 @@
 body{
-    background-color:white!important;
+    background-color:#f1f2f6!important;
 }
 
+.profile{
+    /* background: linear-gradient(to bottom, teal 50%,white 50%); */
+    background: linear-gradient(to bottom, teal 35%,#dff9fb 65%);
+}
 
 .list li{
+    color: white!important;
+    text-decoration: none;
     display: inline;
+    transition: all 0.5s;
+}
+
+.list li a{
+    color: white!important;
+    transition: all 0.5s;
 }
 
 .list li button{
     margin-left:0rem;
     border: none;
-    background: white;
+    background: transparent;
     font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+
+.details{
+    background: #dff9fb;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
 }
 
 .details div ul{
     display: none;
+    transition: all 0.5s;
 }
 
 .details div:hover ul{
@@ -26,25 +47,31 @@ body{
 .details div a{
     text-decoration: none;
     color: black;
-}
-
-.list li{
-    color: black;
-    text-decoration: none;
+    transition: all 0.5s;
 }
 
 #minibar-btn{
+    margin-top: 0.5rem;
     margin-inline: auto;
     margin-bottom:1rem;
+    transition: all 0.5s;
+}
+
+center:nth-child(3){
+    background: #dff9fb;
 }
 
 .paragraph{
+    color: black;
     width: 80%;
-    margin-top:3.6rem;
+    margin-top:1.9rem;
+    transition: all 0.5s;
 }
 
 #minibar-btn a{
-    text-decoration: none; color: white;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
 }
 
 .home{
@@ -55,47 +82,80 @@ body{
 }
 .minibar{
     display: flex;
-    margin-top: 4rem;
+    padding-top: 4rem;
     margin-left: 4%;
-    transition: margin-top 1s, margin-left 1s;
+    transition: all 0.5s;
+}
+
+.choose_file {
+    position: absolute;
+    display: inline-block;   
+    font: normal 12px Myriad Pro, Verdana, Geneva, sans-serif;
+    color: #7f7f7f;
+    margin-top: 9.5rem;
+    margin-left: -2.5rem;
+    background: teal;
+    border-radius:50%;
+}
+
+.choose_file input[type="file"]{
+    -webkit-appearance:none; 
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+}
+
+.upload{
+    width: 2rem;
+    border: none;
+    position: absolute;
+    /* border-radius: 50%; */
+    color: black;
+    /* bottom: 6rem; */
 }
 
 .image img{
     margin-bottom: 4.5rem;
+    transition: all 0.5s;
 }
 .image{
     margin-right: auto;
     margin-left: auto;
-    height: 25rem;
-    transition: height 1s;
+    height: 22.5rem;
+    transition: all 0.5s;
 }
 
-div .details
-{
-    width: 80%;
-}
 
 img{
     margin-top: 0;
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    transition: height 1s,width 1s,margin-top 1s;
+    border: solid 6px rgb(255,255,255,0.5);
+    transition: all 0.5s;
+}
+
+.details div i{
+    background: transparent;
 }
 
 .details div{
     transition: all .5s ease;
     padding: 0.8rem;
-    font-size: 20px;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     justify-content:center;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    max-width: 60rem;
     border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background: #ffffff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     height: auto;
+    transition: all 0.5s;
+    font-size: 20px;
 }
 
 #minibar-btn{
@@ -104,28 +164,38 @@ img{
 
 .details div button
 {
+    background: transparent;
     float: right;
+    transition: all 0.5s;
 }
 
 .details div .first-anchor{
     margin-top: 0.5rem;
+    transition: all 0.5s;
 }
 
 .details div button li
 {
     float: right;
+    transition: all 0.5s;
 }
 
 div button{
     background: white;
     border: none;
+    transition: all 0.5s;
 }
 
 .name{
+    color: black;
     margin-top: -3.8rem;
     margin-right: auto;
     margin-left: auto;
     transition: margin-top 1s;
+}
+
+.image1{
+
 }
 
 .ala{
@@ -153,29 +223,42 @@ div button{
 
 .details div:hover li{
     transform: translate(0);
-    height:auto;
     display: block;
+    height: auto;
     animation: animat 1s;
 }
 
 .login .name-css{
-    text-decoration: none; font-size: x-large; margin-right: 0.2rem;
+    text-decoration: none; 
+    font-size: x-large; 
+    margin-right: 0.2rem;
+    transition: all 0.5s;
 }
 
 @media screen and (max-width: 900px)
 {
+    .choose_file {
+        margin-top: 9rem;
+        margin-left: -2.5rem;
+    }
+
+    .details{
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
     .home{
         font-size: large;
     }
     
     .minibar{
-        margin-top: 1rem;
+        padding-top: 1rem;
         margin-left: -3%;
     }
     
     .details div{
         height: auto;
-        font-size: 19px;
+        font-size: 18px;
         margin-top: 1rem;
         margin-bottom: 1.5rem;
         transition: all 1s ease;
@@ -191,13 +274,13 @@ div button{
     }
     
     img{
-        height: 150px;
-        width: 150px;
+        height: 160px;
+        width: 160px;
         margin-top: 1rem;
     }
     
     .image{
-        height: 23rem;
+        height: 20.5rem;
     }
     
     .ala{
@@ -206,7 +289,7 @@ div button{
 
     .paragraph{
         width: 80%;
-        margin-top:2.6rem;
+        margin-top:1.6rem;
     }
     
     #minibar-btn{
@@ -227,19 +310,24 @@ div button{
 
 @media screen and (max-width: 600px)
 {
+    .choose_file {
+        margin-top: 7.5rem;
+        margin-left: -2rem;
+    }
+
     .paragraph{
         width: 80%;
         margin-top:1.6rem;
     }
 
     .minibar{
-        margin-top: 1rem;
+        padding-top: 1rem;
         margin-left: -5%;
     }
 
     .details div{
         width: 90%;
-        font-size: 18px;
+        font-size: 16px;
         margin-top: 0.8rem;
         margin-bottom: 1.5rem;
         height: auto;
@@ -254,11 +342,11 @@ div button{
         font-size: medium;
     }
     img{
-        height: 120px;
-        width: 120px;
+        height: 140px;
+        width: 140px;
     }
     .image{
-        height: 20rem;
+        height: 19rem;
     }
     .ala{
         width: 70%;
@@ -270,7 +358,7 @@ div button{
         display: none;
         margin-left: 0.5rem;
         margin-top: 0.3rem;
-        font-size: 15px;
+        font-size: 14px;
         height: auto;
         transition: all 1s ease;
     }
