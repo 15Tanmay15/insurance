@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/home.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/signup.css">
     <title>Document</title>
     <%- include('header') -%>
@@ -20,7 +21,7 @@
     <p class="slogan">Helo</p>
   </div>
   
-  <div class="one">  
+  <div data-aos="fade-up" class="one">  
     <form action="/connector/create" method="POST">
       <h2 class="head-signup">Welcome! Signup</h2>  
             <div class="main">
@@ -73,6 +74,12 @@
                 click.style.display="block";
               }
             </script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init({
+              duration: 900,
+            })
+              </script>
     </div>
 </body>
 
