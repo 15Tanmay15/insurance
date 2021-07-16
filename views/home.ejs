@@ -14,78 +14,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/home.css">
     <title>Home</title>
 </head>
 
 <body>
-    <header>
-        <section id="Navbar">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="/">Logo</a>
-                    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                      <ul class="navbar-nav">
-                        <div id="container">
-                          <div class="nav-flex">
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Loans
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a class="dropdown-item men" href="#">Personal Loan</a></li>
-                                <li><a class="dropdown-item men" href="#">Business Loan</a></li>
-                                <li><a class="dropdown-item men" href="#">Home Loan</a></li>
-                                <li><a class="dropdown-item men" href="#">Home Loan Balance Transfer</a></li>
-                                <li><a class="dropdown-item men" href="#">Loan Against Property</a></li>
-                                <li><a class="dropdown-item men" href="#">Gold Loan</a></li>
-                              </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Insurance Products
-                              </a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                  <li><a class="dropdown-item men" href="#">Life Insurance</a></li>
-                                  <li><a class="dropdown-item men" href="#">Health Insurance</a></li>
-                                  <li><a class="dropdown-item men" href="#">Vehicle Insurance</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Financial Tools
-                              </a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                  <li><a class="dropdown-item men" href="/emi_calculator">EMI Calculator</a></li>
-                                  <li><a class="dropdown-item men" href="#">RD Calculator</a></li>
-                                  <li><a class="dropdown-item men" href="/fd_calculator">FD Calculator</a></li>
-                                </ul>
-                            </li>
-                          </div>
-                            <% if(!locals.user){ %>
-                              <div class="login">
-                                <button type="button" style="margin-right: 5px;" class="btn btn-light"><a href="/connector/sign-in">Sign In</a></button>
-                                <button type="button" class="btn btn-info"><a href="/connector/sign-up">Sign Up</a></button>
-                              </div>
-                            <% }else{ %>
-                              <div class="login">
-                                <span><a class="name-css" href="/connector/profile"><%= locals.user.first_name %></a></span>
-                                <button type="button" class="btn btn-danger"><a class="display-name" href="/connector/sign-out">Sign Out</a></button>
-                              </div>
-                            <% } %>
-                        </div>
-                      </ul>
-                    </div>
-                </div>
-            </nav>
-        </section>
-    </header>
-
-    <div id="sec1">
+    <%- include('header') -%>
+    <div  data-aos="fade-up" id="sec1">
       <div class="whole">
         <div class="one">
           <!-- <video autoplay loop muted playsinline>
@@ -96,17 +33,17 @@
           <img class="video" id="image" src="/images/hey.jpg">
         </div>
 
-        <div class="paradiv">
+        <div  data-aos="fade-up" class="paradiv">
           <center><h1 class="heading">TS2 Insurance</h1></center>
           <p class="para">TS2 is your one-stop destination to search for the best Home Loans, Personal Loans and Credit Cards in India. Since 1989, more than 50 lakh customers have fulfilled their dreams with us. Our network of 100+ banks and NBFCs promise most affordable and suitable finance deal for you.</p>
         </div>
       </div>
     </div>
-      <div class="sec2">
-        <center><h1 class="head">Find, compare and buy financial products with ease.</h1></center>
+      <div data-aos="fade-up" class="sec2">
+        <center data-aos="fade-up"><h1 class="head">Find, compare and buy financial products with ease.</h1></center>
         <p class="para2">TS2 is India’s largest phygital loan aggregator. We have combined digital with physical capabilities to offer the most customised & customer-friendly loan borrowing experience. You can use our online platform and instantly search, compare & buy the right Credit Card, Personal Loan, Home Loan, Business Loan or LAP from place of your choice.</p>
         <!-- <h2 style="text-align: center; color: white; margin-top: 4rem; font-weight: bold;">Why Us?</h2> -->
-        <div class="cards">
+        <div data-aos="fade-up" class="cards">
           <div class="divs"><div class="card"><svg style="color: rgb(33, 33, 33);" xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-shield-fill-plus" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5V5z"/></svg><div class="text-box">Health Safety</div></div></div>
           <div class="divs"><div class="card"><svg style="color: rgb(33, 33, 33);" xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-bank2" viewBox="0 0 16 16"><path d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/></svg><div class="text-box">Wealth Care</div></div> </div>
           <div class="divs"><div class="card"><svg style="color: rgb(33, 33, 33);" xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16"><path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/></svg><div class="text-box">24/7 Availiable</div></div> </div>
@@ -139,16 +76,16 @@
       </div>
   </div> -->
 
-  <center><div class="whole3">
-      <div class="big-btn">
+  <center data-aos="fade-up" ><div class="whole3">
+      <div  data-aos="fade-up" class="big-btn">
           <button><h2><i class="icon1 fas fa-credit-card"></i>Credit Card</h2><i class="icon2 fas fa-arrow-right"></i></button>
           <button><h2><i class="icon1 fa fa-bank " ></i>Home Loans</h2><i class="icon2 fas fa-arrow-right"></i></button>
       </div>
-      <div class="big-btn">
+      <div  data-aos="fade-up" class="big-btn">
           <button><h2><i class="icon1 fas fa-user-shield" ></i>Personal Loan</h2><i class="icon2 fas fa-arrow-right"></i></button>
           <button><h2><i class="icon1 fas fa-coins"></i>Gold Loan</h2><i class="icon2 fas fa-arrow-right"></i></button>
       </div>
-      <div class="big-btn">
+      <div data-aos="fade-up" class="big-btn">
         <button><h2><i class="icon1 fas fa-user-md" style="margin-right:0rem ;"></i>Health Insurance</h2><i class="icon2 fas fa-arrow-right"></i></button>
         <button><h2><i class="icon1 fas fa-heartbeat"></i>Life Insurance</h2><i class="icon2 fas fa-arrow-right"></i></button>
       </div>
@@ -160,5 +97,11 @@
     <script src="/js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+  duration: 900,
+})
+  </script>
 </body>
 </html>

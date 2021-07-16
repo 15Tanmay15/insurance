@@ -20,72 +20,7 @@
 </head>
 
 <body>
-    <header>
-
-        <section id="Navbar">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="/">Logo</a>
-                    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                      <ul class="navbar-nav">
-                        <div id="container">
-                          <div class="nav-flex">
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Loans
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a class="dropdown-item men" href="#">Personal Loan</a></li>
-                                <li><a class="dropdown-item men" href="#">Business Loan</a></li>
-                                <li><a class="dropdown-item men" href="#">Home Loan</a></li>
-                                <li><a class="dropdown-item men" href="#">Home Loan Balance Transfer</a></li>
-                                <li><a class="dropdown-item men" href="#">Loan Against Property</a></li>
-                                <li><a class="dropdown-item men" href="#">Gold Loan</a></li>
-                              </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Insurance Products
-                              </a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                  <li><a class="dropdown-item men" href="#">Life Insurance</a></li>
-                                  <li><a class="dropdown-item men" href="#">Health Insurance</a></li>
-                                  <li><a class="dropdown-item men" href="#">Vehicle Insurance</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Financial Tools
-                              </a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                  <li><a class="dropdown-item men" href="/emi_calculator">EMI Calculator</a></li>
-                                  <li><a class="dropdown-item men" href="#">RD Calculator</a></li>
-                                  <li><a class="dropdown-item men" href="/fd_calculator">FD Calculator</a></li>
-                                </ul>
-                            </li>
-                          </div>
-                            <% if(!locals.user){ %>
-                              <div class="login">
-                                <button type="button" style="margin-right: 5px;" class="btn btn-light"><a href="/connector/sign-in">Sign In</a></button>
-                                <button type="button" class="btn btn-info"><a href="/connector/sign-up">Sign Up</a></button>
-                              </div>
-                            <% }else{ %>
-                              <div class="login">
-                                <span><a class="name-css" href="/connector/profile"><%= locals.user.first_name %></a></span>
-                                <button type="button" class="btn btn-danger"><a class="display-name" href="/connector/sign-out">Sign Out</a></button>
-                              </div>
-                            <% } %>
-                        </div>
-                      </ul>
-                    </div>
-                </div>
-            </nav>
-        </section>
-    
-    </header>
+  <%- include('header') -%>
 
     <div class="main">
         <div class="col-one">

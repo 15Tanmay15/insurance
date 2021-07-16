@@ -1,11 +1,13 @@
 body, html {
-  background-color: #CAD3C8 !important;
+  background-color: rgb(23,23,23) !important;
+  /* background: linear-gradient(to bottom, #74ebd5, #acb6e5)!important; */
+  height: 30rem;
 }
 /* #EBECF0 */
 
 .body-head::before{
   content: '..';
-  background: url('../images/cherry.jpg');
+  background: url('../images/3.jpg');
   -webkit-background-size: cover;
   background-size: cover;
   filter: brightness(.7);
@@ -109,7 +111,7 @@ form label {
   position: absolute;
   text-align: center;
   width: 20rem;
-  color: black;
+  color: white;
   font-size: 20px;
   margin-left: 8.5rem;
   margin-top: 13rem;
@@ -255,7 +257,8 @@ form button.red {
               radial-gradient(ellipse at bottom, #d7d8db, transparent, transparent);
   -webkit-background-clip: text;
   background-clip: text;
-  color: rgb(41, 41, 41);
+  /* color: rgb(41, 41, 41); */
+  color: white;
   font-size: 65px;
   position: absolute;
   font-family: "Source Sans Pro", sans-serif;
@@ -329,7 +332,7 @@ form button.red {
 
   .body-head::before{
     content: '..';
-    background: url('../images/cherry2.jpg');
+    background: url('../images/2.jpg');
     -webkit-background-size: cover;
     background-size: cover;
     filter: brightness(.7);

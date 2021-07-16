@@ -11,62 +11,7 @@
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/signup.css">
     <title>Document</title>
-    <header>
-      <section id="Navbar">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="/">Logo</a>
-            <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-              <ul class="navbar-nav">
-                <div id="container">
-                  <div class="nav-flex">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Loans
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Personal Loan</a></li>
-                        <li><a class="dropdown-item" href="#">Business Loan</a></li>
-                        <li><a class="dropdown-item" href="#">Home Loan</a></li>
-                        <li><a class="dropdown-item" href="#">Home Loan Balance Transfer</a></li>
-                        <li><a class="dropdown-item" href="#">Loan Against Property</a></li>
-                        <li><a class="dropdown-item" href="#">Gold Loan</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Insurance Products
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Life Insurance</a></li>
-                        <li><a class="dropdown-item" href="#">Health Insurance</a></li>
-                        <li><a class="dropdown-item" href="#">Vehicle Insurance</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Financial Tools
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">EMI Calculator</a></li>
-                        <li><a class="dropdown-item" href="#">RD Calculator</a></li>
-                        <li><a class="dropdown-item" href="#">FD Calculator</a></li>
-                      </ul>
-                    </li>
-                  </div>
-                  <div class="login">
-                    <button type="button" style="margin-right: 5px; margin-top: 0.3rem;" class="btn btn-light"><a href="/connector/sign-in">Sign In</a></button>
-                  </div>
-                </div>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </section> 
-    </header>
+    <%- include('header') -%>
 </head>
 
 <body>
