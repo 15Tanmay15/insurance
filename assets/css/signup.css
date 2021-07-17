@@ -45,7 +45,8 @@ header{
     color: #f7f1e3;
     width: 25rem;
     margin-top: -0.7rem;
-    margin-left: 0.5rem;
+    /* margin-left: 2rem; */
+    text-indent: 2rem;
     transition: all 0.5s;
 }
 
@@ -273,8 +274,8 @@ input{
     }
 
     #emailHelp{
+        text-indent: 1.5rem;
         width: 20rem;
-        margin-left: 1rem;
     }
 
     input{
@@ -357,10 +358,10 @@ input{
 
     #emailHelp{
         width: unset;
-        max-width: 12rem;
+        max-width: 15rem;
         display: none;
         font-size: 10px;
-        margin-left: 1rem;
+        text-indent: 0.5rem;
     }
 
     input,input::-webkit-input-placeholder {

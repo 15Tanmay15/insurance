@@ -7,3 +7,4 @@ router.get('/', bankDetailsController.enterBankDetails);
 router.post('/create' ,bankDetailsController.create);
 
 module.exports = router;
+

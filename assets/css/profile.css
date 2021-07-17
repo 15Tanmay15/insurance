@@ -90,12 +90,13 @@ center:nth-child(3){
 .choose_file {
     position: absolute;
     display: inline-block;   
-    font: normal 12px Myriad Pro, Verdana, Geneva, sans-serif;
+    font: normal 8px Myriad Pro, Verdana, Geneva, sans-serif;
     color: #7f7f7f;
     margin-top: 9.5rem;
     margin-left: -2.5rem;
     background: teal;
     border-radius:50%;
+    transition: all 1s;
 }
 
 .choose_file input[type="file"]{
@@ -107,12 +108,15 @@ center:nth-child(3){
 }
 
 .upload{
-    width: 2rem;
-    border: none;
-    position: absolute;
-    /* border-radius: 50%; */
+    position: absolute; 
+    background: rgb(136, 201, 39); 
     color: black;
-    /* bottom: 6rem; */
+    font-weight: bold;
+    padding :0.30rem 0.4rem; 
+    border-radius: 50%; 
+    padding-bottom: 0.5rem; 
+    border: solid 0.2rem rgb(255,255,255,0.5);
+    transition: all 1s;
 }
 
 .image img{
@@ -150,7 +154,7 @@ img{
     margin-right: auto;
     width: 80%;
     max-width: 60rem;
-    border-radius: 1rem;
+    border-radius: 0.4rem;
     background: #ffffff;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     height: auto;
@@ -237,6 +241,12 @@ div button{
 
 @media screen and (max-width: 900px)
 {
+
+    .list li a{
+        margin-left: 0.8rem;
+        font-size: 18px;
+    }
+
     .choose_file {
         margin-top: 9rem;
         margin-left: -2.5rem;
@@ -293,7 +303,9 @@ div button{
     }
     
     #minibar-btn{
+        margin-top: 1rem;
         font-size: 18px;
+        margin-bottom: 0rem;
     }
 
     .details div li{
