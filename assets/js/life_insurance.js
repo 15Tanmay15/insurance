@@ -1,6 +1,7 @@
 x = 0
 y = 0
 z = 0
+k = 0
 
 var stringarray=[]
 
@@ -16,22 +17,29 @@ var var7 = document.getElementsByClassName('pagination')[1]
 var var9 = document.getElementsByClassName('pagination')[2]
 
 $('#right').on('click', () => {
+    $('.spinner').css('display',"block")
     $('#anime').animate({ marginLeft: '100%', opacity: '0' }, { duration: 1000 })
     
     setTimeout(() => {
         $('#anime').css('margin-left', '0%')
-    }, 1000)
+    }, 500)
     $('#anime').animate({ marginLeft: '0%', opacity: '1' }, { duration: 1000 })
+    setTimeout(() => {
+        $('.spinner').css('display','none')
+    }, 2000)
 });
 
 $('#left').on('click', () => {
+    $('.spinner').css('display',"block")
     $('#anime').animate({ marginRight: '100%', opacity: '0' }, { duration: 1000 })
-    
     setTimeout(() => {
         $('#anime').css('margin-right', '0%')
     }, 1000)
     $('#anime').animate({ marginRight: '0%', opacity: '1' }, { duration: 1000 })
     
+    setTimeout(() => {
+        $('.spinner').css('display','none')
+    }, 2000)
 });
 
 function clearinp(){
@@ -46,16 +54,21 @@ function func() {
         stringarray[1]=var2.value
         stringarray[2]=var3.value
         clearinp();
-        var8.style.display = "block"
+        if(k==1){
+            var1.value=stringarray[3]
+            var2.value=stringarray[4]
+            var5.value=stringarray[5]
+        }
         var6.style.opacity = "0.5";
         setTimeout(() => {
-            var6.style.opacity = "1";
-            var5.style.display = "block"
             var1.setAttribute('name', 'company')
             var2.setAttribute('name', 'income')
-            var3.style.display = "none"
             var1.setAttribute('placeholder', "Company Name");
             var2.setAttribute('placeholder', "Net Monthly Income");
+            var3.style.display = "none"
+            var6.style.opacity = "1";
+            var5.style.display = "block"
+            var8.style.display = "block"
         }, 1000)
         x = 1;
     }
@@ -66,25 +79,23 @@ function func() {
         var6.style.opacity = "0.5";
         clearinp();
         setTimeout(() => {
-            var6.style.opacity = "1";
-            var7.style.display = "block";
-            var5.style.display = "none"
-            var3.style.display = "block"
-            var4.style.animation = "none";
             var1.setAttribute('name', 'email')
             var1.setAttribute('type', 'email')
             var2.setAttribute('name', 'phone')
             var1.setAttribute('placeholder', "eg. tanmaygupta@gmail.com");
             var2.setAttribute('placeholder', "+91 ");
+            var7.style.display = "block";
+            var5.style.display = "none"
+            var3.style.display = "block"
+            var4.style.animation = "none";
+            var6.style.opacity = "1";
         }, 1000)
         var9.style.display = "none";
+        k=1;
         y = 1;
     }
 }
 
-function submit(){
-    console.log(stringarray)
-}
 
 // var var1 = document.getElementById('life-first')
 // var var2 = document.getElementById('middle')

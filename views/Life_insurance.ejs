@@ -25,9 +25,12 @@
     <%- include('header') -%>
     
     <div class="body" >
-
+      <!-- <h2 style="margin-top:0.5rem; font-weight: bold;">TS2 Insurance</h2> -->
+      <h2 style="margin-top:1rem; font-weight: bold; color: teal;">Application form </h2>
+      <p style="font-weight: bold;"><u>Life - Insurance</u></p>
       <form class="form-life">
-
+        
+        <center><div class="spinner"></div></center>
         <div id="anime">
           <div>
             <input class="life-input" id="life-first" name="first" type="text" placeholder="First Name" required>
@@ -50,9 +53,9 @@
         </div>
           
         <div class="buttons">
-          <button class="pagination" onclick="func2()" id="left" type="button"><img src="/images/838901.png" style="margin-right: 0.2rem!important; transform: rotate(90deg);" width="30px" height="30px"></button>
-          <button class="pagination" id="tick" onclick="submit()">✓</button>
-          <button class="pagination" onclick="func()" id="right" type="button"><img src="/images/838901.png" style="margin-left: 0.2rem!important; transform: rotate(-90deg);" width="30px" height="30px"></button>
+          <button class="pagination" onclick="func2()" id="left" type="button"><img src="/images/838901.png" style="margin-right: 0.2rem!important; transform: rotate(90deg);" width=25px" height=25px"></button>
+          <button class="pagination" id="tick" onclick="submit()" type="submit">✓</button>
+          <button class="pagination" onclick="func()" id="right" type="button"><img src="/images/838901.png" style="margin-left: 0.2rem!important; transform: rotate(-90deg);" width=25px" height=25px"></button>
         </div>
       </form>
     </div>
