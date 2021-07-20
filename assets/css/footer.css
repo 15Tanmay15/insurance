@@ -88,8 +88,8 @@ footer{
 
 .footer-card h3{
     background: white;
-    font-size: 14px;
-    margin-top: 0.9rem;
+    font-size: 13.5px;
+    margin-top: 0.8rem;
     letter-spacing: 0.2rem;
     text-align: center;
     font-weight: 100;
@@ -122,9 +122,9 @@ hr{
 } */
 
 .footer-card p{
-    margin-top: 1.2rem;
+    margin-top: 1.1rem;
     color: rgb(10, 165, 165);
-    font-size: 14px;
+    font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1rem;
     background: white;
@@ -173,8 +173,8 @@ hr{
 .container2 .container2-head{
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    font-size: 21px;
-    margin-top: 0.3rem;
+    font-size: 19px;
+    margin-top: 0.2rem;
     background: rgb(41,44,50);
     transition: all 1s;
 }
@@ -183,7 +183,7 @@ hr{
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(148,154,161);
     margin-top: 0.4rem;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.4rem;
     word-spacing: 0.15rem;
     width: 100%;
@@ -271,7 +271,7 @@ hr{
     }
     
     .footer-card{
-        height: 10rem;
+        height: auto;
         margin: 1rem auto;
         width: 100%;
         padding-block: 0rem;
@@ -350,6 +350,10 @@ hr{
     .footer-list{
         display: block;
         margin: 0 auto;
+    }
+
+    .footer-card{
+        width: 85%;
     }
 
     .footer-list1{

@@ -13,3 +13,4 @@ module.exports.fd_calculator = (req,res) => {
 module.exports.rd_calculator = (req,res) => {
     return res.render('rd_calculator')
 }
+

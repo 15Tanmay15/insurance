@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0rem;
+}
+
+body{
+    background: #000!important;
+}
+
+.body{
+    padding-top: 1rem;
+    padding-bottom: 0.1rem;
+    height: auto;
+    width: 100%;
+    margin:3rem auto;
+    align-items: center;
+    justify-content: center;
+    background: silver!important;
+    max-width: 30rem;
+    overflow: hidden;
+}
+
+#select{
+    display: none;
+}
+
+/* @keyframes motion {
+    50%{
+        margin-right: 100%;
+        opacity: 0;
+        width: 0%;
+    }
+    95%{
+        margin-left: 100%;
+        opacity: 1;
+    }
+} */
+
+@keyframes motion1 {
+    90%{
+        float: left;
+        margin-left: 0%;
+        margin-right: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes motion2 {
+90%{
+    margin-right: 0%;
+    margin-left: 100%;
+    opacity: 1;
+    }
+}
+
+#anime{
+    position: relative;
+    overflow: hidden;
+}
+
+.form-life{
+    height: auto;
+    overflow: hidden;
+    margin: 0rem auto;
+}
+
+#life-first{
+    margin-top: 2rem;
+}
+
+input::placeholder{
+    color: black;
+}
+
+.buttons{
+    height: 4rem;
+    display: flex;
+    margin: 3rem auto;
+    width: 100%;
+    max-width: 15rem;
+    justify-content: space-between;
+}
+
+#right{
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin: 0 auto;
+}
+
+#tick{
+    align-items: center;
+    justify-content: center;
+    background: teal;
+    margin: 0 auto;
+    border: none;
+    display: none;
+    color: black;
+    font-size: 40px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px black;
+}
+
+#left{
+    align-items: center;
+    justify-content: center;
+    display: none;
+    margin: 0 auto;
+}
+
+.pagination{
+    align-items: center;
+    justify-content: center;
+    background: teal;
+    padding-inline: 1.1rem;
+    color: white;
+    border: none;
+    border-radius: 50%;
+}
+
+.life-input{
+    color: black;
+    background: teal;
+    display: block;
+    border: none;
+    padding: 0.5rem;
+    margin-top: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 0.2rem;
+    outline: none;
+    width: 80%;
+    max-width: 20rem;
+}
