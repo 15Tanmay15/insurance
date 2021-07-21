@@ -45,6 +45,16 @@ body{
     }
 } */
 
+@keyframes visi {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        display: block;
+        opacity: 1;
+    }
+}
+
 @keyframes motion1 {
     90%{
         float: left;
