@@ -1,36 +1,72 @@
 body{
-    background-color:white!important;
+    background-color:#f1f2f6!important;
 }
 
+.profile{
+    /* background: linear-gradient(to bottom, teal 50%,white 50%); */
+    background: linear-gradient(to bottom, teal 35%,#dff9fb 65%);
+}
 
 .list li{
+    color: white!important;
+    text-decoration: none;
     display: inline;
+    transition: all 0.5s;
+}
+
+.list li a{
+    color: white!important;
+    transition: all 0.5s;
 }
 
 .list li button{
     margin-left:0rem;
     border: none;
-    background: white;
+    background: transparent;
     font-size: 1.5rem;
+    transition: all 0.5s;
 }
 
-.list a{
-    color: black;
+
+.details{
+    background: #dff9fb;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+.details div ul{
+    display: none;
+    transition: all 0.5s;
+}
+
+.details div a{
     text-decoration: none;
+    color: black;
+    transition: all 0.5s;
 }
 
 #minibar-btn{
+    margin-top: 0.5rem;
     margin-inline: auto;
     margin-bottom:1rem;
+    transition: all 0.5s;
+}
+
+center:nth-child(3){
+    background: #dff9fb;
 }
 
 .paragraph{
+    color: black;
     width: 80%;
-    margin-top:3.6rem;
+    margin-top:1.9rem;
+    transition: all 0.5s;
 }
 
 #minibar-btn a{
-    text-decoration: none; color: white;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
 }
 
 .home{
@@ -41,72 +77,124 @@ body{
 }
 .minibar{
     display: flex;
-    margin-top: 4rem;
+    padding-top: 4rem;
     margin-left: 4%;
-    transition: margin-top 1s, margin-left 1s;
+    transition: all 0.5s;
+}
+
+.choose_file {
+    position: absolute;
+    display: inline-block;   
+    font: normal 8px Myriad Pro, Verdana, Geneva, sans-serif;
+    color: #7f7f7f;
+    margin-top: 9.5rem;
+    margin-left: -2.5rem;
+    background: teal;
+    border-radius:50%;
+    transition: all 1s;
+}
+
+.choose_file input[type="file"]{
+    -webkit-appearance:none; 
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+}
+
+.upload{
+    position: absolute; 
+    background: rgb(136, 201, 39); 
+    color: black;
+    font-weight: bold;
+    padding :0.30rem 0.4rem; 
+    border-radius: 50%; 
+    padding-bottom: 0.5rem; 
+    border: solid 0.2rem rgb(255,255,255,0.5);
+    transition: all 1s;
 }
 
 .image img{
     margin-bottom: 4.5rem;
+    transition: all 0.5s;
 }
 .image{
     margin-right: auto;
     margin-left: auto;
-    height: 25rem;
-    transition: height 1s;
+    height: 22.5rem;
+    transition: all 0.5s;
 }
 
-div .details
-{
-    width: 80%;
-}
 
 img{
     margin-top: 0;
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    transition: height 1s,width 1s,margin-top 1s;
+    border: solid 6px rgb(255,255,255,0.5);
+    transition: all 0.5s;
+}
+
+.details div i{
+    background: transparent;
 }
 
 .details div{
-    font-size: x-large;
+    transition: all .5s ease;
+    padding: 0.8rem;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    justify-content: space-between;
+    justify-content:center;
     margin-left: auto;
     margin-right: auto;
-    padding: 1rem;
     width: 80%;
-    border-radius: 1rem;
-    transition: font-size 1s,margin-top 1s,margin-bottom 1s, height 0.5s!important;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 60rem;
+    border-radius: 0.4rem;
+    background: #ffffff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    height: auto;
+    transition: all 0.5s;
+    font-size: 20px;
+}
+
+#minibar-btn{
+    font-size: 20px;
 }
 
 .details div button
 {
+    background: transparent;
     float: right;
+    transition: all 0.5s;
 }
 
 .details div .first-anchor{
     margin-top: 0.5rem;
+    transition: all 0.5s;
 }
 
 .details div button li
 {
     float: right;
+    transition: all 0.5s;
 }
 
 div button{
     background: white;
     border: none;
+    transition: all 0.5s;
 }
 
 .name{
+    color: black;
     margin-top: -3.8rem;
     margin-right: auto;
     margin-left: auto;
     transition: margin-top 1s;
+}
+
+.image1{
+
 }
 
 .ala{
@@ -116,13 +204,15 @@ div button{
     transition: width 1s;
 }
 
-.details a{
+.details div li{
     text-decoration: none;
     color: black;
     font-size: 17px;
     display: none;
+    height: 0;
     margin-left: 1rem;
     margin-top: 0.3rem;
+    transition: all 1s ease;
 }
 
 @keyframes animat {
@@ -130,88 +220,72 @@ div button{
     to {opacity: 1;}
 }
 
-.details div:hover{
-    height: 10rem;
-}
-
-.details .dropdown2:hover{
-    height: 8rem;
-}
-
-.details .dropdown3:hover{
-    height: 8rem;
-}
-
-.dropdown2:hover a{
+.details div:hover li{
+    transform: translate(0);
     display: block;
-    animation: animat 1s;
-}
-
-.dropdown2:hover li{
-    display: block;
-    animation: animat 1s;
-}
-
-.dropdown3:hover a{
-    display: block;
-    animation: animat 1s;
-}
-
-.dropdown4:hover a{
-    display: block;
-    animation: animat 1s;
-}
-
-
-.dropdown5:hover a{
-    display: block;
-    animation: animat 1s;
-}
-
-.dropdown6:hover a{
-    display: block;
+    height: auto;
     animation: animat 1s;
 }
 
 .login .name-css{
-    text-decoration: none; font-size: x-large; margin-right: 0.2rem;
+    text-decoration: none; 
+    font-size: x-large; 
+    margin-right: 0.2rem;
+    transition: all 0.5s;
 }
 
 @media screen and (max-width: 900px)
 {
+
+    .list li a{
+        margin-left: 0.8rem;
+        font-size: 18px;
+    }
+
+    .choose_file {
+        margin-top: 9rem;
+        margin-left: -2.5rem;
+    }
+
+    .details{
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
     .home{
         font-size: large;
     }
     
     .minibar{
-        margin-top: 1rem;
+        padding-top: 1rem;
         margin-left: -3%;
     }
     
     .details div{
-        font-size: 22px;
+        height: auto;
+        font-size: 18px;
         margin-top: 1rem;
         margin-bottom: 1.5rem;
-        height: 3.8rem;
-        transition: height 1s;
+        transition: all 1s ease;
     }
     .name-css{
         font-size: medium;
     }
     
     .display-name{
-        text-decoration: none; color: white;
+        text-decoration: none;
+        color: white;
         font-size: medium;
     }
     
     img{
-        height: 150px;
-        width: 150px;
+        height: 160px;
+        width: 160px;
         margin-top: 1rem;
     }
     
     .image{
-        height: 23rem;
+        height: 20.5rem;
     }
     
     .ala{
@@ -220,101 +294,114 @@ div button{
 
     .paragraph{
         width: 80%;
-        margin-top:2.6rem;
+        margin-top:1.6rem;
+    }
+    
+    #minibar-btn{
+        margin-top: 1rem;
+        font-size: 18px;
+        margin-bottom: 0rem;
     }
 
+    .details div li{
+        text-decoration: none;
+        color: black;
+        display: none;
+        margin-left: 0.5rem;
+        margin-top: 0.3rem;
+        font-size: 16px;
+        height: auto;
+        transition: all 1s ease;
+    }
 }
-
 
 @media screen and (max-width: 600px)
 {
-    
-    
+    .choose_file {
+        margin-top: 7.5rem;
+        margin-left: -2rem;
+    }
+
     .paragraph{
         width: 80%;
         margin-top:1.6rem;
     }
-    
+
     .minibar{
-        margin-top: 1rem;
+        padding-top: 1rem;
         margin-left: -5%;
     }
-    
+
     .details div{
-        font-size: 18px;
+        width: 90%;
+        font-size: 16px;
         margin-top: 0.8rem;
         margin-bottom: 1.5rem;
-        height: 3.2rem;
-        transition: height 1s;
+        height: auto;
+        transition: all 1s ease;
     }
-    
-    .details a{
-        margin-top: 0.6rem;
-    }
-    
+
     .name-css{
         font-size: medium;
     }
-    
+
     .display-name{
-        
         font-size: medium;
     }
     img{
-        height: 120px;
-        width: 120px;
+        height: 140px;
+        width: 140px;
     }
     .image{
-        height: 20rem;
+        height: 19rem;
     }
     .ala{
         width: 70%;
     }
-    
-    .details a{
+
+    .details div li{
         text-decoration: none;
         color: black;
-        font-size: 17px;
         display: none;
-        margin-left: 0.2rem;
+        margin-left: 0.5rem;
         margin-top: 0.3rem;
+        font-size: 14px;
+        height: auto;
+        transition: all 1s ease;
     }
-    
-    
-}
 
+}
 
 @media screen and (max-width: 450px)
 {
     .details div{
         width: 98%;
-        font-size: 16px;
+        font-size: 15px;
         margin-top: 0.8rem;
         margin-bottom: 1.5rem;
-        height: 3.2rem;
-        transition: height 1s;
+        height: auto;
+        transition: all 1s ease;
     }
 
-    .details a{
+    .details div li{
+        margin-left: 0.2rem;
         margin-top: 0.3rem;
-        font-size: 15px;
+        font-size: 13px;
         white-space: nowrap;
-    }
-
-    .details div:hover{
-        height: 8rem;
-    }
-
-    .details .dropdown3:hover{
-        height: 6.5rem;
-    }
-
-    .details .dropdown2:hover{
-        height: 6.5rem;
+        height: auto;
     }
 
     .details div .first-anchor{
         margin-top: 0.4rem;
     }
+
+    #minibar-btn{
+        font-size: 13px;
+        margin-bottom:1.5rem;
+    }
     
+    .paragraph{
+        width: 100%;
+        font-size: 15px;
+    }
 }

@@ -11,71 +11,13 @@
 
 <body>
 
-  <header>
-    <section id="Navbar">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/">Logo</a>
-                <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                  <ul class="navbar-nav">
-                    <div id="container">
-                      <div class="nav-flex">
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Loans
-                          </a>
-                          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Personal Loan</a></li>
-                            <li><a class="dropdown-item" href="#">Business Loan</a></li>
-                            <li><a class="dropdown-item" href="#">Home Loan</a></li>
-                            <li><a class="dropdown-item" href="#">Home Loan Balance Transfer</a></li>
-                            <li><a class="dropdown-item" href="#">Loan Against Property</a></li>
-                            <li><a class="dropdown-item" href="#">Gold Loan</a></li>
-                          </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Insurance Products
-                          </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                              <li><a class="dropdown-item" href="#">Life Insurance</a></li>
-                              <li><a class="dropdown-item" href="#">Health Insurance</a></li>
-                              <li><a class="dropdown-item" href="#">Vehicle Insurance</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Financial Tools
-                          </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                              <li><a class="dropdown-item" href="#">EMI Calculator</a></li>
-                              <li><a class="dropdown-item" href="#">RD Calculator</a></li>
-                              <li><a class="dropdown-item" href="#">FD Calculator</a></li>
-                            </ul>
-                        </li>
-                      </div>
-                          <div class="login m-1">
-                            <span><a class="name-css" href="/connector/profile"> <%= locals.user.first_name %></a></span>
-                            <button type="button" class="btn btn-danger"><a class="display-name" href="/connector/sign-out">Sign Out</a></button>
-                          </div>
-                    </div>
-                  </ul>
-                </div>
-            </div>
-        </nav>
-    </section>
-
-</header>
-
+  <%- include('header') -%>
 
 <form class="form" action="/connector/file-insurance/create" method="POST">
   
     <div class="plot">
-      <h1 class="t-head" >File Insurance</h1>
       <center><div class="on">
+        <h1 class="t-head" >File Insurance</h1>
         <label for="NameOfInsured">Name of Insured</label>
         <input class="first-inp" id="first-label" type="text" name="name" placeholder="Name of Insured" autocomplete="off">
 
@@ -167,13 +109,10 @@
                       <input class="first-inp" id="child2" type="text" name="SChildName" placeholder="Name of 2nd child">
                       
                       <br>
-                      
                       <!-- <label for="previousPolicy">Upload if any previous policy copy</label>
                         <input type="file" name="previousPolicyHealth"> -->
-                        
                       </div>
                     </div>
-                      
                       <div id="Vehicle-Plan">
                         <h3 class="heads">Vehicle Plan</h3>
                         <div class="on">
@@ -185,9 +124,7 @@
                           <label for="vehicle-make" style="margin-right: 2.3rem;">Enter make of Vehicle</label>
                           <input class="first-inp" style="margin-right: 1rem;" type="text" name="vehicleMake" placeholder="Enter make of Vehicle">
                         </div>
-                
                 <br>
-                
                 <!-- <label for="previousPolicy">Upload if any previous policy copy</label>
                   <input type="file" name="previousPolicyVehicle"> -->
                   

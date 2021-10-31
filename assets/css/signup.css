@@ -4,18 +4,24 @@ body{
     /* background: url("/images/login.jpg") no-repeat center center; */
     /* background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67)); */
     /* background: linear-gradient(to right,rgb(71, 68, 68),rgb(148, 147, 147),rgb(70, 67, 67));
-    color: black; */
-    background-color: black;
-    color: white;
+    color: #f7f1e3; */
+    /* background-color: #58B19F; */
+    /* background-color: rgb(24,79,92); */
+    background: rgb(0, 0, 0);
+    /* background: linear-gradient(to bottom, #74ebd5, #acb6e5); */
     font-family: 'Balsamiq Sans',sans-serif;
     height: 100%;
     margin: 0;
     padding-bottom: 4rem;
+    transition: all 0.5s;
 }
 
 #emailHelp{
     display: none;
+    transition: all 0.5s;
 }
+
+
 
   /* body::before{
     position: absolute;
@@ -31,115 +37,317 @@ body{
 
 header{
     font-family: sans-serif!important;
-}
-
-input{
-    color: black;
-    height: 3rem;
-    font-family: sans-serif;
+    transition: all 0.5s;
 }
 
 #emailHelp{
-    color: black;
-    margin-left: 1rem;
+    position: absolute;
+    color: #f7f1e3;
+    width: 25rem;
+    margin-top: -0.7rem;
+    /* margin-left: 2rem; */
+    text-indent: 2rem;
+    transition: all 0.5s;
 }
 
 .label{
-    margin-top: 2.7rem;
+    margin-top: 3.5rem;
+    transition: all 0.5s;
 }
 
-label{
-    font-weight: bold;
-    font-size: 28px;
-    transition: font-size 1s;
-}
 
 .col-one{
     margin-left: auto ;
     margin-right: auto ;
-    width: 35%;
+    width: 40%;
+    transition: all 0.5s;
 }
 
 .col-two{
     margin-left: auto -10rem;
     margin-right: auto ;
-    width: 35%;
+    width: 40%;
+    transition: all 0.5s;
+}
+
+#label-one,#label-two{
+    margin-top: 0.5rem;
+    transition: all 0.5s;
 }
 
 .main{
+    margin-top: 0;
     display: flex;
+    transition: all 0.5s;
 }
 
+.forget{
+    margin: 1.7rem auto;
+    font-size: 14px; 
+    color: #f7f1e3; 
+    margin-bottom: 0.6rem; 
+    text-align: center;
+    transition: all 0.5s;
+}
+/* form::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    max-width: 78rem;
+    height: 50rem;
+    max-height: 30rem;
+    z-index: -1;
+} */
 form{
+    padding-bottom: 6rem;
+    padding-top: 1.5rem;
+    /* background: rgba(0, 0, 0, 0.2); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(79, 87, 100, 0.5)),url('../images/2.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
     margin-left: auto; 
     margin-right: auto;
-    margin-top: 3rem;
+    margin-top: 2rem;
     width: 100%;
+    max-width: 78rem;
+    z-index: 99999;
+    transition: all 0.5s;
+}
+
+#form-button-one{
+    margin-top: 3.5rem;
+    transition: all 0.5s;
+}
+
+#form-button-two{
+    margin-top: 0rem;
+    transition: all 0.5s;
 }
 
 .submit{
-    margin-top: 3rem;
-    padding: 0.4rem 1rem;
-    padding-top: 0.7rem;
-    font-size: 20px;
+    border: none;
+    background: #f7f1e3;
+    /* margin-top: 0.7rem; */
+    height: 2.5rem;
+    width: 100%;
+    color: rgb(24,79,92);
+    font-size: 18px;
+    max-width: 28.5rem;
+    border-radius: 0.2rem;
+    transition: all 0.5s;
+}
+
+.animated-text {
+    margin-top: 1rem;
+    text-align: center;
+    background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #d7d8db, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* color: rgb(41,41,41); */
+    color: #f7f1e3;
+    font-size: 50px;
+    font-family: "Source Sans Pro", sans-serif;
+    animation: reveal 2000ms ease-in-out forwards 200ms,
+    glow 1000ms forwards 1 1000ms ,
+    float 2000ms;
+    opacity: 1;
+    white-space: nowrap;
+    z-index: 9999;
+    text-shadow: 1px 1px 3px #f7f1e3;
+    transition: all 0.5s;
+}  
+
+@keyframes float{
+    80%{
+        margin-left: -5rem;
+    }
+    100%{
+        margin-left: 5rem;
+        filter:blur(1px);
+    }
+}
+
+@keyframes reveal {
+    80%{
+        letter-spacing: 8px;
+    }
+    100% {
+        background-size: 300% 300%;
+    }
+}
+
+@keyframes glow {
+    40% {
+        text-shadow: 1px 1px 3px #f7f1e3;
+    }
+}
+
+.slogan{
+    font-size: 18px; 
+    color: #f7f1e3; 
+    margin-top: -1rem; 
+    margin-left: 15rem;
+    margin-bottom: 0;
+    animation: glow 1000ms 1;
+    text-shadow: 1px 1px 3px #f7f1e3;
+    transition: all 0.5s;
+}
+
+input,input::-webkit-input-placeholder {
+    font-size: 17px;
+    line-height: 3;
+    color: #f7f1e3;
+    text-shadow: 0.1px 0.1px 0.1px #f7f1e3;
+    transition: all 0.5s;
+}
+
+input{
+    background: transparent;
+    padding-left: 0.2rem;
+    color: #f7f1e3;
+    height: 2.5rem;
+    font-family: sans-serif;
+    margin: 0.8rem auto;
+    width: 100%;
+    max-width: 28rem;
+    border: none!important;
+    outline: none!important;
+    border-bottom: solid 2px #f7f1e3!important;
+    display: block;
+    transition: all 0.5s;
+}
+
+.head-signup{
+    text-align: center;
+    font-weight: 1000;
+    font-size: 40px;
+    color:#f7f1e3;
+    font-family: 'calibri';
+    margin: 0rem auto 2rem auto;
+    transition: all 0.5s;
 }
 
 @media screen and (max-width:1000px) {
-    form{
-        margin-top: 4rem;
-        margin-left: auto; 
-        margin-right: auto;
-        width:70%;
+    
+    .head-signup{
+        font-size: 35px;
+        margin-bottom: 1.5rem;
+        margin-top: 0rem;
     }
     
+    .submit{
+        border: none;
+        /* margin-top: 0.7rem; */
+        height: 2.5rem;
+        width: 99%;
+        font-size: 18px;
+        max-width: 28rem;
+        border-radius: 0.2rem;
+    }
+
+    #label-two{
+        margin-top: 2.5rem;
+    }
+
+    .forget{
+        margin-top: 1rem;
+    }
+
+    form{
+        padding-top: 2.5rem;
+        margin-top: 2rem;
+        margin-left: auto; 
+        margin-right: auto;
+        width:95%;
+        max-width: 35rem;
+    }
+
+    #form-button-one{
+        margin-top: 2rem;
+    }
+
     .main{
         margin-left: auto; 
         margin-right: auto;
         display: block;
     }
 
+    #emailHelp{
+        text-indent: 1.5rem;
+        width: 20rem;
+    }
+
     input{
+        width: 90%;
         height:2.3rem;
         margin-left: auto; 
         margin-right: auto;
-        max-width: 30rem;
+        max-width: 28rem;
     }
-
+    
     .col-one{
+        margin: 1rem auto;
         width: 100%;
     }
-
+    
     .col-two{
         width: 100%;
     }
-
+    
     .label{
-        margin-top: 1.2rem;
-        width:100%;
+        margin-top: 2.2rem;
+        width:85%;
         margin-left: auto;
         margin-right: auto;
         max-width: 30rem;
     }
-
-    label{
-        font-size: 18px;
-    }
-
+    
+    
     .submit{
-        margin-top: 2rem;
-        font-size: 18px;
-        padding-block: 0.3rem;
-        padding-top: 0.55rem;
+        font-size: 16px;
     }
 
     input,input::-webkit-input-placeholder {
-        font-size: 15px;
+        font-size: 16px;
         line-height: 3;
+    }
+
+    .animated-text{
+        margin-top: 1.5rem;
+        font-size: 45px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    .head-signup{
+        font-size: 28px;
+    }
+
+    input{
+        width: 95%;
+    }
+
+    .animated-text{
+        font-size: 37px;
+    }
+
+    .slogan{
+        text-align: center;
+        margin-left: 0;
+        margin-top: -0.2rem;
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width:450px) {
-    label{
+    .animated-text{
+        font-size: 30px;
+        animation: none;
+    }
+    .slogan{
         font-size: 15px;
     }
 
@@ -148,8 +356,16 @@ form{
         font-size: 14px;
     }
 
+    #emailHelp{
+        width: unset;
+        max-width: 15rem;
+        display: none;
+        font-size: 10px;
+        text-indent: 0.5rem;
+    }
+
     input,input::-webkit-input-placeholder {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 3;
     }
 

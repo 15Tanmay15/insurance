@@ -102,7 +102,10 @@ body{
     /* margin-left:30%; */
     width:100%;
     transition: width 1s;
+    overflow: hidden;
+    /* border-right: 3px solid; */
 }
+
 
 .paradiv{
     margin-top: 5%;
@@ -118,20 +121,17 @@ body{
     margin: 0  auto;
     margin-top: 20%;
 }
-
 .single1{
     width: 10rem;
     height: 10em;
     background: transparent;
 }
-
 .single2{
     margin-left: 80%;
     width: 10rem;
     height: 10em;
     background: transparent;
 }
-
 .icon
 {
     margin: 0 auto;
@@ -139,13 +139,11 @@ body{
     display: flex;
     justify-content: space-between;
 }
-
 .icon i{
     color:gray;
     font-size: x-large;
     margin: 0 auto;
 }
-
 .single1 p{
     margin-top: 0.3rem;
     text-align: center;
@@ -153,7 +151,6 @@ body{
     margin-right: auto;
     color: white;
 }
-
 .single2 p{
     margin-top: 0.3rem;
     text-align: center;
@@ -218,7 +215,7 @@ body{
     /* background-image: linear-gradient(to right,rgb(88,171,46), rgb(146, 213, 65)); */
     /* background: rgb(109,184,187); */
     /* background: rgb(5,100,122); */
-    background: rgb(158, 158, 158);
+    background: rgb(245, 242, 242);
     color: black;
     /* background-image: linear-gradient(to right, rgb(21,33,55),rgb(21,33,55)); */
 }
@@ -227,7 +224,7 @@ body{
     /* background-image: linear-gradient(to right,rgb(88,171,46), rgb(146, 213, 65)); */
     /* background: rgb(109,184,187); */
     /* background: rgb(5,100,122); */
-    background: rgb(158, 158, 158);
+    background: rgb(245, 242, 242);
     color: black;
     /* background-image: linear-gradient(to right, rgb(21,33,55),rgb(21,33,55)); */
 }
@@ -242,6 +239,7 @@ body{
     margin-right: auto;
     margin-left: 0;
     white-space: nowrap;
+    background: transparent;
     transition: margin-right 1s,font-size 1s;
 }
 
@@ -280,12 +278,18 @@ body{
 .card{
     align-items: center;
     padding-top: 2rem;
-    background: rgb(202, 200, 200);
+    background: rgb(245, 242, 242);
     height: 10rem;
     width: 10rem;
+    font-weight: bold;
+    border: none;
     /* border: solid white; */
-    /* box-shadow: 0px 0px 20px #2D8DBD; */
+    /* box-shadow: 2px 2px 2px 1px white, inset 1px 1px 1px 1px black; */
 }
+
+/* .card:hover{
+    box-shadow: 3px 3px 4px 1px white, inset 1px 1px 2px 1px black;
+} */
 
 .divs{
     display: block; 
@@ -344,13 +348,13 @@ body{
         display: flex;
         flex-direction: column;
     }
-    .icon
+    /* .icon
     {
         margin: 0 auto;
         max-width: 80%;
         display: flex;
         justify-content: space-between;
-    }
+    } */
     
     .big-btn{
         display: flex;

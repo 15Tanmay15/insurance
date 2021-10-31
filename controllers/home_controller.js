@@ -9,3 +9,8 @@ module.exports.emi_calculator = (req,res) => {
 module.exports.fd_calculator = (req,res) => {
     return res.render('fd_calculator')
 }
+
+module.exports.rd_calculator = (req,res) => {
+    return res.render('rd_calculator')
+}
+

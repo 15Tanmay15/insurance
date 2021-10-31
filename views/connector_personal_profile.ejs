@@ -6,122 +6,84 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <title>Profile</title>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  </head>
+</head>
 
 <body>
 
-    <header>
-        <section id="Navbar">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="/">Logo</a>
-                    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                      <ul class="navbar-nav">
-                        <div id="container">
-                          <div class="nav-flex">
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Loans
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#"  class="one">Personal Loan</a></li>
-                                <li><a class="dropdown-item" href="#">Business Loan</a></li>
-                                <li><a class="dropdown-item" href="#">Home Loan</a></li>
-                                <li><a class="dropdown-item" href="#">Home Loan Balance Transfer</a></li>
-                                <li><a class="dropdown-item" href="#">Loan Against Property</a></li>
-                                <li><a class="dropdown-item" href="#">Gold Loan</a></li>
-                              </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Insurance Products
-                              </a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                  <li><a class="dropdown-item" href="#">Life Insurance</a></li>
-                                  <li><a class="dropdown-item" href="#">Health Insurance</a></li>
-                                  <li><a class="dropdown-item" href="#">Vehicle Insurance</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Financial Tools
-                              </a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                  <li><a class="dropdown-item" href="#">EMI Calculator</a></li>
-                                  <li><a class="dropdown-item" href="#">RD Calculator</a></li>
-                                  <li><a class="dropdown-item" href="#">FD Calculator</a></li>
-                                </ul>
-                              </li>
-                            </div>
-                            <div class="login">
-                              <span><a class="name-css " href="/connector/profile"><%= locals.user.first_name %></a></span>
-                              <button type="button" class="btn btn-danger ml-5"><a class="display-name" href="/connector/sign-out">Sign Out</a></button>
-                            </div>
-                          </div>
-                        </ul>
-                    </div>
-                  </div>
-                </nav>
-              </section>
-              
-            </header>
-            
+  <%- include('header') -%>
             <!-- <h1>Hi <%= locals.user.first_name %></h1> 
               <h3><%= locals.user.phone %></h3> -->
-    <div class="minibar">
-      <ul class="list">
-        <li><button type="button"  ><a class="home" href="/connector/sign-out">HOME <i class='fas fa-angle-right'></i></a></button></li>
-        <li><button ><a class="home">USER PROFILE </a></button></li>
-      </ul>
+    <div class="profile">
+      <div class="minibar">
+        <ul class="list">
+          <li><button type="button"  ><a class="home" href="/connector/sign-out">HOME <i class='fas fa-angle-right'></i></a></button></li>
+          <li><button ><a class="home">USER PROFILE </a></button></li>
+        </ul>
+      </div>
 
+      <center><div class="image">
+        <div class="image1">
+          <img src="/images/car.jpeg">
+          <!-- <input id='fileid' type='file' hidden/>
+          <input id='buttonid' type='button' class="upload" value='MB' /> -->
+          <div class="choose_file">
+            <button type="button" class="upload"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+              <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+            </svg></button>
+            <input name="img" type="file" style="width: 1rem;" accept="image/*" />
+        </div>
+        </div>
+        <h1 class="name"><%= locals.user.first_name[0].toUpperCase()  %><%= locals.user.first_name.slice(1,)  %> <%= locals.user.last_name[0].toUpperCase() %><%= locals.user.last_name.slice(1,) %></h1>
+        <hr class="ala">
+        <p class="paragraph">Complete your profile for the best results and ease up your application process</p>
+      </div></center>
     </div>
-    <center><div class="image">
-      <img src="/images/car.jpeg">
-      <h1 class="name"><%= locals.user.first_name[0].toUpperCase()  %><%= locals.user.first_name.slice(1,)  %> <%= locals.user.last_name[0].toUpperCase() %><%= locals.user.last_name.slice(1,) %></h1>
-      <hr class="ala">
-      <p class="paragraph">Complete your profile for the best results and ease up your application process</p>
-    </div></center>
-    
+
     <center><button type="button" class="btn btn-info" id='minibar-btn'>
       <a href="/connector/file-insurance">File Insurance</a>
     </button></center>
-    <div class="details">
-      <div class="dropdown3">Name<button><i class='fas fa-angle-down'></i></button>
-            <a class="first-anchor">Number of insured: <%= locals.user.insurers.length %></a>
+      <div class="details" >
+        <div class="dropdown3">Name<button><i class='fas fa-angle-down'></i></button>
+          <li class="first-anchor"><a>Number of insured: <%= locals.user.insurers.length %></a>
             <% for(let i=0; i< insurers.length; i++){ %>
-              <% for(let j=0; j<locals.insurers[i].insurers.length; j++){%>
+              <% for(let j=0; j<locals.insurers[i].insurers.length ; j++){%>
                 
-                    <% if(JSON.stringify(locals.user._id) == JSON.stringify(insurers[i].insurers[j].connector)){ %>
-                      <a>Name of Insured:-<%= insurers[i].insurers[j].nameOfInsured %></a>
+                <% if(JSON.stringify(locals.user._id) == JSON.stringify(insurers[i].insurers[j].connector)){ %>
+                  <li><a>Name of Insured:-<%= insurers[i].insurers[j].nameOfInsured %></a>
                     <% } %>
-                    </a>
-              <% } %>
-          <% } %>
-      </div>
+                  </a>
+                  <% } %>
+                  <% } %>
+                </div>
+                
+                <div class="dropdown2">Contact Information<button><i class='fas fa-angle-down'></i></button>
+                  <li class="first-anchor"><a>Phone: <%= locals.user.phone %></a></li>
+                  <% if(locals.user.email){ %>
+                    <li><a>Email: <%= locals.user.email %></a>
+                      <% } %>
+                    </div>
+                    
+                    <div class="dropdown4">Insurance Done<button><i class='fas fa-angle-down'></i></button>
+                      <li class="first-anchor"><a href="#">Link 1</a>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 2</a></li>
+        </div>
 
-        <div class="dropdown2">Contact Information<button><i class='fas fa-angle-down'></i></button>
-              <a class="first-anchor">Phone: <%= locals.user.phone %></a>
-              <a>Email: <%= locals.user.email %></a>
-        </div>
-        
-        <div class="dropdown4">Insurance Done<button><i class='fas fa-angle-down'></i></button>
-          <a href="#" class="first-anchor">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-        
         <div class="dropdown5">Payment Log<button><i class='fas fa-angle-down'></i></button>
-          <a href="#" class="first-anchor">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+            <li class="first-anchor"><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
         </div>
-        
+
         <!-- <div class="dropdown6">Offers<button><i class='fas fa-angle-down'></i></button>
           <a href="#" class="first-anchor">Link 1</a>
           <a href="#">Link 2</a>
@@ -130,9 +92,9 @@
       
     </div>
 
+    <%- include('footer') -%>
 
-
-
+    <script src="https://use.fortawesome.com/1ce05b4b.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 </body>
